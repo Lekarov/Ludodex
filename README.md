@@ -2,7 +2,7 @@
 
 Ludodex est un jeu web de collection de cartes inspirées de l’univers du jeu vidéo. Les joueurs créent un compte, ouvrent des boosters, complètent leur collection, consultent le catalogue, échangent des cartes, utilisent un marché interne, lancent des duels et interagissent avec les autres membres.
 
-Cette publication contient le code du site, les migrations PostgreSQL/Supabase et les scripts de génération. Elle ne contient volontairement aucun secret, aucune configuration active, aucune donnée utilisateur, aucun export de production et aucune adresse d’infrastructure réelle.
+Cette publication contient le code du site, les migrations PostgreSQL/Supabase, les scripts de génération et les catalogues complets nécessaires à la reprise. Elle ne contient volontairement aucun secret, aucune configuration active, aucune donnée utilisateur et aucune adresse d’infrastructure réelle.
 
 > **Utilisation du code : contactez d’abord le propriétaire du dépôt via son profil GitHub.** Le code est visible à des fins de consultation et de démonstration, mais sa copie, sa modification, sa redistribution ou son hébergement ne sont pas autorisés sans accord écrit préalable. Consultez `LICENSE`.
 
@@ -90,9 +90,15 @@ python serve_nocache.py
 
 Ouvrez ensuite `http://localhost:8082/`. Le serveur désactive le cache pour faciliter le développement ; ce n’est pas un serveur de production.
 
-### 4. Importer un catalogue
+### 4. Importer les catalogues fournis
 
-Les gros exports réels ne sont pas publiés. Les scripts de `schema/catalogue_import/` montrent comment construire les fichiers attendus. Vérifiez les licences et conditions d’utilisation de chaque source avant de récupérer ou republier ses données et images.
+Les exports prêts à importer se trouvent dans `schema/catalogue_import/` :
+
+- `card_catalogue.csv` pour les jeux ;
+- `character_catalogue.csv` pour les personnages ;
+- `character_catalogue_descriptions.json` pour les descriptions associées.
+
+Les scripts du même dossier permettent de reconstruire ou d’enrichir ces fichiers. Vérifiez les licences et conditions d’utilisation de chaque source ainsi que celles des images distantes avant toute redistribution ou exploitation publique.
 
 Les scripts d’administration utilisent exclusivement des variables d’environnement :
 
@@ -157,7 +163,7 @@ Pour protéger la vie privée et éviter une redistribution involontaire, ce dé
 - données de joueurs, messages, sessions ou journaux ;
 - exports complets de base ou fichiers de sauvegarde ;
 - fichiers de travail et comptes rendus internes ;
-- gros catalogues CSV/JSON et médias provenant de tiers.
+- données brutes intermédiaires et médias tiers téléchargés localement ; les catalogues consolidés nécessaires à la reprise sont inclus.
 
 ## Documentation détaillée
 
@@ -170,4 +176,3 @@ Pour protéger la vie privée et éviter une redistribution involontaire, ce dé
 ## Statut et avertissement
 
 Le projet est fourni comme démonstration technique, sans garantie. Les migrations reflètent l’évolution historique du produit et doivent être relues avant une nouvelle installation. Les pages juridiques fournies sont des modèles neutres et ne constituent pas un conseil juridique.
-

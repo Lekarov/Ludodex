@@ -15,5 +15,7 @@ __pycache__/
 .pytest_cache/
 schema/catalogue_import/*.csv
 schema/catalogue_import/*.json
+!schema/catalogue_import/card_catalogue.csv
+!schema/catalogue_import/character_catalogue.csv
+!schema/catalogue_import/character_catalogue_descriptions.json
 data/
-

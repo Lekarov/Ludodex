@@ -20,9 +20,8 @@ Les fonctions `security definer` contournent potentiellement les droits ordinair
 
 ## Catalogues
 
-Les fichiers volumineux ne sont pas inclus dans cette publication. Générez vos propres données à partir de sources dont vous avez vérifié les conditions d’utilisation. Importez par lots sur une base de test et contrôlez les contraintes d’unicité avant la production.
+Les fichiers consolidés `card_catalogue.csv`, `character_catalogue.csv` et `character_catalogue_descriptions.json` sont inclus dans `schema/catalogue_import/`. Importez-les par lots sur une base de test, contrôlez les contraintes d’unicité et vérifiez les conditions d’utilisation des sources et images avant une exploitation publique.
 
 ## Sauvegardes
 
 Ne placez jamais un dump de base dans ce dépôt. Une sauvegarde peut contenir emails, identifiants, messages, jetons révoqués ou métadonnées privées même si son nom semble anodin.
-
