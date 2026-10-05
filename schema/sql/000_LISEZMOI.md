@@ -1,28 +1,18 @@
-# SQL Ludodex Online — à exécuter vous-même
+# SQL Ludodex Online
 
-Ces fichiers ne sont **pas exécutés automatiquement**. Personne ne s'est connecté à votre projet
-Supabase pour les lancer. Ce sont des fichiers prêts à être collés, un par un et dans l'ordre,
-dans l'éditeur SQL de votre dashboard Supabase (Project → SQL Editor), quand vous serez prêt.
+Pour une base neuve, utilisez de préférence `setup.ps1` à la racine. Il exécute automatiquement les migrations `001` à `074` dans l’ordre, puis importe les catalogues complets.
 
-Ordre d'exécution :
+Installation manuelle :
 
-1. `001_extensions_and_enums.sql` — types réutilisés par les autres tables
-2. `002_profiles.sql` — profils + création automatique à l'inscription
-3. `003_player_state.sql` — pièces, boosters
-4. `004_collection.sql` — cartes possédées
-5. `005_achievements.sql` — succès + trace de récompense
-6. `006_market.sql` — annonces et enchères
-7. `007_messages_and_moderation.sql` — messages privés, signalements, blocages
+1. exécuter chaque fichier SQL dans l’ordre numérique ;
+2. importer `schema/catalogue_import/card_catalogue.csv` dans `public.card_catalogue` ;
+3. importer `schema/catalogue_import/character_catalogue.csv` dans `public.character_catalogue` ;
+4. pour inclure les descriptions dans l’import, utiliser `tools/merge_character_descriptions.py` comme le fait `setup.ps1` ;
+5. configurer dans le dashboard les fournisseurs OAuth, les URL de redirection et les hooks explicitement demandés par les commentaires des migrations ;
+6. tester les politiques RLS avec plusieurs comptes fictifs avant toute ouverture publique.
 
-Recommandation : testez d'abord sur un projet Supabase séparé (pas le projet de production), ou
-au minimum relisez chaque fichier avant de l'exécuter — vous pouvez me redemander une relecture
-avant de lancer quoi que ce soit.
+Les migrations reflètent l’historique du produit. Elles sont prévues ici pour une installation neuve. Ne rejouez jamais aveuglément l’ensemble sur une base de production déjà remplie.
 
-Ce qui **manque encore volontairement** dans ces fichiers (à faire dans une étape suivante,
-séparée) :
-- Les fonctions serveur (RPC) qui valident les actions de jeu (ouvrir un booster, acheter,
-  vendre, enchérir, réclamer un succès) — ces tables n'ont aucune écriture cliente possible tant
-  que ces fonctions n'existent pas, ce qui est voulu (pas de triche possible par défaut).
-- Le nettoyage automatique des signalements après 30 jours (nécessite l'extension `pg_cron`,
-  à activer depuis le dashboard si vous le souhaitez).
-- Le flux Google/Discord (configuration dans Authentication → Providers du dashboard, pas du SQL).
+`016_card_catalogue_foreign_keys.sql` peut être appliqué avant l’import sur une base neuve, puisque les tables métier sont encore vides. Sur une base existante issue d’une ancienne version, suivez impérativement les commentaires de `015` et `016`.
+
+Certaines fonctions nécessitent des étapes manuelles propres au dashboard Supabase, notamment les fournisseurs OAuth, les hooks Auth et les extensions/tâches planifiées disponibles selon le forfait.

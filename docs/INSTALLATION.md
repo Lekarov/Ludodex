@@ -4,11 +4,18 @@
 
 - Python 3 pour le serveur local ;
 - Node.js uniquement pour les scripts de génération/import ;
+- le client PostgreSQL `psql` pour l’installation automatisée ;
 - un projet Supabase neuf ;
 - un navigateur récent ;
 - Git pour versionner votre configuration, sans jamais versionner les secrets.
 
-## Base de données
+## Installation automatisée recommandée
+
+Sur un projet Supabase neuf, définissez `SUPABASE_URL`, `SUPABASE_PUBLISHABLE_KEY` et `SUPABASE_DB_URL`, puis lancez `setup.ps1`. Le script applique toutes les migrations, importe les catalogues et remplit les descriptions sans clé de service. Il refuse d’écraser automatiquement un catalogue partiellement rempli.
+
+La chaîne `SUPABASE_DB_URL` se récupère dans les paramètres de connexion du projet Supabase. Ne la commitez jamais : elle contient le mot de passe de la base.
+
+## Base de données — procédure manuelle
 
 1. Créez un projet Supabase de test.
 2. Ouvrez `schema/sql/000_LISEZMOI.md`.
@@ -66,4 +73,3 @@ Get-ChildItem -Recurse -Force -File | Where-Object {
 ## Rotation en cas de doute
 
 Si une clé a déjà été copiée dans un commit ou envoyée à un tiers, la supprimer du dernier état ne suffit pas. Révoquez-la immédiatement dans le service concerné, générez-en une nouvelle et nettoyez l’historique Git avant toute publication.
-

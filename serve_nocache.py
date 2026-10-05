@@ -20,7 +20,7 @@ CSP = (
     "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; "
     "font-src 'self' https://fonts.gstatic.com; "
     "img-src 'self' data: https:; "
-    "connect-src 'self' https://YOUR_PROJECT_REF.supabase.co wss://YOUR_PROJECT_REF.supabase.co https://api.ipify.org; "
+    "connect-src 'self' https://*.supabase.co wss://*.supabase.co https://api.ipify.org; "
     "object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'self'"
 )
 

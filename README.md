@@ -55,7 +55,23 @@ Ludodex-Public/
 └── LICENSE                      # tous droits réservés
 ```
 
-## Démarrage rapide
+## Démarrage rapide automatisé
+
+Sur Windows/PowerShell, la reprise complète se fait avec trois variables d’environnement et une commande. Utilisez un projet Supabase neuf :
+
+```powershell
+$env:SUPABASE_URL = "https://YOUR_PROJECT_REF.supabase.co"
+$env:SUPABASE_PUBLISHABLE_KEY = "YOUR_SUPABASE_PUBLISHABLE_KEY"
+$env:SUPABASE_DB_URL = "postgresql://..."
+.\setup.ps1
+.\start.ps1
+```
+
+`setup.ps1` génère la configuration locale, applique les migrations `001` à `074`, importe les 195 919 jeux et 48 668 personnages, puis injecte leurs descriptions directement dans l’import. Il exige `psql` et Python 3. Les secrets restent dans les variables d’environnement et ne sont pas écrits dans Git.
+
+Les sections suivantes expliquent la procédure manuelle et le fonctionnement détaillé.
+
+## Démarrage manuel
 
 ### 1. Préparer votre propre projet Supabase
 
@@ -142,7 +158,7 @@ Le serveur valide les limites, sélectionne les cartes et enregistre le résulta
 
 ## Déploiement
 
-Le dossier `web/` peut être servi par un hébergeur statique. Avant toute mise en ligne :
+Le dossier `web/` peut être servi par un hébergeur statique. La CSP accepte les connexions HTTPS/WSS vers les sous-domaines Supabase afin qu’un nouveau projet fonctionne sans modifier toutes les pages. Avant toute mise en ligne :
 
 1. configurez les URL autorisées dans Supabase Auth ;
 2. adaptez la Content Security Policy de chaque page à votre domaine et à votre projet ;
