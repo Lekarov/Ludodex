@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Profil — Ludodex Online</title>
+<link rel="icon" href="assets/logo-ludodex.png" type="image/png">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://YOUR_PROJECT_REF.supabase.co wss://YOUR_PROJECT_REF.supabase.co https://api.ipify.org; object-src 'none'; base-uri 'self'; form-action 'self'">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/tokens-site.css">
+<link rel="stylesheet" href="css/theme.css">
+<link rel="stylesheet" href="css/layout.css">
+<link rel="stylesheet" href="css/account.css">
+<link rel="stylesheet" href="css/card.css">
+<link rel="stylesheet" href="css/dialogs.css">
+<link rel="stylesheet" href="css/notifications.css">
+<link rel="stylesheet" href="css/app-shell.css">
+</head>
+<body>
+<div class="appshell">
+  <aside class="sidebar">
+    <div class="sidebrand">
+      <img src="img/logo-ludodex.png" alt="Ludodex">
+      <div class="belwrap">
+        <button class="sidebell" id="notifBell" type="button" aria-label="Notifications">🔔<span class="nbub" id="notifBubble" hidden>0</span></button>
+        <div class="notifpanel" id="notifPanel" hidden>
+          <div class="notifhead">Notifications</div>
+          <ul class="nlist" id="notifList"></ul>
+        </div>
+      </div>
+    </div>
+    <nav class="sidenav" aria-label="Navigation">
+      <a class="snavitem" href="boosters.html"><span class="sicon">🎴︎</span><span>Boosters</span></a>
+      <a class="snavitem" href="collection.html"><span class="sicon">📚︎</span><span>Collection</span></a>
+      <a class="snavitem" href="cards.html"><span class="sicon">🔍︎</span><span>Toutes les cartes</span></a>
+      <a class="snavitem" href="market.html"><span class="sicon">💱︎</span><span>Marché</span></a>
+      <a class="snavitem" href="trades.html"><span class="sicon">🔁︎</span><span>Échanges</span></a>
+      <a class="snavitem" href="duels.html"><span class="sicon">⚔︎</span><span>Duels</span></a>
+      <a class="snavitem" href="achievements.html"><span class="sicon">🏆︎</span><span>Succès</span></a>
+      <a class="snavitem" href="messages.html"><span class="sicon">✉︎</span><span>Messages</span></a>
+      <a class="snavitem" href="social.html"><span class="sicon">👥︎</span><span>Amis</span></a>
+    </nav>
+    <div class="sidefoot">
+      <nav class="sidenav" aria-label="Compte">
+        <a class="snavitem" href="account.html" aria-current="page"><span class="sicon">👤︎</span><span>Profil</span></a>
+        <a class="snavitem" href="settings.html"><span class="sicon">⚙︎</span><span>Paramètres</span></a>
+      </nav>
+      <div class="sidewallet"><span class="wallet"><span id="coins">—</span><span class="coin" aria-hidden="true"></span></span></div>
+    </div>
+  </aside>
+
+  <div class="maincol">
+    <main class="page-main">
+      <div class="pagehead">
+        <div class="profilehead">
+          <button class="avatar avatar-pick" id="avatarBtn" type="button" aria-label="Changer la photo de profil">
+            <span id="avatarInitial">?</span>
+          </button>
+          <div><h1 id="profileName">Profil</h1><p class="pagesub" id="whoami">Chargement…</p></div>
+        </div>
+        <button class="btn" id="logoutBtn" type="button">Se déconnecter</button>
+      </div>
+
+      <div class="panel section">
+        <h2>Informations</h2>
+        <label for="username">Pseudo</label>
+        <div class="inline-form">
+          <input type="text" id="username" minlength="3" maxlength="24">
+          <button class="btn primary" id="saveUsername" type="button">Enregistrer</button>
+        </div>
+        <div class="msg" id="accountMsg"></div>
+      </div>
+
+      <div class="panel section">
+        <h2>VIP & Premium</h2>
+        <p class="sub" style="margin:0">Envie d'ouvrir des boosters plus vite ? <a href="vip.html">Voir les statuts VIP et Premium</a>.</p>
+      </div>
+
+      <div class="panel section">
+        <h2>Vitrine</h2>
+        <p class="sub">Choisis jusqu'à 4 cartes de ta collection à mettre en avant sur ton profil.</p>
+        <div class="showcase" id="showcaseSlots"></div>
+      </div>
+
+      <div class="panel section">
+        <h2>Statistiques</h2>
+        <p class="sub" id="statsStatus">Chargement…</p>
+        <div class="tiles" id="statsTiles"></div>
+      </div>
+
+      <div class="panel section" id="goldPanel" hidden>
+        <h2>✨ Cartes Gold</h2>
+        <p class="sub">Un seul exemplaire existe dans tout Ludodex Online pour chacune — tirage
+          bonus ultra rare à l'ouverture d'un booster, jamais deux fois la même carte.</p>
+        <div class="grid" id="goldList"></div>
+      </div>
+
+      <footer class="site"><a href="legal-notice.html">Mentions légales</a> · <a href="privacy-policy.html">Confidentialité</a> · <a href="terms.html">CGU</a></footer>
+    </main>
+  </div>
+</div>
+
+<dialog id="pickCardDlg">
+  <button class="dx" id="pickCardClose" type="button" aria-label="Fermer">×</button>
+  <h3 id="pickCardTitle">Choisir une carte</h3>
+  <input type="search" id="pickCardSearch" class="collsearch" placeholder="Rechercher dans ta collection…" style="margin:.6rem 0 1rem;width:100%">
+  <div class="grid" id="pickCardGrid" style="max-height:56vh;overflow-y:auto"></div>
+</dialog>
+
+<div class="toasts" id="toasts" aria-live="polite"></div>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js"></script>
+<script src="js/config.js"></script>
+<script src="js/supabaseClient.js"></script>
+<script src="js/catalogue/dom-helpers.js"></script>
+<script src="js/render.js"></script>
+<script src="js/notifications.js"></script>
+<script src="js/account.js"></script>
+</body>
+</html>

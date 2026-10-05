@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Messages — Ludodex Online</title>
+<link rel="icon" href="assets/logo-ludodex.png" type="image/png">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://YOUR_PROJECT_REF.supabase.co wss://YOUR_PROJECT_REF.supabase.co https://api.ipify.org; object-src 'none'; base-uri 'self'; form-action 'self'">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/tokens-site.css">
+<link rel="stylesheet" href="css/theme.css">
+<link rel="stylesheet" href="css/layout.css">
+<link rel="stylesheet" href="css/dialogs.css">
+<link rel="stylesheet" href="css/messages.css">
+<link rel="stylesheet" href="css/notifications.css">
+<link rel="stylesheet" href="css/app-shell.css">
+</head>
+<body>
+<div class="appshell">
+  <aside class="sidebar">
+    <div class="sidebrand">
+      <img src="img/logo-ludodex.png" alt="Ludodex">
+      <div class="belwrap">
+        <button class="sidebell" id="notifBell" type="button" aria-label="Notifications">🔔<span class="nbub" id="notifBubble" hidden>0</span></button>
+        <div class="notifpanel" id="notifPanel" hidden>
+          <div class="notifhead">Notifications</div>
+          <ul class="nlist" id="notifList"></ul>
+        </div>
+      </div>
+    </div>
+    <nav class="sidenav" aria-label="Navigation">
+      <a class="snavitem" href="boosters.html"><span class="sicon">🎴︎</span><span>Boosters</span></a>
+      <a class="snavitem" href="collection.html"><span class="sicon">📚︎</span><span>Collection</span></a>
+      <a class="snavitem" href="cards.html"><span class="sicon">🔍︎</span><span>Toutes les cartes</span></a>
+      <a class="snavitem" href="market.html"><span class="sicon">💱︎</span><span>Marché</span></a>
+      <a class="snavitem" href="trades.html"><span class="sicon">🔁︎</span><span>Échanges</span></a>
+      <a class="snavitem" href="duels.html"><span class="sicon">⚔︎</span><span>Duels</span></a>
+      <a class="snavitem" href="achievements.html"><span class="sicon">🏆︎</span><span>Succès</span></a>
+      <a class="snavitem" href="messages.html" aria-current="page"><span class="sicon">✉︎</span><span>Messages</span></a>
+      <a class="snavitem" href="social.html"><span class="sicon">👥︎</span><span>Amis</span></a>
+    </nav>
+    <div class="sidefoot">
+      <nav class="sidenav" aria-label="Compte">
+        <a class="snavitem" href="account.html"><span class="sicon">👤︎</span><span>Profil</span></a>
+        <a class="snavitem" href="settings.html"><span class="sicon">⚙︎</span><span>Paramètres</span></a>
+      </nav>
+      <div class="sidewallet"><span class="wallet"><span id="coins">—</span><span class="coin" aria-hidden="true"></span></span></div>
+    </div>
+  </aside>
+
+  <div class="maincol">
+    <main class="page-main">
+      <div class="pagehead">
+        <div><h1>Messages</h1><p class="pagesub">Conversations privées entre joueurs</p></div>
+      </div>
+
+      <div class="msgshell">
+        <aside class="msgconvos">
+          <div class="msgsearch"><input type="text" id="convoSearch" placeholder="Filtrer les conversations…" autocomplete="off"></div>
+          <ul class="convolist" id="convoList"></ul>
+        </aside>
+        <section class="msgthread">
+          <div class="msgempty" id="msgEmpty">Sélectionne un ami à gauche pour discuter.</div>
+          <div class="msgactive" id="msgActive" hidden>
+            <div class="msgheadbar">
+              <b id="msgWithName">—</b>
+              <div class="msgactions">
+                <button class="btn sm" id="blockBtn" type="button">Bloquer</button>
+                <button class="btn sm" id="reportBtn" type="button">Signaler</button>
+              </div>
+            </div>
+            <div class="msglog" id="msgLog"></div>
+            <form class="msgcompose" id="msgCompose">
+              <input type="text" id="msgInput" maxlength="1000" placeholder="Écris un message…" autocomplete="off">
+              <button class="btn primary" type="submit">Envoyer</button>
+            </form>
+          </div>
+        </section>
+      </div>
+    </main>
+  </div>
+</div>
+
+<div class="toasts" id="toasts" aria-live="polite"></div>
+
+<dialog id="reportDlg">
+  <button class="dx" id="reportDlgClose" type="button" aria-label="Fermer">×</button>
+  <h3 class="dtitle">Signaler cette conversation</h3>
+  <p class="dsub">Le signalement porte sur le dernier message reçu de <b id="reportWithName">ce joueur</b>.</p>
+  <div class="form">
+    <label>Motif
+      <select id="reportReason">
+        <option value="Spam ou publicité">Spam ou publicité</option>
+        <option value="Harcèlement ou propos haineux">Harcèlement ou propos haineux</option>
+        <option value="Contenu inapproprié">Contenu inapproprié</option>
+        <option value="Arnaque ou triche">Arnaque ou triche</option>
+        <option value="Autre">Autre</option>
+      </select>
+    </label>
+    <label>Commentaire (facultatif)
+      <textarea id="reportComment" maxlength="500" placeholder="Ajoute des détails si besoin…"></textarea>
+    </label>
+  </div>
+  <div class="msg" id="reportMsg"></div>
+  <div class="actions">
+    <button class="btn" type="button" id="reportCancel">Annuler</button>
+    <button class="btn primary" type="button" id="reportSubmit">Envoyer le signalement</button>
+  </div>
+</dialog>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js"></script>
+<script src="js/config.js"></script>
+<script src="js/supabaseClient.js"></script>
+<script src="js/catalogue/dom-helpers.js"></script>
+<script src="js/render.js"></script>
+<script src="js/shared.js"></script>
+<script src="js/notifications.js"></script>
+<script src="js/messages.js"></script>
+</body>
+</html>

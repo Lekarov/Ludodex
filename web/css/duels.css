@@ -1,0 +1,19 @@
+/* Duels contre l'ordinateur : composition de deck (grille de cartes sélectionnables, façon
+   marché) + résultat manche par manche + historique permanent. */
+.deckgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(120px,1fr));gap:.6rem;max-height:22rem;overflow-y:auto;margin:.6rem 0}
+.deckpick{border:2px solid transparent;border-radius:var(--radius-md);cursor:pointer;background:none;padding:0}
+.deckpick.on{border-color:var(--accent)}
+
+.duelrounds{display:flex;flex-direction:column;gap:.4rem;margin:.8rem 0}
+.duelround{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:.6rem;padding:.6rem .8rem;border-radius:var(--radius-md);background:var(--surface-2);font-size:.88rem}
+.duelround.win{box-shadow:inset 3px 0 0 var(--accent)}
+.duelround.lose{box-shadow:inset 3px 0 0 var(--danger)}
+.duelround .vs{text-align:center;font-weight:800;color:var(--muted)}
+.duelround .side2{text-align:right}
+
+.duelresult{font-size:1.1rem;font-weight:800;margin-bottom:.3rem}
+.duelresult.won{color:var(--accent)}
+.duelresult.lost{color:var(--danger)}
+
+.duelhistrow{display:flex;justify-content:space-between;align-items:center;gap:.8rem;padding:.6rem 0;border-bottom:1px solid var(--line);font-size:.9rem}
+.duelhistrow:last-child{border-bottom:0}

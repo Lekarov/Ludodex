@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Collection — Ludodex Online</title>
+<link rel="icon" href="assets/logo-ludodex.png" type="image/png">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://YOUR_PROJECT_REF.supabase.co wss://YOUR_PROJECT_REF.supabase.co https://api.ipify.org; object-src 'none'; base-uri 'self'; form-action 'self'">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/tokens-site.css">
+<link rel="stylesheet" href="css/theme.css">
+<link rel="stylesheet" href="css/layout.css">
+<link rel="stylesheet" href="css/card.css">
+<link rel="stylesheet" href="css/album.css">
+<link rel="stylesheet" href="css/market.css">
+<link rel="stylesheet" href="css/dialogs.css">
+<link rel="stylesheet" href="css/notifications.css">
+<link rel="stylesheet" href="css/app-shell.css">
+</head>
+<body>
+<div class="appshell">
+  <aside class="sidebar">
+    <div class="sidebrand">
+      <img src="img/logo-ludodex.png" alt="Ludodex">
+      <div class="belwrap">
+        <button class="sidebell" id="notifBell" type="button" aria-label="Notifications">🔔<span class="nbub" id="notifBubble" hidden>0</span></button>
+        <div class="notifpanel" id="notifPanel" hidden>
+          <div class="notifhead">Notifications</div>
+          <ul class="nlist" id="notifList"></ul>
+        </div>
+      </div>
+    </div>
+    <nav class="sidenav" aria-label="Navigation">
+      <a class="snavitem" href="boosters.html"><span class="sicon">🎴︎</span><span>Boosters</span></a>
+      <a class="snavitem" href="collection.html" aria-current="page"><span class="sicon">📚︎</span><span>Collection</span></a>
+      <a class="snavitem" href="cards.html"><span class="sicon">🔍︎</span><span>Toutes les cartes</span></a>
+      <a class="snavitem" href="market.html"><span class="sicon">💱︎</span><span>Marché</span></a>
+      <a class="snavitem" href="trades.html"><span class="sicon">🔁︎</span><span>Échanges</span></a>
+      <a class="snavitem" href="duels.html"><span class="sicon">⚔︎</span><span>Duels</span></a>
+      <a class="snavitem" href="achievements.html"><span class="sicon">🏆︎</span><span>Succès</span></a>
+      <a class="snavitem" href="messages.html"><span class="sicon">✉︎</span><span>Messages</span></a>
+      <a class="snavitem" href="social.html"><span class="sicon">👥︎</span><span>Amis</span></a>
+    </nav>
+    <div class="sidefoot">
+      <nav class="sidenav" aria-label="Compte">
+        <a class="snavitem" href="account.html"><span class="sicon">👤︎</span><span>Profil</span></a>
+        <a class="snavitem" href="settings.html"><span class="sicon">⚙︎</span><span>Paramètres</span></a>
+      </nav>
+      <div class="sidewallet"><span class="wallet"><span id="coins">—</span><span class="coin" aria-hidden="true"></span></span></div>
+    </div>
+  </aside>
+
+  <div class="maincol">
+    <main class="page-main">
+      <div class="pagehead">
+        <div><h1>Ta collection</h1><p class="pagesub" id="collectionStatus">Chargement…</p></div>
+      </div>
+
+      <div class="seg collmode" id="collMode">
+        <button type="button" data-cm="grid" aria-pressed="true">Grille</button>
+        <button type="button" data-cm="album" aria-pressed="false">Album</button>
+      </div>
+      <div id="collGrid">
+        <div class="collfilters">
+          <input type="search" id="fSearch" class="collsearch" placeholder="Rechercher par titre ou plateforme…" aria-label="Rechercher par titre ou plateforme">
+          <div class="ddrow">
+            <div class="dd" id="ddPlat">
+              <button type="button" class="dd-btn" aria-haspopup="listbox" aria-expanded="false"><span class="dd-label">Toutes les plateformes</span><span class="dd-chev">⌄</span></button>
+              <div class="dd-panel" role="listbox" hidden></div>
+            </div>
+          </div>
+        </div>
+        <div class="rartabs" id="rarTabs" role="tablist" aria-label="Filtrer par rareté"></div>
+        <div id="collectionGrid" class="grid"></div>
+      </div>
+      <div id="collAlbum" hidden>
+        <div id="shelf">
+          <p class="sub" id="albumStatus">Chargement…</p>
+          <div class="binders" id="binders"></div>
+        </div>
+        <div id="apage" hidden></div>
+      </div>
+    </main>
+  </div>
+</div>
+
+<dialog id="cardDlg">
+  <button class="dx" id="dlgClose" type="button" aria-label="Fermer">×</button>
+  <div id="dlgBody"></div>
+</dialog>
+
+<dialog id="auctionDlg">
+  <button class="dx" id="auctionDlgClose" type="button" aria-label="Fermer">×</button>
+  <div id="auctionDlgBody"></div>
+</dialog>
+
+<div class="toasts" id="toasts" aria-live="polite"></div>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js"></script>
+<script src="js/config.js"></script>
+<script src="js/supabaseClient.js"></script>
+<script src="js/catalogue/dom-helpers.js"></script>
+<script src="js/render.js"></script>
+<script src="js/shared.js"></script>
+<script src="js/notifications.js"></script>
+<script src="js/collection.js"></script>
+<script src="js/detail.js"></script>
+</body>
+</html>

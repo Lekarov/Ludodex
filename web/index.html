@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ludodex Online — Collectionne, ouvre des boosters, échange tes cartes</title>
+<link rel="icon" href="assets/logo-ludodex.png" type="image/png">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://YOUR_PROJECT_REF.supabase.co wss://YOUR_PROJECT_REF.supabase.co https://api.ipify.org; object-src 'none'; base-uri 'self'; form-action 'self'">
+
+<meta name="description" content="Ludodex Online : jeu de cartes à collectionner en ligne avec plus de 239 000 cartes (jeux vidéo et personnages), boosters, collection, marché joueur à joueur, échanges et duels. Crée ton compte gratuitement.">
+<meta name="robots" content="index,follow">
+<!-- TODO une fois un vrai domaine public choisi : remplacer les URLs ci-dessous (actuellement
+     relatives/locales) par l'URL absolue réelle du site pour canonical/og:url/og:image. -->
+<link rel="canonical" href="index.html">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Ludodex Online">
+<meta property="og:title" content="Ludodex Online — Collectionne, ouvre des boosters, échange tes cartes">
+<meta property="og:description" content="Plus de 239 000 cartes à collectionner (jeux vidéo et personnages), boosters, marché joueur à joueur, échanges et duels. Gratuit, crée ton compte en 1 minute.">
+<meta property="og:image" content="assets/landing-hero.png">
+<meta property="og:locale" content="fr_FR">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Ludodex Online — Collectionne, ouvre des boosters, échange tes cartes">
+<meta name="twitter:description" content="Plus de 239 000 cartes à collectionner (jeux vidéo et personnages), boosters, marché, échanges et duels.">
+<meta name="twitter:image" content="assets/landing-hero.png">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Ludodex Online",
+  "description": "Jeu de cartes à collectionner en ligne : boosters, collection, marché joueur à joueur, échanges et duels sur un catalogue de plus de 239 000 cartes (jeux vidéo et personnages).",
+  "inLanguage": "fr-FR"
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/theme.css">
+<link rel="stylesheet" href="css/landing.css">
+</head>
+<body class="landing">
+
+<header class="lp-header">
+  <div class="brand"><img src="img/logo-ludodex.png" alt="Ludodex Online"></div>
+  <nav id="lpNav">
+    <a href="login.html" class="btn-ghost" id="navLogin">Se connecter</a>
+    <a href="signup.html" class="btn-solid" id="navSignup">Créer un compte</a>
+  </nav>
+</header>
+
+<main>
+  <section class="lp-hero">
+    <div>
+      <h1>Ouvre des boosters.<br>Collectionne <span class="accent">239 000+ cartes</span>.<br>Échange, joue, gagne.</h1>
+      <p class="lead">Ludodex Online est un jeu de cartes à collectionner gratuit : jeux vidéo et personnages
+        emblématiques réunis dans un seul catalogue. Boosters réguliers, marché joueur à joueur, échanges,
+        duels quotidiens et succès à débloquer — tout est lié à ton compte, anti-triche par construction.</p>
+      <div class="cta-row">
+        <a href="signup.html" class="lp-cta primary" id="heroSignup">Créer mon compte gratuitement</a>
+        <a href="login.html" class="lp-cta ghost" id="heroLogin">J'ai déjà un compte</a>
+      </div>
+    </div>
+    <div class="lp-hero-art">
+      <img src="assets/landing-hero.png" alt="Illustration d'un booster Ludodex Online qui s'ouvre, cartes de rareté commune, rare, épique et légendaire en suspension" width="1672" height="941" loading="eager">
+    </div>
+  </section>
+
+  <section class="lp-stats" aria-label="Chiffres clés">
+    <div class="lp-stat"><b>239 000+</b><span>cartes cataloguées</span></div>
+    <div class="lp-stat"><b>14</b><span>franchises de personnages</span></div>
+    <div class="lp-stat"><b>5</b><span>duels gratuits par jour</span></div>
+    <div class="lp-stat"><b>100%</b><span>gratuit pour jouer</span></div>
+  </section>
+
+  <section class="lp-section">
+    <h2>Tout un jeu de cartes, un seul compte</h2>
+    <p class="sub">Ta collection, tes pièces et ta progression sont liées à ton compte — jamais au navigateur
+      ou à l'appareil, pour un vrai anti-triche et pour jouer partout.</p>
+    <div class="lp-features">
+
+      <div class="lp-feature">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 8l-9-5-9 5 9 5 9-5z"/><path d="M3 8v8l9 5 9-5V8"/><path d="M12 13v8"/></svg></div>
+        <h3>Boosters</h3>
+        <p>Ouvre des boosters de 5 cartes à intervalle régulier, avec une chance de tomber sur une carte Gold
+          Unique. Régénération plus rapide pour les comptes VIP.</p>
+      </div>
+
+      <div class="lp-feature">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg></div>
+        <h3>Collection &amp; catalogue</h3>
+        <p>Un catalogue de plus de 239 000 cartes : jeux vidéo (195 000+) et personnages emblématiques de
+          14 franchises (Pokémon, Magic, League of Legends, Genshin Impact et bien d'autres).</p>
+      </div>
+
+      <div class="lp-feature">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.59 13.41L12 22l-9-9V4h9l8.59 8.59a2 2 0 010 2.82z"/><circle cx="7.5" cy="8.5" r="1"/></svg></div>
+        <h3>Marché joueur à joueur</h3>
+        <p>Vends tes cartes à prix fixe ou aux enchères. Le cours affiché sur chaque carte vient des ventes
+          réelles des joueurs, pas d'une simulation.</p>
+      </div>
+
+      <div class="lp-feature">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 7h13l-4-4"/><path d="M17 17H4l4 4"/></svg></div>
+        <h3>Échanges</h3>
+        <p>Propose un échange direct à un autre joueur, carte contre carte — les cartes offertes sont
+          séquestrées immédiatement, rendues automatiquement en cas de refus.</p>
+      </div>
+
+      <div class="lp-feature">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21l7-7"/><path d="M21 3l-7 7"/><path d="M3 3l18 18"/></svg></div>
+        <h3>Duels</h3>
+        <p>Monte un deck de 5 cartes et affronte un adversaire tiré du catalogue, à la même rareté.
+          5 duels gratuits par jour, historique conservé.</p>
+      </div>
+
+      <div class="lp-feature">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 21h8"/><path d="M12 17v4"/><path d="M7 4h10v5a5 5 0 01-10 0V4z"/><path d="M7 5H4a1 1 0 00-1 1c0 2.5 1.5 4 4 4"/><path d="M17 5h3a1 1 0 011 1c0 2.5-1.5 4-4 4"/></svg></div>
+        <h3>Succès &amp; progression</h3>
+        <p>Débloque des succès au fil de ta collection et de tes parties, avec une progression globale et
+          des récompenses à réclamer.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="lp-cta-band">
+    <h2>Prêt à ouvrir ton premier booster ?</h2>
+    <p>La création de compte prend une minute, par email ou avec Google / Discord.</p>
+    <a href="signup.html" class="lp-cta primary" id="bandSignup">Créer mon compte gratuitement</a>
+  </section>
+</main>
+
+<footer class="lp-footer">
+  <div class="foot-links">
+    <a href="legal-notice.html">Mentions légales</a>
+    <a href="privacy-policy.html">Confidentialité</a>
+    <a href="terms.html">CGU</a>
+    <a href="login.html">Se connecter</a>
+  </div>
+  &copy; <span id="lpYear"></span> Ludodex Online.
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js"></script>
+<script src="js/config.js"></script>
+<script src="js/supabaseClient.js"></script>
+<script>
+document.getElementById("lpYear").textContent = new Date().getFullYear();
+
+// Visiteur déjà connecté : on ne redirige pas de force hors de la landing (elle doit rester
+// indexable/visible), on adapte juste les CTA pour l'amener directement dans l'appli.
+supabaseClient.auth.getSession().then(({ data: { session } }) => {
+  if (!session) return;
+  document.querySelectorAll("#navSignup, #heroSignup, #bandSignup").forEach((el) => {
+    el.textContent = "Accéder à mon compte";
+    el.href = "boosters.html";
+  });
+  const navLogin = document.getElementById("navLogin");
+  if (navLogin) navLogin.remove();
+  const heroLogin = document.getElementById("heroLogin");
+  if (heroLogin) { heroLogin.textContent = "Voir ma collection"; heroLogin.href = "collection.html"; }
+});
+</script>
+</body>
+</html>

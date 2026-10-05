@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Paramètres — Ludodex Online</title>
+<link rel="icon" href="assets/logo-ludodex.png" type="image/png">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://YOUR_PROJECT_REF.supabase.co wss://YOUR_PROJECT_REF.supabase.co https://api.ipify.org; object-src 'none'; base-uri 'self'; form-action 'self'">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/tokens-site.css">
+<link rel="stylesheet" href="css/theme.css">
+<link rel="stylesheet" href="css/layout.css">
+<link rel="stylesheet" href="css/account.css">
+<link rel="stylesheet" href="css/notifications.css">
+<link rel="stylesheet" href="css/app-shell.css">
+</head>
+<body>
+<div class="appshell">
+  <aside class="sidebar">
+    <div class="sidebrand">
+      <img src="img/logo-ludodex.png" alt="Ludodex">
+      <div class="belwrap">
+        <button class="sidebell" id="notifBell" type="button" aria-label="Notifications">🔔<span class="nbub" id="notifBubble" hidden>0</span></button>
+        <div class="notifpanel" id="notifPanel" hidden>
+          <div class="notifhead">Notifications</div>
+          <ul class="nlist" id="notifList"></ul>
+        </div>
+      </div>
+    </div>
+    <nav class="sidenav" aria-label="Navigation">
+      <a class="snavitem" href="boosters.html"><span class="sicon">🎴︎</span><span>Boosters</span></a>
+      <a class="snavitem" href="collection.html"><span class="sicon">📚︎</span><span>Collection</span></a>
+      <a class="snavitem" href="cards.html"><span class="sicon">🔍︎</span><span>Toutes les cartes</span></a>
+      <a class="snavitem" href="market.html"><span class="sicon">💱︎</span><span>Marché</span></a>
+      <a class="snavitem" href="trades.html"><span class="sicon">🔁︎</span><span>Échanges</span></a>
+      <a class="snavitem" href="duels.html"><span class="sicon">⚔︎</span><span>Duels</span></a>
+      <a class="snavitem" href="achievements.html"><span class="sicon">🏆︎</span><span>Succès</span></a>
+      <a class="snavitem" href="messages.html"><span class="sicon">✉︎</span><span>Messages</span></a>
+      <a class="snavitem" href="social.html"><span class="sicon">👥︎</span><span>Amis</span></a>
+    </nav>
+    <div class="sidefoot">
+      <nav class="sidenav" aria-label="Compte">
+        <a class="snavitem" href="account.html"><span class="sicon">👤︎</span><span>Profil</span></a>
+        <a class="snavitem" href="settings.html" aria-current="page"><span class="sicon">⚙︎</span><span>Paramètres</span></a>
+      </nav>
+      <div class="sidewallet"><span class="wallet"><span id="coins">—</span><span class="coin" aria-hidden="true"></span></span></div>
+    </div>
+  </aside>
+
+  <div class="maincol">
+    <main class="page-main">
+      <div class="pagehead">
+        <div><h1>Paramètres</h1><p class="pagesub">Confidentialité, notifications et son.</p></div>
+      </div>
+
+      <div class="panel section">
+        <h2>Confidentialité</h2>
+        <label class="switchrow">
+          <div><b>Collection publique</b><span>Les autres joueurs peuvent voir les cartes que tu possèdes.</span></div>
+          <span class="switch"><input type="checkbox" id="collectionPublic"><i></i></span>
+        </label>
+        <div class="msg" id="settingsMsg"></div>
+      </div>
+
+      <div class="panel section">
+        <h2>Son</h2>
+        <p class="sub">Volume des bruitages (ouverture de booster). Réglage gardé sur cet appareil.</p>
+        <label class="volrow" for="sfxVolume">
+          <span aria-hidden="true">🔈</span>
+          <input type="range" id="sfxVolume" min="0" max="100" step="5">
+          <span aria-hidden="true">🔊</span>
+          <b id="sfxVolumeVal">70%</b>
+        </label>
+      </div>
+
+      <div class="panel section">
+        <h2>Notifications</h2>
+        <p class="sub">Choisis les événements pour lesquels tu veux être notifié. Désactivé, l'événement ne génère plus aucune entrée dans ta cloche.</p>
+        <div class="notifprefs" id="notifPrefs"></div>
+      </div>
+
+      <div class="panel section">
+        <h2>Contacter le support</h2>
+        <p class="sub">Un bug, un souci de compte, une question ? Écris directement à l'équipe —
+          différent de "Signaler" (réservé aux messages d'un autre joueur).</p>
+        <div class="supportform">
+          <label for="supportSubject">Sujet</label>
+          <input type="text" id="supportSubject" maxlength="120" placeholder="En une phrase…">
+          <label for="supportMessage">Message</label>
+          <textarea id="supportMessage" maxlength="2000" rows="4" placeholder="Décris le problème le plus précisément possible…"></textarea>
+        </div>
+        <button class="btn" id="supportSendBtn" type="button">Envoyer</button>
+        <div class="msg" id="supportMsg"></div>
+      </div>
+
+      <div class="panel section">
+        <h2>Mes données</h2>
+        <p class="sub">Télécharge une copie de toutes tes données personnelles connues de Ludodex
+          Online (profil, collection, échanges, duels, messages, annonces du marché, liste de
+          souhaits) au format JSON.</p>
+        <button class="btn" id="exportDataBtn" type="button">Exporter mes données (JSON)</button>
+        <div class="msg" id="exportMsg"></div>
+      </div>
+
+      <div class="panel section danger-panel">
+        <h2>Zone dangereuse</h2>
+        <p class="sub">Supprimer ton compte est immédiat et définitif : profil, pièces, collection, succès, annonces et messages disparaissent avec lui. Aucun moyen de revenir en arrière.</p>
+        <button class="btn danger" id="openDeleteBtn" type="button">Supprimer mon compte</button>
+      </div>
+
+      <footer class="site"><a href="legal-notice.html">Mentions légales</a> · <a href="privacy-policy.html">Confidentialité</a> · <a href="terms.html">CGU</a></footer>
+    </main>
+  </div>
+</div>
+
+<dialog id="deleteDlg" style="border-radius:16px;border:1px solid var(--line);max-width:420px;width:90%;padding:1.4rem;background:var(--surface);color:var(--ink)">
+  <h2 style="margin-top:0">Confirmer la suppression</h2>
+  <p class="sub">Tape <strong>SUPPRIMER</strong> ci-dessous pour confirmer. Cette action est immédiate et irréversible.</p>
+  <input type="text" id="confirmDeleteInput" autocomplete="off">
+  <div style="display:flex;gap:.6rem;margin-top:1rem">
+    <button class="btn" id="cancelDeleteBtn" type="button">Annuler</button>
+    <button class="btn danger" id="confirmDeleteBtn" type="button" disabled>Supprimer définitivement</button>
+  </div>
+  <div class="msg" id="deleteMsg"></div>
+</dialog>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js"></script>
+<script src="js/config.js"></script>
+<script src="js/supabaseClient.js"></script>
+<script src="js/catalogue/dom-helpers.js"></script>
+<script src="js/notifications.js"></script>
+<script src="js/sfx.js"></script>
+<script src="js/settings.js"></script>
+</body>
+</html>

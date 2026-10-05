@@ -1,0 +1,170 @@
+/* Carte à jouer : direction artistique "façon WikiMasters" — photo recadrée en haut, bandeau
+   pastel coloré par rareté en dessous (titre, plateforme, ATK/DEF avec icônes), badge de rareté
+   en pastille sur la photo. Remplace le gabarit précédent (cartouche + fenêtre d'art bordée +
+   badge losange), porté ici sur demande explicite le 29/09/2026 après inspection du rendu du
+   site de référence — voir Claude/Projets/ludodex-online dans le contexte durable pour le détail. */
+.cw.missing .card{filter:grayscale(.85);opacity:.5}
+.cw{container-type:inline-size;position:relative;aspect-ratio:5/7;width:100%;display:block}
+.card{position:absolute;inset:0;isolation:isolate;overflow:hidden;border-radius:9cqw;
+  background:#12100f;box-shadow:0 4cqw 11cqw #0006,0 0 0 1px color-mix(in srgb,var(--rc) 55%,transparent)}
+.cc-photo{position:absolute;z-index:1;inset:0 0 55% 0;overflow:hidden;background:#1a1a1a}
+.cc-photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 35%}
+.cc-photo>span{position:absolute;inset:0;display:grid;place-items:center;
+  font:800 20cqw/1 "Bricolage Grotesque",system-ui,sans-serif;color:#fff;
+  background:color-mix(in srgb,var(--rc) 55%,#1a1a1a)}
+.cc-photo::after{content:"";position:absolute;z-index:1;inset:0;pointer-events:none;
+  background:linear-gradient(0deg,color-mix(in srgb,var(--rc) 45%,#000 55%) 0%,transparent 60%)}
+.cc-badge{position:absolute;z-index:5;top:2.6cqw;left:2.6cqw;padding:.5cqw 2.2cqw;border-radius:1.6cqw;
+  background:#000000b3;color:var(--rc);font:800 3.6cqw/1.6 system-ui,sans-serif;letter-spacing:.02em}
+.cnt{position:absolute;z-index:5;top:2.6cqw;right:2.6cqw;padding:.5cqw 2.2cqw;border-radius:99px;
+  background:#000000b3;color:#fff;font:700 3.4cqw/1.6 system-ui,sans-serif}
+/* Bandeau du bas : vrai fond texturé (marbrure/foil, un fichier par rareté, généré par
+   ChatGPT/gpt-image-2 — voir web/assets/card-bg-*-v1.png et CARD_BG dans render.js), pas un
+   dégradé CSS. L'image couvre toute la hauteur de la carte ; comme .cc-body n'occupe que les
+   55% du bas, on l'étire à 100/55≈182% et on l'ancre en bas pour n'en montrer que la zone basse
+   (volontairement plus calme/unie à la génération, pensée pour recevoir du texte par-dessus).
+   L'image elle-même est posée en style inline par render.js (background-image), pas via une
+   variable CSS ici : un url() dans une custom property se résout par rapport à CETTE feuille de
+   style (web/css/) et non au document qui pose le style inline, d'où des 404 vers /css/assets/...
+   quand on l'a fait passer par --cardbg. */
+.cc-body{position:absolute;z-index:2;left:0;right:0;top:45%;bottom:0;display:flex;flex-direction:column;
+  padding:3.4cqw 3.8cqw 2.8cqw;background-color:color-mix(in srgb,var(--rc) 30%,#161310);
+  background-size:100% 182%;background-position:0 100%;background-repeat:no-repeat}
+/* Voile sombre constant par-dessus l'image, plus marqué en bas (où vivent les stats) : les fonds
+   générés varient beaucoup en luminosité d'une rareté à l'autre (l'or, en particulier, ressort
+   très clair) — sans ça le texte clair ne serait pas toujours lisible. */
+.cc-body::before{content:"";position:absolute;z-index:0;inset:0;pointer-events:none;
+  background:linear-gradient(0deg,#00000090 0%,#00000055 45%,#00000022 75%,transparent 100%)}
+.cc-title,.cc-sub,.cc-stats{position:relative;z-index:1}
+.cc-title{margin:0;font:800 4.6cqw/1.2 Inter,"Segoe UI",system-ui,sans-serif;color:#f6f1e4;letter-spacing:-.01em;
+  text-shadow:0 .3cqw 1cqw #000a;
+  display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:1;overflow:hidden}
+/* Texte d'ambiance (description_fr d'un personnage, ou repli genres/plateforme) — pensé comme le
+   texte d'ambiance italique d'une vraie carte TCG : serif italique plutôt que la même sans-serif
+   que le titre, et une taille nettement remontée (2.9cqw était illisible, quasi 3-4px sur une
+   carte de grille) au prix d'un habillage sur 3 lignes plutôt que 2. Georgia/serif système : pas
+   besoin d'ajouter un Google Font sur chacune des pages qui chargent card.css. */
+.cc-sub{margin:.7cqw 0 0;font:italic 500 3.7cqw/1.3 Georgia,"Iowan Old Style","Times New Roman",serif;color:#f6f1e4d9;
+  text-shadow:0 .2cqw .8cqw #000a;
+  display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:3;overflow:hidden}
+.cc-stats{margin-top:auto;display:flex;justify-content:space-between;gap:1cqw;padding-top:2cqw;
+  border-top:.25cqw solid #f6f1e430}
+.cc-stats span{display:inline-flex;align-items:center;gap:1.3cqw;font:800 3.8cqw/1 system-ui,sans-serif;
+  color:#f6f1e4;font-variant-numeric:tabular-nums;text-shadow:0 .2cqw .8cqw #000a}
+.cc-stats svg{width:1em;height:1em;flex:none;stroke-width:2.4}
+.cc-atk svg{color:#ff8a7a}
+.cc-def svg{color:#7ab8ff}
+/* Le scintillement animé est réservé aux cartes vraiment "brillante" (.holo, voir plus bas) —
+   avant, il s'appliquait à TOUTE carte Légendaire/Mythique (r4/r5) même non brillante, ce qui
+   fait beaucoup d'animations CSS `infinite` simultanées sur une grille (charge inutile côté
+   client). Une rareté élevée non brillante reste maintenant visuellement statique/basique. */
+.card.ghost{box-shadow:0 0 0 1px var(--line)}
+.card.ghost .cc-photo{filter:grayscale(1) opacity(.35)}
+/* Cartes brillantes */
+.card.holo::before{content:"";position:absolute;inset:0;z-index:4;pointer-events:none;
+  background:linear-gradient(115deg,transparent 18%,rgba(255,0,140,.38) 28%,rgba(255,210,0,.38) 38%,rgba(0,255,170,.38) 48%,rgba(0,170,255,.38) 58%,rgba(170,0,255,.38) 68%,transparent 80%);
+  background-size:260% 260%;background-position:var(--hx,50%) var(--hy,50%);mix-blend-mode:color-dodge;opacity:.8;animation:holoAuto 5s ease-in-out infinite alternate}
+.cw.tracking .card.holo::before{animation:none}
+.card.holo .cc-photo::before{content:"";position:absolute;z-index:2;inset:0;background:repeating-linear-gradient(45deg,rgba(255,255,255,.14) 0 2px,transparent 2px 7px);pointer-events:none}
+@keyframes holoAuto{from{background-position:0% 0%}to{background-position:100% 100%}}
+.shb,.scn{position:absolute;bottom:3cqw;font-size:5.5cqw;font-weight:700;padding:1cqw 3cqw;border-radius:99px;color:#2a1a00;
+  background:linear-gradient(90deg,#ffd76a,#ff9ad9,#9ae6ff)}
+.shb{left:3cqw}.scn{right:3cqw}
+/* Cartes Gold unique : un seul exemplaire au monde (voir 042/043_*.sql), toujours reconnaissable
+   quelle que soit sa rareté normale — foil doré permanent (pas seulement au survol comme .holo)
+   + ruban "Unique" en coin + photo virée dans les tons or (sepia + hue-rotate) ; --rc passe déjà
+   à l'or côté render.js, donc le bandeau du bas suit automatiquement sans règle dédiée ici. */
+.card.gold{box-shadow:0 4cqw 11cqw #0006,0 0 8cqw #f5c945cc}
+.card.gold .cc-photo img{filter:sepia(1) saturate(2.6) hue-rotate(-8deg) brightness(1.05) contrast(1.08)}
+.card.gold .cc-photo>span{background:linear-gradient(160deg,#fff3c4,#e0ab3d 55%,#8a6314)}
+.card.gold::after{content:"";position:absolute;z-index:4;inset:0;pointer-events:none;background-size:260% 100%;
+  background-image:linear-gradient(115deg,transparent 30%,rgba(255,244,200,.55) 46%,rgba(255,215,90,.7) 52%,rgba(255,244,200,.55) 58%,transparent 74%);
+  animation:goldSweep 3.6s ease-in-out infinite}
+@keyframes goldSweep{0%{background-position:130% 0}100%{background-position:-130% 0}}
+.gribbon{position:absolute;z-index:9;top:8.5cqw;right:-9cqw;transform:rotate(40deg);width:34cqw;text-align:center;
+  background:linear-gradient(90deg,#a9720f,#f7dd8a,#a9720f);color:#2a1a00;font:800 3.4cqw/1 Inter,"Segoe UI",sans-serif;
+  padding:.9cqw 0;box-shadow:0 .6cqw 1.4cqw #0008;letter-spacing:.03em}
+.counter{margin:.4rem 0 1rem;font-size:1.05rem;color:var(--muted)}
+.counter b{color:var(--accent);font-size:1.35rem;font-family:"Bricolage Grotesque",system-ui,sans-serif}
+.onewrap{position:relative;width:min(320px,78vw);display:grid;view-transition-name:onecard}
+.one{border:0;padding:0;background:none;cursor:pointer;transition:transform .2s cubic-bezier(.2,.8,.2,1);transform-origin:50% 60%;perspective:1500px}
+/* Retournement dos -> face a l'ouverture (drapeau USE_CARD_BACK_REVEAL, site/js/config/flags.js) :
+   vraie rotation 3D. perspective posée directement sur .one (parent immédiat de .flipcard), pour
+   que rien ne s'intercale et n'aplatisse le contexte 3D. */
+.flipcard{position:absolute;inset:0;transform-style:preserve-3d;transform:rotateY(0deg);
+  transition:transform .8s cubic-bezier(.3,.15,.2,1)}
+.flipcard.flipped{transform:rotateY(180deg)}
+.flipface{position:absolute;inset:0;backface-visibility:hidden;-webkit-backface-visibility:hidden}
+.flipface.front{transform:rotateY(180deg)}
+.cardback{border-radius:7cqw;overflow:hidden;border:.6cqw solid rgba(160,150,255,.4);
+  background:#15110d url("../assets/card-back-v2.png") center/cover no-repeat;
+  box-shadow:0 2.2cqw 6cqw rgba(10,8,30,.5)}
+/* "Mouvement réduit" : on raccourcit la rotation, on ne la supprime pas — c'est le retour
+   visuel central de l'ouverture d'un booster, pas un effet décoratif accessoire.
+   !important nécessaire : css/tokens.css force `transition:none!important` sur *,
+   une déclaration normale ne peut jamais la battre (diagnostic Codex). */
+@media (prefers-reduced-motion: reduce){.flipcard{transition:transform .3s linear!important}}
+/* Sortie de la carte précédente avant de placer la suivante (voir showCard() dans packs.js) */
+.one.cardOut>*{transition:opacity .2s ease-in,transform .2s ease-in!important;opacity:0!important;transform:scale(.9) translateY(3cqw)!important}
+.one:hover,.one:focus-visible{transform:scale(1.035)}
+@media (min-width:640px){
+  .pack{width:250px}
+  .onewrap{width:380px}
+}
+::view-transition-group(onecard){animation-duration:.22s}
+::view-transition-image-pair(onecard){overflow:visible}
+::view-transition-old(onecard),::view-transition-new(onecard){animation-duration:.22s;animation-timing-function:ease;height:auto;mix-blend-mode:normal}
+html[data-dir="next"]::view-transition-old(onecard){animation-name:cardSwipeOutL}
+html[data-dir="next"]::view-transition-new(onecard){animation-name:cardSwipeInR}
+html[data-dir="prev"]::view-transition-old(onecard){animation-name:cardSwipeOutR}
+html[data-dir="prev"]::view-transition-new(onecard){animation-name:cardSwipeInL}
+@keyframes cardSwipeOutL{to{transform:translateX(-6%);opacity:0}}
+@keyframes cardSwipeInR{from{transform:translateX(6%);opacity:0}}
+@keyframes cardSwipeOutR{to{transform:translateX(6%);opacity:0}}
+@keyframes cardSwipeInL{from{transform:translateX(-6%);opacity:0}}
+/* cardIn servait à la fois d'entrée seule (sans retournement) ET de "pop" rejoué juste après le
+   retournement dos->face (voir showCard() dans booster.js) — dans ce dernier cas, rejouer une
+   rotation depuis 85deg sur une carte déjà bien en face donnait l'impression de deux animations
+   qui se marchent dessus (constaté par l'utilisateur). Notre révélation flip TOUJOURS le dos
+   d'abord, donc plus besoin de la variante "rotation depuis le côté" : cardIn n'est plus qu'un
+   petit tassement (scale), le halo de rareté/brillante (burst/shburst) reste identique. */
+.one.enter .card{animation:cardIn .5s cubic-bezier(.2,.8,.2,1)}
+.one.enter[data-r="3"] .card,.one.enter[data-r="4"] .card,.one.enter[data-r="5"] .card{animation:cardIn .5s cubic-bezier(.2,.8,.2,1),burst 1s ease-out both}
+.one.enter[data-sh="1"] .card{animation:cardIn .5s cubic-bezier(.2,.8,.2,1),shburst 1.4s ease-out both}
+@keyframes shburst{0%{box-shadow:0 0 0 0 #fff}35%{box-shadow:0 0 0 3cqw #ffd76a,0 0 22cqw #ff7ad9,0 0 40cqw #7ad9ff}100%{box-shadow:0 0 10cqw rgba(255,215,106,.55)}}
+@keyframes cardIn{0%{transform:scale(.94)}60%{transform:scale(1.03)}100%{transform:scale(1)}}
+@keyframes burst{0%{box-shadow:0 0 0 0 var(--rc)}40%{box-shadow:0 0 0 3cqw var(--rc),0 0 16cqw var(--rc)}100%{box-shadow:0 0 0 0 transparent,0 0 8cqw color-mix(in srgb,var(--rc) 60%,transparent)}}
+.tapinfo{font-size:.85rem;color:var(--muted);margin:.7rem 0 0}
+.cnav{display:flex;align-items:center;gap:1rem;margin:.9rem 0 1rem}
+.arrow{width:2.7rem;height:2.7rem;border-radius:50%;border:1px solid var(--line);background:var(--surface);cursor:pointer;font-size:1.35rem;line-height:1;display:grid;place-items:center}
+.arrow:disabled{opacity:.3;cursor:default}
+.dots{display:flex;gap:.5rem}
+.dots i{width:10px;height:10px;border-radius:50%;background:var(--line);transition:transform .2s}
+.dots i.seen{background:color-mix(in srgb,var(--accent) 45%,var(--line))}
+.dots i.cur{background:var(--accent);transform:scale(1.35)}
+/* Onglets de rareté compacts, lettres seules (façon WikiMasters : L UR SR R PC C), multi-
+   sélection (plusieurs peuvent être actives à la fois, re-cliquer désactive) — le nom complet
+   reste accessible via title= au survol. Sobre : gris/plat au repos, seul l'anneau de couleur
+   signale une rareté active, pas de pastille pleine. */
+.rartabs{display:flex;flex-wrap:wrap;gap:.3rem;align-items:center;margin-bottom:1rem}
+.rartabs button{border:1.5px solid transparent;background:none;color:var(--muted);
+  border-radius:8px;padding:.35rem .65rem;font-weight:800;font-size:.8rem;letter-spacing:.02em;
+  min-width:2.2rem;text-align:center;cursor:pointer;transition:border-color .12s,color .12s,background .12s}
+.rartabs button:hover{color:var(--ink)}
+.rartabs button[aria-pressed="true"]{border-color:var(--rc);color:var(--rc);
+  background:color-mix(in srgb, var(--rc) 12%, transparent)}
+.rartabs .rarreset{border:0;background:none;color:var(--muted);font-size:.8rem;
+  padding:.35rem .5rem;cursor:pointer;text-decoration:underline;text-underline-offset:2px;
+  min-width:0}
+.rartabs .rarreset:hover{color:var(--ink)}
+.summary{font-size:.95rem;color:var(--muted);margin:.2rem 0 1rem}
+.summary strong{color:var(--ink)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(128px,1fr));gap:.7rem}
+.slot{border:0;padding:0;background:none;cursor:pointer}
+div.slot{cursor:default}
+button.slot{transition:transform .18s cubic-bezier(.2,.8,.2,1);transform-origin:50% 65%}
+button.slot:hover,button.slot:focus-visible{transform:scale(1.06);z-index:2}
+/* Carte de la Collection cliquable pour ouvrir sa fiche détail (voir detail.js). */
+.cw-click{cursor:pointer;transition:transform .15s cubic-bezier(.2,.8,.2,1)}
+.cw-click:hover{transform:scale(1.04)}
+.empty{grid-column:1/-1;text-align:center;color:var(--muted);padding:2rem 0}

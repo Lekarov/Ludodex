@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Marché — Ludodex Online</title>
+<link rel="icon" href="assets/logo-ludodex.png" type="image/png">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://YOUR_PROJECT_REF.supabase.co wss://YOUR_PROJECT_REF.supabase.co https://api.ipify.org; object-src 'none'; base-uri 'self'; form-action 'self'">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/tokens-site.css">
+<link rel="stylesheet" href="css/theme.css">
+<link rel="stylesheet" href="css/layout.css">
+<link rel="stylesheet" href="css/card.css">
+<link rel="stylesheet" href="css/market.css">
+<link rel="stylesheet" href="css/dialogs.css">
+<link rel="stylesheet" href="css/notifications.css">
+<link rel="stylesheet" href="css/app-shell.css">
+</head>
+<body>
+<div class="appshell">
+  <aside class="sidebar">
+    <div class="sidebrand">
+      <img src="img/logo-ludodex.png" alt="Ludodex">
+      <div class="belwrap">
+        <button class="sidebell" id="notifBell" type="button" aria-label="Notifications">🔔<span class="nbub" id="notifBubble" hidden>0</span></button>
+        <div class="notifpanel" id="notifPanel" hidden>
+          <div class="notifhead">Notifications</div>
+          <ul class="nlist" id="notifList"></ul>
+        </div>
+      </div>
+    </div>
+    <nav class="sidenav" aria-label="Navigation">
+      <a class="snavitem" href="boosters.html"><span class="sicon">🎴︎</span><span>Boosters</span></a>
+      <a class="snavitem" href="collection.html"><span class="sicon">📚︎</span><span>Collection</span></a>
+      <a class="snavitem" href="cards.html"><span class="sicon">🔍︎</span><span>Toutes les cartes</span></a>
+      <a class="snavitem" href="market.html" aria-current="page"><span class="sicon">💱︎</span><span>Marché</span></a>
+      <a class="snavitem" href="trades.html"><span class="sicon">🔁︎</span><span>Échanges</span></a>
+      <a class="snavitem" href="duels.html"><span class="sicon">⚔︎</span><span>Duels</span></a>
+      <a class="snavitem" href="achievements.html"><span class="sicon">🏆︎</span><span>Succès</span></a>
+      <a class="snavitem" href="messages.html"><span class="sicon">✉︎</span><span>Messages</span></a>
+      <a class="snavitem" href="social.html"><span class="sicon">👥︎</span><span>Amis</span></a>
+    </nav>
+    <div class="sidefoot">
+      <nav class="sidenav" aria-label="Compte">
+        <a class="snavitem" href="account.html"><span class="sicon">👤︎</span><span>Profil</span></a>
+        <a class="snavitem" href="settings.html"><span class="sicon">⚙︎</span><span>Paramètres</span></a>
+      </nav>
+      <div class="sidewallet"><span class="wallet"><span id="coins">—</span><span class="coin" aria-hidden="true"></span></span></div>
+    </div>
+  </aside>
+
+  <div class="maincol">
+    <main class="page-main">
+      <div class="pagehead">
+        <div><h1>Marché</h1><p class="pagesub">Enchéris sur des cartes ou vends les tiennes contre des pièces</p></div>
+      </div>
+
+      <nav class="mtabs" id="mTabs" aria-label="Sections du marché">
+        <button type="button" data-tab="browse" aria-current="page">Parcourir</button>
+        <button type="button" data-tab="mine">Mes ventes<span class="count" id="ctMine"></span></button>
+        <button type="button" data-tab="bids">Mes enchères<span class="count" id="ctBids"></span></button>
+        <button type="button" data-tab="won">Gagnées<span class="count" id="ctWon"></span></button>
+        <button type="button" data-tab="history">Historique<span class="count" id="ctHist"></span></button>
+      </nav>
+
+      <div id="tab-browse" class="mtab">
+        <div class="mbrowsebar">
+          <input type="search" id="mSearch" class="collsearch" placeholder="Rechercher une carte…" aria-label="Rechercher une carte">
+          <div class="dd" id="ddSort">
+            <button type="button" class="dd-btn" aria-haspopup="listbox" aria-expanded="false"><span class="dd-label">Récemment listées</span><span class="dd-chev">⌄</span></button>
+            <div class="dd-panel" role="listbox" hidden></div>
+          </div>
+        </div>
+        <div class="rartabs" id="mRarTabs" role="tablist" aria-label="Filtrer par rareté"></div>
+        <p class="sub" id="marketStatus">Chargement…</p>
+        <div id="marketGrid" class="grid mgrid"></div>
+      </div>
+
+      <div id="tab-mine" class="mtab" hidden>
+        <div class="mminebar">
+          <button class="btn primary" type="button" id="toggleSellForm">+ Vendre une carte</button>
+        </div>
+        <div class="panel" id="sellForm" hidden style="max-width:26rem;margin-bottom:1.2rem">
+          <div class="form">
+            <label for="sellCard">Carte à vendre
+              <select id="sellCard"></select>
+            </label>
+            <label for="sellType">Type d'annonce
+              <select id="sellType">
+                <option value="sale">Vente directe</option>
+                <option value="auction">Enchère</option>
+              </select>
+            </label>
+            <label for="sellPrice" id="sellPriceLabel">Prix (pièces)
+              <input type="text" id="sellPrice" inputmode="numeric" placeholder="ex. 50">
+            </label>
+            <label for="sellDuration" id="sellDurationRow" hidden>Durée de l'enchère
+              <select id="sellDuration">
+                <option value="30">30 minutes</option>
+                <option value="120">2 heures</option>
+                <option value="1440">24 heures</option>
+              </select>
+            </label>
+            <div class="actions start"><button class="btn primary" id="sellBtn" type="button">Mettre en vente</button></div>
+            <div class="msg" id="sellMsg"></div>
+          </div>
+        </div>
+        <p class="sub" id="mineStatus"></p>
+        <div id="mineGrid" class="grid mgrid"></div>
+      </div>
+
+      <div id="tab-bids" class="mtab" hidden>
+        <div id="bidsGrid" class="grid mgrid"></div>
+      </div>
+
+      <div id="tab-won" class="mtab" hidden>
+        <p class="sub" id="wonStatus"></p>
+        <div id="wonGrid" class="grid mgrid"></div>
+      </div>
+
+      <div id="tab-history" class="mtab" hidden>
+        <p class="sub" id="histStatus"></p>
+        <div id="historyGrid" class="grid mgrid"></div>
+      </div>
+    </main>
+  </div>
+</div>
+
+<div class="toasts" id="toasts" aria-live="polite"></div>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js"></script>
+<script src="js/config.js"></script>
+<script src="js/supabaseClient.js"></script>
+<script src="js/catalogue/dom-helpers.js"></script>
+<script src="js/render.js"></script>
+<script src="js/shared.js"></script>
+<script src="js/notifications.js"></script>
+<script src="js/market.js"></script>
+</body>
+</html>

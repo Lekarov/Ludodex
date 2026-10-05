@@ -1,0 +1,76 @@
+/* Profil — refonte façon WikiMasters (26/09-27/09/2026 : le reste des pages l'était déjà,
+   celle-ci utilisait encore l'ancien style.css du prototype, qui fuitait un `main{display:flex}`
+   pensé pour les écrans de connexion et écrasait toutes les sections du profil en colonnes
+   compressées côte à côte). Reprend les mêmes briques que market.css/achievements.css. */
+
+.acctgrid{display:grid;grid-template-columns:1fr 1fr;gap:var(--space-4);margin-bottom:var(--space-4)}
+@media (max-width:760px){.acctgrid{grid-template-columns:1fr}}
+
+.avatar{background:linear-gradient(135deg,var(--accent-soft),var(--surface-2));box-shadow:inset 0 0 0 1px var(--line-strong)}
+
+/* Bouton avatar cliquable (Profil) : la photo de profil est une carte de la collection, pas un
+   upload libre — voir 054_profile_avatar_showcase.sql. object-position privilégie le tiers
+   supérieur de la jaquette (logo/personnage principal la plupart du temps) plutôt qu'un centrage
+   brut qui la coupe au mauvais endroit une fois recadrée en cercle. */
+.avatar-pick{cursor:pointer;padding:0;position:relative;overflow:hidden;transition:box-shadow .15s}
+.avatar-pick:hover{box-shadow:0 0 0 3px color-mix(in srgb,var(--accent) 45%,transparent)}
+.avatar-pick img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 15%}
+.avatar-pick::after{content:"✎";position:absolute;bottom:-1px;right:-1px;width:1.15rem;height:1.15rem;border-radius:50%;
+  background:var(--accent);color:var(--accent-ink);font-size:.6rem;display:grid;place-items:center;box-shadow:0 0 0 2px var(--surface)}
+
+/* Vitrine : 4 emplacements, chacun une carte de la collection (voir loadShowcase() account.js). */
+.showcase{display:grid;grid-template-columns:repeat(auto-fill,minmax(120px,1fr));gap:var(--space-3);max-width:36rem}
+.showslot{position:relative}
+.showslot.empty{all:unset;box-sizing:border-box;aspect-ratio:5/7;width:100%;border:2px dashed var(--line);border-radius:var(--radius-md);
+  display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.3rem;color:var(--muted);cursor:pointer;text-align:center}
+.showslot.empty span:first-child{font-size:1.6rem;line-height:1}
+.showslot.empty:hover{border-color:var(--accent);color:var(--accent)}
+.showslot-label{font-size:.72rem}
+/* Retrait discret : juste le glyphe ×, sans cercle ni bordure ni libellé — pas un bouton visible
+   tant qu'on ne survole/focus pas la carte, pour ne pas polluer la vitrine de boutons ronds. */
+.showslot-x{position:absolute;top:.3rem;right:.3rem;width:1.3rem;height:1.3rem;border:0;border-radius:4px;
+  background:none;color:rgba(255,255,255,.85);text-shadow:0 1px 3px rgba(0,0,0,.8);
+  font-size:1rem;line-height:1;cursor:pointer;z-index:2;opacity:0;transition:opacity .12s,background .12s}
+.showslot.filled:hover .showslot-x,.showslot.filled:focus-within .showslot-x{opacity:1}
+.showslot-x:hover{background:rgba(0,0,0,.45)}
+
+/* Réglage de volume (Paramètres) */
+.volrow{display:flex;align-items:center;gap:.7rem;margin-top:.6rem}
+.volrow input[type=range]{flex:1;accent-color:var(--accent)}
+.volrow b{min-width:3.4ch;text-align:right;font-variant-numeric:tabular-nums}
+
+/* Une couleur d'accent par statistique (--tc, posée en style inline depuis account.js) : halo
+   discret en fond + numéro teinté + icône, sur une base toujours sombre (pas de fond pastel plein
+   comme les cartes) pour rester dans l'esprit sobre du reste du profil. */
+.tiles{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:var(--space-3)}
+.tile{position:relative;overflow:hidden;background:var(--surface-2);
+  border:1px solid color-mix(in srgb,var(--tc,var(--line)) 35%,var(--line));
+  border-radius:var(--radius-md);padding:var(--space-3) var(--space-4)}
+.tile::before{content:"";position:absolute;z-index:0;top:-40%;right:-30%;width:80%;aspect-ratio:1;border-radius:50%;
+  background:radial-gradient(circle,color-mix(in srgb,var(--tc,var(--accent)) 45%,transparent),transparent 70%);
+  pointer-events:none}
+.tile-ic{position:relative;display:block;font-size:1.15rem;line-height:1;margin-bottom:.3rem;filter:drop-shadow(0 1px 2px #0006)}
+.tile b{position:relative;display:block;font-size:1.7rem;line-height:1.15;font-variant-numeric:tabular-nums;
+  color:color-mix(in srgb,var(--tc,var(--ink)) 78%,var(--ink))}
+.tile-l{position:relative;display:block;font-size:.8rem;color:var(--muted)}
+
+/* Formulaire de contact support — mêmes tokens que .inline-form input (theme.css), empilé au lieu
+   d'en ligne (sujet court + message plus long ne tiennent pas côte à côte). */
+.supportform{display:flex;flex-direction:column;gap:.4rem;margin-bottom:.8rem}
+.supportform label{font-size:.8rem;color:var(--muted);margin-top:.4rem}
+.supportform label:first-child{margin-top:0}
+.supportform input[type=text],.supportform textarea{
+  background:var(--surface-2);border:1px solid var(--line);border-radius:var(--radius-md);
+  padding:.6rem .8rem;font:inherit;color:var(--ink);resize:vertical}
+
+.danger-panel{max-width:none}
+.danger-panel .sub{max-width:56ch}
+.danger-panel .btn.danger{width:auto}
+
+.site{margin-top:var(--space-5);color:var(--muted);font-size:.82rem;display:flex;gap:.6rem;flex-wrap:wrap}
+.site a{color:inherit}
+
+.notifprefs{display:grid;gap:var(--space-4)}
+.notifprefgroup h3{margin:0 0 .5rem;font-size:.82rem;text-transform:uppercase;letter-spacing:.04em;color:var(--muted)}
+.notifprefgroup .switchrow{padding:.5rem 0;border-top:1px solid var(--line)}
+.notifprefgroup .switchrow:first-of-type{border-top:0}

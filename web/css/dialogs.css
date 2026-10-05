@@ -1,0 +1,104 @@
+/* Boîtes de dialogue : formulaires, fiche détail, aide. Extrait de ludodex.html sans changement de règle. */
+.vseg{margin:.2rem 0 .8rem;max-width:18rem}
+.mlabel{color:var(--subtle);font-size:.66rem;font-weight:700;letter-spacing:.03em;text-transform:uppercase}
+
+/* Dialogue "Vendre" (vente directe / enchère), voir detail.js openSellDialog(). */
+.selldlg-head{display:flex;align-items:flex-start;gap:.7rem;margin-bottom:.9rem;padding-right:2.2rem}
+.selldlg-head>svg{width:1.5rem;height:1.5rem;flex:none;color:var(--accent);margin-top:.15rem}
+.selldlg-head h3{margin:0;font-size:1.15rem;line-height:1.2}
+.selldlg-head .dsub{margin:.25rem 0 0}
+.seg.selltype{max-width:22rem;margin-bottom:1rem}
+.sellsummary{display:flex;align-items:center;gap:.9rem;background:var(--bg);border:1px solid var(--line);border-radius:14px;padding:.7rem .8rem;margin-bottom:.3rem}
+.sellsummary .cw{width:4.6rem;flex:none}
+.sellsummary-info{min-width:0;flex:1}
+.sellname{margin:0;font-weight:700;font-size:.95rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.sellstat{display:flex;align-items:center;justify-content:space-between;gap:.6rem;font-size:.82rem;padding:.15rem 0}
+.sellstat span{color:var(--subtle)}
+.sellstat b{font-variant-numeric:tabular-nums;display:inline-flex;align-items:center;gap:.15em}
+.dhead{display:flex;align-items:flex-start;justify-content:space-between;gap:.8rem;padding-right:2.8rem}
+.dmeta{display:flex;align-items:center;justify-content:space-between;gap:.8rem;flex-wrap:wrap;margin:.5rem 0 .3rem}
+/* Discret plutôt qu'en pilule pleine largeur : coins peu arrondis, fond semi-transparent, texte
+   minuscule — repris du style de bouton de vue "Détails/Marché" du site de référence. */
+.det-vseg{flex:none;margin:0;max-width:none;width:auto;padding:2px;gap:2px;border-radius:8px;
+  background:color-mix(in srgb,var(--surface) 55%,transparent)}
+.det-vseg button{flex:none;padding:.28rem .6rem;font-size:.72rem;border-radius:6px}
+.form label{display:flex;flex-direction:column;gap:.3rem;font-size:.9rem;color:var(--muted);margin:1rem 0 .4rem}
+.form input,.form select{background:var(--bg);border:1px solid var(--line);border-radius:10px;padding:.65rem .75rem;font-size:1.05rem;color:var(--ink)}
+.dtitle{font-family:"Bricolage Grotesque",system-ui,sans-serif;font-size:1.5rem;margin:0 0 .3rem;padding-right:2.6rem;line-height:1.15}
+.actions{display:flex;gap:.6rem;justify-content:flex-end;margin-top:1.1rem;flex-wrap:wrap}
+.actions.start{justify-content:flex-start}
+.err{color:#e0444e;font-weight:700}
+dialog{border:0;border-radius:20px;background:var(--surface);color:var(--ink);padding:1.5rem;width:min(720px,94vw);max-height:90vh;overflow:auto}
+dialog::backdrop{background:rgba(10,8,30,.65)}
+.dx{position:absolute;top:.7rem;right:.7rem;width:2.3rem;height:2.3rem;border-radius:50%;border:1px solid var(--line);background:var(--surface);font-size:1.2rem;cursor:pointer;line-height:1;z-index:2}
+.det{display:grid;grid-template-columns:minmax(0,288px) 1fr;gap:1.4rem;align-items:start}
+.det .cw{width:100%}
+@media (max-width:680px){.det{grid-template-columns:1fr}.det .cw{width:min(288px,66vw);margin:0 auto}}
+.det h3{font-family:"Bricolage Grotesque",system-ui,sans-serif;font-size:1.65rem;margin:0;line-height:1.15;letter-spacing:-.02em;min-width:0}
+.pill{display:inline-block;background:var(--rc);color:#fff;font-weight:700;font-size:.82rem;padding:.15rem .75rem;border-radius:99px;margin:0}
+.pill .shinymark{opacity:.85;font-weight:700}
+.dsub{color:var(--muted);margin:0 0 1rem;font-size:.95rem}
+.ddesc{margin:-.2rem 0 1rem;line-height:1.5;font-size:1rem}
+.ddesc.unavailable{color:var(--muted);font-style:italic}
+.ddesc-lang{color:var(--muted);font-size:.75rem;font-weight:700}
+.ddesc.ddesc-genres{color:var(--muted);font-style:italic}
+.tagbox{margin:0 0 1rem}
+.tagchips{display:flex;flex-wrap:wrap;gap:.4rem;margin-bottom:.5rem}
+/* Teinte assignée par tag (voir tagColor() dans detail.js) : déterministe à partir du texte du
+   tag, donc définitive/stable — pas stockée en base, recalculée pareil partout. Rendu calqué sur
+   la pastille "étiquette" de wiki-masters.com (inspectée en direct via le navigateur) : fond et
+   bord translucides teintés (posés en inline style par tagsHTML), texte quasi blanc constant plutôt
+   qu'un fond plein avec texte sombre — reste lisible quelle que soit la teinte tirée. */
+.chip{display:inline-flex;align-items:center;gap:.25rem;border:1px solid;border-radius:999px;padding:.1rem .25rem .1rem .6rem;font-size:.75rem;font-weight:500;color:rgba(248,250,252,.95)}
+.chip button{border:0;background:none;color:inherit;opacity:.85;cursor:pointer;font-size:.85rem;line-height:1;padding:.1rem .25rem;border-radius:50%}
+.chip button:hover{opacity:1;background:rgba(0,0,0,.25)}
+.taginput{width:100%;background:var(--bg);border:1px solid var(--line);border-radius:10px;padding:.55rem .75rem;font-size:.9rem;color:var(--ink)}
+.taginput::placeholder{color:var(--muted)}
+.countbadge{display:inline-flex;align-items:center;margin-left:.35rem;padding:0 .45rem;height:1.25rem;border-radius:999px;background:var(--bg);border:1px solid var(--line);font-size:.72rem;font-weight:700;font-variant-numeric:tabular-nums;color:var(--muted)}
+.shinytog{display:flex;gap:.4rem}
+.shinytog button{position:relative;width:2.1rem;height:2.1rem;border-radius:.6rem;border:1px solid var(--line);background:var(--surface);color:var(--muted);cursor:pointer;display:grid;place-items:center;padding:0}
+.shinytog button svg{width:15px;height:15px}
+.shinytog button[aria-pressed="true"]{background:color-mix(in srgb,var(--accent) 16%,var(--surface));border-color:transparent;color:var(--accent)}
+.shinytog .badge{position:absolute;top:-.35rem;right:-.35rem;min-width:15px;height:15px;padding:0 3px;border-radius:99px;background:var(--accent);color:var(--accent-ink);font-size:.62rem;font-weight:800;display:grid;place-items:center;line-height:1}
+.statbox{display:grid;grid-template-columns:1fr 1fr;gap:.7rem}
+.statbox div{border:1px solid var(--line);border-radius:14px;padding:.8rem;text-align:center}
+.statbox b{display:inline-flex;align-items:center;gap:.4rem;font-family:"Bricolage Grotesque",system-ui,sans-serif;font-size:1.8rem;font-variant-numeric:tabular-nums;line-height:1.15}
+.statbox b svg{width:.85em;height:.85em;flex:none}
+.statbox .atk b{color:#e0444e}.statbox .def b{color:#3b74e0}
+.statbox span{display:block;font-size:.85rem;color:var(--muted)}
+/* Bouton icône seule (étoile vide/pleine) de la fiche détail — même composant que
+   .wishtoggle de cards.css, dupliqué ici car detail.js est chargé par des pages
+   (collection.html, market.html) qui n'incluent pas cards.css. */
+.wishtoggle{width:2.6rem;height:2.6rem;padding:0;background:var(--surface-2);border:1px solid var(--line);
+  border-radius:50%;font-size:1.15rem;line-height:1;color:var(--muted);cursor:pointer;
+  display:inline-flex;align-items:center;justify-content:center;flex:none}
+.wishtoggle[aria-pressed="true"]{background:var(--accent-soft);border-color:var(--accent);color:var(--accent)}
+/* Signaler une image cassée (report_card_image, 065_card_image_requests.sql) — glyphe discret
+   révélé au survol plutôt qu'un bouton bordé, cohérent avec le reste des icônes secondaires du
+   site (voir MENU_ICONS/sidebar). */
+.imgreport{margin-top:.8rem}
+.imgreport-btn{display:inline-flex;align-items:center;gap:.4rem;background:none;border:0;padding:0;
+  color:var(--subtle);font-size:.82rem;cursor:pointer}
+.imgreport-btn svg{width:1em;height:1em}
+.imgreport-btn:hover{color:var(--muted)}
+.imgreport-btn:disabled{color:var(--accent);cursor:default}
+.imgreport-form{display:flex;gap:.5rem;margin-top:.5rem}
+.imgreport-form input{flex:1;padding:.5rem .7rem;border-radius:10px;border:1px solid var(--line);
+  background:var(--bg);color:var(--ink);font:inherit;font-size:.85rem}
+.imgreport-form .btn{width:auto;margin:0;padding:.5rem .9rem;font-size:.85rem}
+
+.meta{margin:1rem 0 0;display:grid;grid-template-columns:auto 1fr;gap:.3rem 1rem;font-size:.95rem}
+.meta dt{color:var(--muted)}.meta dd{margin:0;font-weight:700;font-variant-numeric:tabular-nums}
+.help p{margin:.5rem 0;max-width:60ch}
+.help h3{padding-right:2.6rem}
+
+/* Stepper de mise (fiche détail → Mettre aux enchères) et boutons de durée. */
+.stepper{display:flex;align-items:stretch;border:1px solid var(--line);border-radius:10px;overflow:hidden;max-width:14rem}
+.stepper button{width:2.6rem;flex:none;border:0;background:var(--bg);color:var(--ink);font-size:1.2rem;cursor:pointer}
+.stepper button:hover{background:var(--surface-hover)}
+.stepper input{flex:1;min-width:0;border:0;border-left:1px solid var(--line);border-right:1px solid var(--line);
+  background:var(--bg);color:var(--ink);text-align:center;font:inherit;font-weight:700;font-variant-numeric:tabular-nums}
+.durbtns{display:flex;gap:.4rem;flex-wrap:wrap}
+.durbtns button{border:1px solid var(--line);background:var(--surface);color:var(--ink);border-radius:999px;
+  padding:.4rem .9rem;font:inherit;font-size:.85rem;cursor:pointer}
+.durbtns button[aria-pressed="true"]{background:var(--accent);border-color:var(--accent);color:var(--accent-ink);font-weight:700}

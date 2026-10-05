@@ -1,0 +1,152 @@
+/* Design system Ludodex Online — palette et échelle définies avec un second avis (Codex/GPT),
+   26/09-27/09/2026. Réutilise les MÊMES noms de variable que l'ancien tokens-site.css/style.css
+   (--bg, --surface, --ink, --muted, --line, --accent, --accent-ink, --gold) pour que tous les
+   composants hérités du prototype (card.css, market.css, pack.css, dialogs.css...) héritent de la
+   nouvelle palette sans réécriture — seules les VALEURS changent, jamais les noms utilisés par le
+   CSS existant. */
+:root{
+  color-scheme: dark;
+
+  --bg:            #0d0f12;
+  --sidebar:       #101318;
+  --surface:       #15191f;   /* surface-1 */
+  --surface-2:     #1b2028;
+  --surface-hover: #222934;
+
+  --line:          #2a313c;   /* border */
+  --line-strong:   #3a4452;
+
+  --ink:           #f2f5f7;   /* text */
+  --muted:         #a7afba;   /* text-muted */
+  --subtle:        #7f8996;   /* text-subtle */
+
+  --accent:        #2ee6a6;
+  --accent-hover:  #51edb7;
+  --accent-active: #20c98f;
+  --accent-soft:   #173d33;
+  --accent-ink:    #071a14;   /* on-accent */
+
+  --info:          #55a7ff;
+  --gold:          #f4b84a;   /* warning, réutilisé pour l'or/brillant */
+  --danger:        #ff6577;
+
+  --rarity-common:    #a7afba;
+  --rarity-rare:      #4fa3ff;
+  --rarity-epic:      #b279ff;
+  --rarity-legendary: #ffb547;
+
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+  --radius-xl: 22px;
+
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+  --space-7: 48px;
+}
+
+/* Le prototype a un mode clair automatique (prefers-color-scheme) : Ludodex Online est pensé
+   sombre uniquement (comme WikiMasters), donc pas de bloc clair ici — color-scheme:dark ci-dessus
+   suffit à dire au navigateur de ne pas forcer de contrôles de formulaire clairs. */
+
+body{
+  font-family:"Inter","Atkinson Hyperlegible",system-ui,-apple-system,"Segoe UI",sans-serif;
+  font-size:15px;
+  line-height:1.5;
+}
+h1{font-family:"Inter",system-ui,sans-serif;font-weight:750}
+h2{font-family:"Inter",system-ui,sans-serif;font-weight:700}
+h3{font-family:"Inter",system-ui,sans-serif;font-weight:650}
+
+/* Panneau générique (remplace l'usage ad hoc de .mycard/.card wide/etc à divers endroits) */
+.panel{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius-lg);padding:var(--space-5)}
+.panel:hover{border-color:var(--line-strong)}
+
+/* En-tête de page : titre + sous-titre à gauche, statut du compte (pièces/boosters) à droite,
+   DANS le contenu plutôt qu'une barre pleine largeur séparée — remplace .top/.top-in du
+   prototype sur les pages reconstruites. */
+.pagehead{display:flex;align-items:flex-start;justify-content:space-between;gap:var(--space-4);flex-wrap:wrap;margin-bottom:var(--space-5)}
+.pagehead h1{margin:0;font-size:clamp(24px,3vw,32px);line-height:1.15;letter-spacing:-.01em}
+.pagehead .pagesub{margin:.3rem 0 0;color:var(--muted);font-size:.92rem}
+.acctstatus{display:flex;align-items:center;gap:var(--space-3);flex:none}
+.acctstatus .wallet{background:var(--surface-2);border:1px solid var(--line);border-radius:999px;padding:.4rem .9rem;font-weight:700;font-variant-numeric:tabular-nums;display:inline-flex;align-items:center;gap:.4rem}
+.acctstatus .stockpill{background:var(--surface-2);border:1px solid var(--line);border-radius:999px;padding:.4rem .9rem;font-size:.85rem;color:var(--muted);text-align:right;line-height:1.3}
+.acctstatus .stockpill strong{color:var(--ink);font-variant-numeric:tabular-nums}
+
+.price,.mp,.stat,.tile b{font-variant-numeric:tabular-nums}
+
+.page-main{max-width:1440px;margin:0 auto;padding:var(--space-6);width:100%}
+@media (max-width:600px){.page-main{padding:var(--space-4)}}
+
+.sub{color:var(--muted);font-size:.92rem;margin:.3rem 0 1rem}
+.msg{margin-top:.8rem;padding:.6rem .85rem;border-radius:var(--radius-md);font-size:.88rem;display:none}
+.msg.show{display:block}
+.msg.error{background:color-mix(in srgb, var(--danger) 18%, transparent);color:var(--danger)}
+.msg.ok{background:color-mix(in srgb, var(--accent) 18%, transparent);color:var(--accent)}
+
+/* ===== Page Profil ===== */
+.profilehead{display:flex;align-items:center;gap:var(--space-4)}
+.avatar{width:56px;height:56px;border-radius:50%;background:var(--surface-2);border:1px solid var(--line);display:grid;place-items:center;font-weight:800;font-size:1.4rem;color:var(--accent);flex:none}
+.section{margin-bottom:var(--space-4)}
+.section h2{margin:0 0 var(--space-3);font-size:1.05rem}
+.section > label{display:block;font-weight:600;font-size:.86rem;color:var(--muted);margin-bottom:.4rem}
+.inline-form{display:flex;gap:.6rem;flex-wrap:wrap}
+.inline-form input{flex:1;min-width:0;background:var(--surface-2);border:1px solid var(--line);border-radius:var(--radius-md);padding:.6rem .8rem;font:inherit;color:var(--ink)}
+.inline-form .btn{width:auto;margin:0;flex:none}
+
+.switchrow{display:flex;align-items:center;justify-content:space-between;gap:var(--space-4);cursor:pointer}
+.switchrow div{display:flex;flex-direction:column;gap:.2rem}
+.switchrow b{font-weight:700}
+.switchrow span{font-size:.85rem;color:var(--muted)}
+/* Sobre, façon WikiMasters : piste sombre à bord visible + pastille grise à l'arrêt (jamais
+   "invisible" même sur un fond gris), piste teintée accent + pastille pleine accent une fois
+   activé — l'état se lit à la couleur ET à la position, pas seulement à un dégradé de gris. */
+.switch{position:relative;width:2.7rem;height:1.5rem;flex:none}
+.switch input{position:absolute;inset:0;opacity:0;margin:0;cursor:pointer;z-index:1}
+.switch i{position:absolute;inset:0;border-radius:999px;background:var(--surface-2);
+  border:1px solid var(--line-strong,var(--line));transition:background .15s,border-color .15s}
+.switch i::after{content:"";position:absolute;top:50%;left:.16rem;transform:translateY(-50%);
+  width:1rem;height:1rem;border-radius:50%;background:var(--muted);transition:transform .15s,background .15s}
+.switch input:checked+i{background:color-mix(in srgb,var(--accent) 22%,var(--surface-2));border-color:var(--accent)}
+.switch input:checked+i::after{transform:translateY(-50%) translateX(1.2rem);background:var(--accent)}
+.switch input:focus-visible+i{outline:2px solid var(--accent);outline-offset:2px}
+
+.danger-panel{border-color:color-mix(in srgb, var(--danger) 35%, var(--line))}
+.danger-panel h2{color:var(--danger)}
+
+/* Badges de grade (roleBadgeHTML, render.js) — un habillage distinct par rang, posés à côté du
+   pseudo sur la fiche profil. */
+.rolebadge{display:inline-flex;align-items:center;gap:.3rem;padding:.2rem .65rem;border-radius:999px;
+  font-size:.72rem;font-weight:800;letter-spacing:.02em;vertical-align:middle;margin-left:.5rem;white-space:nowrap}
+.rb-fondateur{background:linear-gradient(135deg,#3a2c05,#5c4711);color:#ffd76a;box-shadow:inset 0 0 0 1px #ffd76a66}
+.rb-admin{background:color-mix(in srgb,var(--danger) 22%,transparent);color:#ff9599;box-shadow:inset 0 0 0 1px color-mix(in srgb,var(--danger) 55%,transparent)}
+.rb-moderator{background:color-mix(in srgb,var(--info) 22%,transparent);color:#8fc7ff;box-shadow:inset 0 0 0 1px color-mix(in srgb,var(--info) 55%,transparent)}
+.rb-vip{background:color-mix(in srgb,var(--rarity-epic) 22%,transparent);color:#d3aaff;box-shadow:inset 0 0 0 1px color-mix(in srgb,var(--rarity-epic) 55%,transparent)}
+
+/* ===== Filtres collection (barre de recherche + menus déroulants maison, façon WikiMasters ;
+   les onglets de rareté .rartabs sont resserrés en lettres dans card.css) ===== */
+.collfilters{display:flex;flex-wrap:wrap;gap:.6rem 1rem;align-items:center;margin-bottom:.8rem}
+.collsearch{flex:1 1 280px;min-width:0;background:var(--surface-2);border:1px solid var(--line);border-radius:var(--radius-md);padding:.6rem .9rem;font:inherit;color:var(--ink)}
+.collsearch::placeholder{color:var(--subtle)}
+.ddrow{display:flex;gap:.6rem;flex-wrap:wrap}
+
+/* Menu déroulant maison : bouton pilule + panneau d'options, remplace les <select> natifs. */
+.dd{position:relative}
+.dd-btn{display:flex;align-items:center;justify-content:space-between;gap:.6rem;min-width:11rem;
+  background:var(--surface-2);border:1px solid var(--line);border-radius:var(--radius-md);
+  padding:.55rem .9rem;font:inherit;font-weight:600;color:var(--ink);cursor:pointer;text-align:left}
+.dd-btn:hover{border-color:var(--line-strong)}
+.dd.open .dd-btn{border-color:var(--accent);box-shadow:0 0 0 3px var(--accent-soft)}
+.dd-chev{color:var(--muted);font-size:.75rem;line-height:1;transition:transform .15s ease}
+.dd.open .dd-chev{transform:rotate(180deg);color:var(--accent)}
+.dd-panel{position:absolute;top:calc(100% + .4rem);left:0;right:0;z-index:20;
+  background:var(--surface-2);border:1px solid var(--line);border-radius:var(--radius-md);
+  padding:.35rem;box-shadow:0 12px 28px rgba(0,0,0,.4);max-height:16rem;overflow-y:auto}
+.dd-opt{display:block;width:100%;text-align:left;background:none;border:0;border-radius:var(--radius-sm);
+  padding:.5rem .7rem;font:inherit;font-size:.9rem;color:var(--ink);cursor:pointer}
+.dd-opt:hover{background:var(--surface-hover)}
+.dd-opt.sel{background:var(--accent-soft);color:var(--accent);font-weight:700}

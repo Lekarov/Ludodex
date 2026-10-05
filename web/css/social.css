@@ -1,0 +1,144 @@
+/*
+  BLOC "SOCIAL" — CSS
+  ====================
+  Variables attendues (déjà définies globalement dans le prototype d'origine,
+  à reprendre ou adapter à votre thème) :
+    --bg --surface --ink --muted --line --accent --accent-ink --gold --rc --pc
+
+  Classes qui existent SANS DOUTE déjà dans votre UI de cartes/formulaires
+  (données ici uniquement pour référence — ne les collez pas si l'équivalent
+  existe déjà chez vous, sous peine de doublons / conflits de style) :
+    .thumb .btn .btn.sm .btn.primary .grid .cw .form .dtitle .dsub .empty .note .err
+*/
+
+/* --- Structure d'onglets (barre de section + sous-onglets, réutilisable) --- */
+.mhead{display:flex;justify-content:space-between;align-items:center;gap:1rem;margin:.4rem 0 1rem}
+.mhead h1{font-size:clamp(1.7rem,6vw,2.3rem);margin:0;letter-spacing:-.03em;line-height:1.1}
+.seg{display:flex;background:var(--surface);border:1px solid var(--line);border-radius:99px;padding:3px;gap:3px}
+.seg button{flex:1;border:0;background:none;border-radius:99px;padding:.5rem .6rem;font-weight:700;color:var(--muted);cursor:pointer;white-space:nowrap}
+.seg button[aria-pressed="true"]{background:var(--accent);color:var(--accent-ink)}
+
+/* --- Listes (amis, messages, échanges) --- */
+.mlist{margin:0;padding:0;list-style:none}
+.mrow{display:grid;grid-template-columns:48px minmax(0,1fr) auto;gap:.8rem;align-items:center;padding:.8rem 0;border-bottom:1px solid var(--line)}
+.mt{background:none;border:0;padding:0;font-weight:700;text-align:left;cursor:pointer;font-size:1rem;color:var(--ink);line-height:1.25}
+.ms{font-size:.84rem;color:var(--muted);line-height:1.35}
+.mside{text-align:right;display:flex;flex-direction:column;align-items:flex-end;gap:.1rem}
+.mrow.trow{align-items:flex-start}
+.unreaddot{width:8px;height:8px;border-radius:50%;background:#e5484d;display:inline-block;margin-left:.4rem;vertical-align:middle}
+
+/* Actions rapides sur une ligne d'ami : icônes seules, sobres (pas de cercle/bordure au repos,
+   même esprit que .showslot-x sur la vitrine du profil) — Défier/Échanger sont de simples liens
+   vers duels.html/trades.html (pas de vrai duel/échange ciblé pour l'instant), Voir ouvre la
+   vitrine publique, Discuter va droit à la conversation réelle (messages.html?with=...). */
+.mactions{flex-direction:row;align-items:center;gap:.3rem}
+.micon{display:inline-flex;align-items:center;justify-content:center;width:2rem;height:2rem;
+  border-radius:8px;border:0;background:none;color:var(--muted);font-size:1.05rem;line-height:1;
+  cursor:pointer;text-decoration:none}
+.micon:hover{background:var(--bg);color:var(--ink)}
+.micon svg{width:1.15rem;height:1.15rem;display:block;fill:none;stroke:currentColor;
+  stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+
+/* Fiche profil d'un ami (openViewFriend, social.js) — même dialog/.form que le reste du site,
+   mais habillée pour ressembler à une vraie page de profil plutôt qu'un simple aperçu : en-tête
+   large sur fond légèrement relevé, avatar imposant, grade juste sous le pseudo. */
+.profileview .pfhead{background:var(--surface-2);border-radius:14px;padding:1rem 1.1rem;margin:0 0 1.1rem}
+.profileview .pavatar.big{flex:none}
+.profileview .dtitle{display:flex;align-items:center;flex-wrap:wrap;gap:.5rem .4rem}
+/* Les icônes MENU_ICONS (shared.js) sont des tracés bruts sans fill/stroke inline (elles comptent
+   sur le CSS du contexte où elles sont posées, ex. .sicon svg) : sans règle équivalente ici, le
+   navigateur les affiche remplies en noir par défaut au lieu du style "trait" blanc du site. */
+.profileview .actions .btn svg{fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+
+/* --- Avatars et profil --- */
+.pavatar{width:46px;height:46px;border-radius:50%;display:grid;place-items:center;font-weight:800;color:#fff;font-size:1.15rem;flex:none;font-family:"Bricolage Grotesque",system-ui,sans-serif;background-size:cover;background-position:center}
+.pavatar.big{width:68px;height:68px;font-size:1.7rem}
+.pavatar.you{background:var(--accent)}
+.avatarEdit{display:flex;align-items:center;gap:1rem;margin:.9rem 0 .4rem}
+.avatarBtns{display:flex;gap:.5rem;flex-wrap:wrap}
+.bio{font-size:.88rem;color:var(--muted);line-height:1.4;margin:.3rem 0 .8rem}
+.mycard{border:1px solid var(--line);border-radius:16px;padding:1rem;margin:.9rem 0 1.3rem}
+.pfhead{display:flex;align-items:center;gap:.8rem;margin-bottom:.7rem}
+.pfhead h3{font-family:"Bricolage Grotesque",system-ui,sans-serif;font-size:1.15rem}
+.vzone{display:flex;gap:.45rem;flex-wrap:wrap}
+
+/* --- Messagerie (bulles de discussion) --- */
+.chatlog{max-height:48vh;overflow-y:auto;display:flex;flex-direction:column;gap:.5rem;padding:.6rem 0;margin-bottom:.6rem}
+.bubble{max-width:78%;padding:.55rem .8rem;border-radius:15px;font-size:.92rem;line-height:1.35;position:relative}
+.bubble.me{align-self:flex-end;background:var(--accent);color:var(--accent-ink);border-bottom-right-radius:4px}
+.bubble.them{align-self:flex-start;background:var(--bg);border:1px solid var(--line);border-bottom-left-radius:4px}
+.bubble time{display:block;font-size:.66rem;opacity:.7;margin-top:.25rem;text-align:right}
+.typing{align-self:flex-start;color:var(--muted);font-size:.82rem;font-style:italic;margin:.1rem 0 0}
+.chatinput{display:flex;gap:.5rem}
+.chatinput input{flex:1;background:var(--bg);border:1px solid var(--line);border-radius:999px;padding:.55rem 1rem;min-width:0}
+.chatinput .btn{border-radius:999px;flex:none}
+.chatinput.sm input{padding:.5rem .8rem;font-size:.9rem}
+.chatinput.sm .btn{padding:.5rem .9rem}
+/* bulle "carte partagée" dans le chat */
+.bubble.card{border:0;font:inherit;color:inherit;cursor:pointer;display:flex;flex-direction:column;gap:.3rem;text-align:left;max-width:78%}
+.bubble.card.me{align-self:flex-end}
+.bubble.card.them{align-self:flex-start}
+/* bulle "reçu d'échange conclu" dans le chat */
+.bubble.trade{border:1px solid var(--line);background:var(--bg);color:var(--ink);max-width:82%}
+.bubble.trade.me{align-self:flex-end}
+.bubble.trade.them{align-self:flex-start}
+.bubble.trade b{display:block;font-size:.85rem;margin-bottom:.4rem}
+/* bulle "invitation à échanger" (en attente/acceptée/refusée) */
+.bubble.invite{border:1px solid var(--line);background:var(--bg);color:var(--ink);display:flex;flex-direction:column;gap:.2rem;text-align:left;font:inherit;cursor:default}
+.bubble.invite b{font-size:.86rem}
+.bubble.invite span{font-size:.8rem;color:var(--muted)}
+.bubble.invite.accepted{cursor:pointer;border-color:var(--accent)}
+.bubble.invite.accepted span{color:var(--accent)}
+.bubble.invite.declined span{color:#e5484d}
+.bubble.invite:disabled{opacity:1}
+/* menu "+" (pièce jointe : carte / échange) */
+.attachList{display:flex;flex-direction:column;gap:.6rem;margin:.9rem 0}
+.attachRow{display:flex;align-items:center;gap:.9rem;text-align:left;border:1px solid var(--line);background:var(--bg);border-radius:14px;padding:.8rem .9rem;cursor:pointer;color:var(--ink)}
+.attachRow .ai{font-size:1.5rem;line-height:1}
+.attachRow .at{display:flex;flex-direction:column;line-height:1.3}
+.attachRow b{font-size:.95rem}
+.attachRow small{color:var(--muted);font-weight:400;font-size:.78rem}
+/* mini-messagerie affichée dans l'écran d'échange direct */
+.miniChat{border:1px solid var(--line);border-radius:14px;padding:.7rem .8rem;margin:1rem 0}
+.miniChatLabel{font-size:.8rem;font-weight:700;color:var(--muted);margin:0 0 .5rem}
+.miniChatLog{display:flex;flex-direction:column;gap:.4rem;max-height:22vh;overflow-y:auto;margin-bottom:.55rem}
+
+/* --- Échange (panneaux "toi" / "ami", cartes à donner/recevoir) --- */
+.tphead{display:flex;align-items:center;gap:.6rem;margin-bottom:.7rem}
+.tphead .pavatar{width:32px;height:32px;font-size:.9rem}
+.tphead b{font-family:"Bricolage Grotesque",system-ui,sans-serif}
+.tgrid{display:flex;flex-wrap:wrap;gap:.5rem;min-height:48px;margin-bottom:.7rem}
+.tslot{position:relative;display:inline-block}
+.tslot .rm{position:absolute;top:-6px;right:-6px;width:18px;height:18px;border-radius:50%;background:var(--ink);color:var(--bg);border:0;font-size:.75rem;line-height:1;cursor:pointer;display:grid;place-items:center;padding:0}
+.tval{margin:.3rem 0 0;font-size:.9rem;color:var(--muted)}
+.tval b{color:var(--ink);font-family:"Bricolage Grotesque",system-ui,sans-serif}
+.tval.warn b{color:#e5484d}
+.warnIcon{color:#e5484d}
+.tarrow{text-align:center;color:var(--muted);font-size:1.3rem;margin:-.2rem 0}
+.empty.sm{font-size:.85rem;padding:.4rem 0;margin:0}
+/* mini-vignettes utilisées dans les historiques (échange direct / demandes) */
+.tradeRow{display:flex;align-items:center;gap:.5rem;margin:.3rem 0}
+.tlabel{font-size:.74rem;color:var(--muted);width:46px;flex:none}
+.tmini{display:flex;gap:.3rem;flex-wrap:wrap}
+.tmini .thumb{width:32px}
+.tnone{color:var(--muted);font-size:.8rem}
+/* badges de statut d'une demande d'échange en différé */
+.reqstatus{font-size:.72rem;font-weight:700;padding:.15rem .55rem;border-radius:999px;display:inline-block;vertical-align:middle}
+.reqstatus.pending{background:color-mix(in srgb,var(--gold) 25%,transparent);color:var(--gold)}
+.reqstatus.accepted{background:color-mix(in srgb,var(--accent) 25%,transparent);color:var(--accent)}
+.reqstatus.declined,.reqstatus.expired{background:color-mix(in srgb,#e5484d 22%,transparent);color:#e5484d}
+
+/* --- Duels (sous-onglet Social ▸ Duels) --- */
+.dcap{border:1px solid var(--line);border-radius:16px;padding:1rem;margin:.9rem 0}
+/* Renommé .drow -> .duelrow pour éviter tout conflit avec une classe .drow
+   déjà utilisée ailleurs dans votre projet (ex. barres de distribution). */
+.duelrow{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:.6rem;padding:.7rem 0;border-bottom:1px solid var(--line);font-size:.9rem}
+.duelrow b{font-family:"Bricolage Grotesque",system-ui,sans-serif;font-size:1.05rem}
+.duelrow .vs{color:var(--muted);font-size:.78rem;text-align:center}
+.duelrow.win{color:var(--accent)}
+.duelrow.lose{color:var(--muted)}
+
+/* --- Champs de formulaire (si votre projet n'a pas déjà ces règles) --- */
+.form label{display:flex;flex-direction:column;gap:.3rem;font-size:.9rem;color:var(--muted);margin:1rem 0 .4rem}
+.form input,.form select,.form textarea{background:var(--bg);border:1px solid var(--line);border-radius:10px;padding:.65rem .75rem;font-size:1.05rem;color:var(--ink);font-family:inherit}
+.form textarea{resize:vertical;min-height:4.2em;font-size:.95rem;line-height:1.4}

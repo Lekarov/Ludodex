@@ -1,0 +1,54 @@
+/* Coquille commune aux pages connectées (menu latéral). Ne touche PAS aux règles de centrage /
+   espacement du prototype (.top, .top-in, main dans layout.css) : seul un menu latéral est ajouté
+   à côté, le contenu garde exactement son ancien rendu centré. */
+.appshell{display:flex;min-height:100vh}
+.sidebar{
+  width:230px;flex:none;background:var(--surface);border-right:1px solid var(--line);
+  display:flex;flex-direction:column;padding:1.2rem 0;
+  position:sticky;top:0;height:100vh;overflow:visible;z-index:35;
+}
+.sidebrand{padding:0 1.2rem 1.2rem;border-bottom:1px solid var(--line);margin-bottom:.8rem;display:flex;align-items:center;justify-content:space-between;gap:.6rem}
+.sidebrand img{max-width:130px;height:auto;display:block}
+.sidebell{flex:none;width:2.1rem;height:2.1rem;border-radius:50%;border:1px solid var(--line);background:var(--surface-2);color:var(--muted);cursor:pointer;display:grid;place-items:center;font-size:1rem;position:relative}
+.sidebell .bell-icon,.sidebell .bell-icon svg{display:block;width:1rem;height:1rem}.sidebell .bell-icon svg{fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+.sidebell:hover{background:var(--surface-hover);color:var(--ink)}
+.sidenav{display:flex;flex-direction:column;gap:.2rem;padding:0 .7rem}
+.sidenav .snavitem{
+  display:flex;align-items:center;gap:.8rem;width:100%;text-align:left;
+  padding:.7rem .8rem;border-radius:10px;font-weight:700;font-size:.95rem;
+  color:var(--muted);background:none;border:0;text-decoration:none;cursor:pointer;position:relative;
+}
+.sidenav .snavitem small{color:var(--muted);font-weight:400;font-size:.7rem;display:block}
+.sidenav .snavitem .sicon{font-size:1.15rem;line-height:1;width:1.4rem;height:1.4rem;display:grid;place-items:center;text-align:center;flex:none;color:currentColor}
+.sidenav .snavitem .sicon svg{display:block;width:1.15rem;height:1.15rem;fill:none;stroke:currentColor;stroke-width:1.65;stroke-linecap:round;stroke-linejoin:round}
+.sidenav .snavitem:hover{background:var(--bg)}
+.sidenav .snavitem[aria-current="page"]{background:color-mix(in srgb, var(--accent) 16%, transparent);color:var(--accent)}
+.sidenav .snavitem .dot{position:absolute;top:.5rem;right:.6rem;left:auto}
+
+/* Bloc du bas : Profil + Paramètres + monnaie, groupés ensemble et collés en bas de la barre
+   latérale (margin-top:auto) — seul ce bloc descend, le reste de la navigation garde sa position
+   naturelle en haut. */
+.sidefoot{margin-top:auto}
+.sidefoot .sidenav{padding-top:.6rem;border-top:1px solid var(--line);margin-top:.6rem}
+
+.sidewallet{margin-top:.8rem;padding:.9rem 1.2rem 0;border-top:1px solid var(--line)}
+.sidewallet .wallet{width:100%;justify-content:center;box-sizing:border-box}
+
+.maincol{flex:1;min-width:0}
+
+@media (max-width:760px){
+  .appshell{flex-direction:column}
+  .sidebar{
+    position:sticky;top:0;z-index:30;width:100%;height:auto;
+    flex-direction:row;align-items:center;overflow-x:auto;padding:.5rem .8rem;
+  }
+  .sidebrand{display:none}
+  .sidenav{flex-direction:row;padding:0}
+  .sidenav .snavitem{flex-direction:column;gap:.2rem;padding:.5rem .6rem;font-size:.72rem;white-space:nowrap}
+  .sidenav .snavitem small{display:none}
+  .sidefoot{display:flex;align-items:center;margin-top:0;margin-left:auto}
+  .sidefoot .sidenav{padding-top:0;border-top:0;margin-top:0}
+  .sidewallet{margin-top:0;margin-left:.6rem;padding:0;border-top:0}
+  .sidewallet .wallet{width:auto}
+  .notifpanel{position:fixed;left:.75rem;top:4rem;right:.75rem;width:auto;max-width:none}
+}

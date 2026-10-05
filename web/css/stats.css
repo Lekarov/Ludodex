@@ -1,0 +1,17 @@
+/* Statistiques : tuiles, répartition des raretés, tableaux. Extrait de ludodex.html sans changement de règle. */
+.tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:.7rem}
+.tile{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:.8rem 1rem}
+.tile b{display:block;font-family:"Bricolage Grotesque",system-ui,sans-serif;font-size:1.8rem;line-height:1.1;font-variant-numeric:tabular-nums}
+.tile span{font-size:.88rem;color:var(--muted)}
+.dist{display:grid;gap:.5rem}
+.drow{display:grid;grid-template-columns:7.5rem 1fr 6.5rem;align-items:center;gap:.7rem;font-size:.92rem}
+.drow .bar{height:12px;border-radius:6px;background:var(--line);overflow:hidden}
+.drow .bar i{display:block;height:100%;background:var(--rc)}
+.drow .v{text-align:right;font-variant-numeric:tabular-nums;color:var(--muted)}
+.drow .nm{font-weight:700;color:var(--rc)}
+.bestwrap{max-width:180px}
+.note{font-size:.88rem;color:var(--muted);max-width:60ch}
+.table{width:100%;border-collapse:collapse;font-size:.9rem}
+.tablewrap{overflow-x:auto;background:var(--surface);border:1px solid var(--line);border-radius:12px}
+.table th,.table td{padding:.5rem .8rem;text-align:left;border-bottom:1px solid var(--line);white-space:nowrap}
+.table td.num,.table th.num{text-align:right;font-variant-numeric:tabular-nums}

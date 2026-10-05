@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- TODO une fois un vrai domaine public choisi : remplacer le placeholder
+     "https://REMPLACER-PAR-LE-DOMAINE.example" ci-dessous par le domaine réel, partout, et
+     ajouter la ligne "Sitemap: <url>/sitemap.xml" dans robots.txt. -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://REMPLACER-PAR-LE-DOMAINE.example/index.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://REMPLACER-PAR-LE-DOMAINE.example/signup.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://REMPLACER-PAR-LE-DOMAINE.example/login.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://REMPLACER-PAR-LE-DOMAINE.example/vip.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.4</priority>
+  </url>
+  <url>
+    <loc>https://REMPLACER-PAR-LE-DOMAINE.example/legal-notice.html</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  <url>
+    <loc>https://REMPLACER-PAR-LE-DOMAINE.example/privacy-policy.html</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  <url>
+    <loc>https://REMPLACER-PAR-LE-DOMAINE.example/terms.html</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.2</priority>
+  </url>
+</urlset>

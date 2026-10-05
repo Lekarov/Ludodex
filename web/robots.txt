@@ -1,0 +1,18 @@
+# Ludodex Online. Seules les pages publiques (sans compte) sont indexables : les pages
+# jointes/applicatives ne montrent rien sans session et n'ont aucun intérêt SEO.
+User-agent: *
+Disallow: /
+Allow: /$
+Allow: /index.html
+Allow: /login.html
+Allow: /signup.html
+Allow: /forgot-password.html
+Allow: /legal-notice.html
+Allow: /privacy-policy.html
+Allow: /terms.html
+Allow: /vip.html
+Allow: /assets/
+Allow: /css/
+
+# TODO une fois un vrai domaine public choisi : ajouter la ligne Sitemap ci-dessous avec l'URL
+# absolue réelle (ex. "Sitemap: https://ludodex.example/sitemap.xml").

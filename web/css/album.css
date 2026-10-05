@@ -1,0 +1,45 @@
+/* Album : étagère par plateforme, page d'album. Extrait de ludodex.html sans changement de règle. */
+.collmode{max-width:16rem;margin:.2rem 0 .8rem}
+.shelfbar{display:flex;flex-wrap:wrap;gap:.6rem;align-items:center;margin-bottom:1rem}
+.shelfbar .seg{flex:1 1 20rem}
+#albFilter button{font-size:.85rem;padding:.45rem .4rem}
+.shelfbar select{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:.5rem .6rem}
+.binders{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:.8rem}
+.binder{position:relative;text-align:left;border:1px solid var(--line);background:var(--surface);border-radius:6px 14px 14px 6px;padding:.9rem .9rem .8rem 1.4rem;cursor:pointer;min-height:118px;display:flex;flex-direction:column;justify-content:space-between;overflow:hidden}
+.binder::before{content:"";position:absolute;left:0;top:0;bottom:0;width:.55rem;background:var(--pc)}
+.binder::after{content:"";position:absolute;left:.55rem;top:0;bottom:0;width:3px;background:repeating-linear-gradient(180deg,transparent 0 10px,var(--line) 10px 16px)}
+.binder .bn{font-family:"Bricolage Grotesque",system-ui,sans-serif;font-weight:800;font-size:1.08rem;line-height:1.15}
+.binder .bc{font-size:.85rem;color:var(--muted);font-variant-numeric:tabular-nums}
+.binder .bb{height:7px;border-radius:4px;background:var(--line);overflow:hidden;margin-top:.4rem}
+.binder .bb i{display:block;height:100%;background:var(--pc)}
+.binder.done{border-color:#e9b93a;box-shadow:0 0 0 1px #e9b93a inset}
+.binder .star{position:absolute;top:.5rem;right:.6rem;color:#e9b93a;font-size:1.1rem}
+.apage{position:relative;background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:1rem}
+.apage.complete{border:3px solid #e9b93a;box-shadow:0 0 24px color-mix(in srgb,#e9b93a 35%,transparent)}
+.ahead{display:grid;grid-template-columns:auto 1fr auto;gap:.6rem;align-items:center;margin-bottom:.4rem}
+.ahead h2{margin:0;font-size:1.35rem;text-align:center;line-height:1.15}
+.ahead h2 small{display:block;font-family:"Atkinson Hyperlegible",system-ui,sans-serif;font-weight:400;font-size:.85rem;color:var(--muted)}
+.aback{background:none;border:0;color:var(--accent);font-weight:700;cursor:pointer;padding:.3rem 0;margin-bottom:.6rem}
+.abar{height:8px;border-radius:4px;background:var(--line);overflow:hidden;margin:.4rem 0 1rem}
+.abar i{display:block;height:100%;background:var(--pc)}
+.stamp{position:absolute;top:-1.1rem;right:1rem;transform:rotate(-12deg);border:3px solid #e9b93a;color:#e9b93a;font-family:"Bricolage Grotesque",system-ui,sans-serif;font-weight:800;padding:.15rem .7rem;border-radius:8px;font-size:1.15rem;letter-spacing:.05em;background:color-mix(in srgb,var(--surface) 80%,transparent);z-index:5;pointer-events:none}
+/* Pagination de l'album (28/09/2026) : une plateforme comme Arcade dépasse le millier de cartes,
+   plus de défilement infini d'un seul tenant — pages de 100, navigation par numéros compacte
+   (bornes + voisines de la page courante, "…" pour le reste), même style que le reste de l'UI. */
+.pager{display:flex;flex-wrap:wrap;gap:.35rem;align-items:center;justify-content:center;margin:.9rem 0}
+.pgbtn{min-width:2.2rem;height:2.2rem;padding:0 .5rem;border-radius:8px;border:1px solid var(--line);
+  background:var(--surface);color:var(--ink);font-weight:700;font-variant-numeric:tabular-nums;cursor:pointer}
+.pgbtn:hover:not(:disabled){border-color:var(--pc,var(--accent))}
+.pgbtn.cur{background:var(--pc,var(--accent));border-color:var(--pc,var(--accent));color:#0b0e12}
+.pgbtn:disabled{opacity:.35;cursor:default}
+.pgdots{color:var(--muted);padding:0 .1rem;user-select:none}
+.aslots{display:grid;grid-template-columns:repeat(auto-fill,minmax(112px,1fr));gap:.7rem}
+.aslot{display:flex;flex-direction:column;gap:.25rem}
+.anum{font-size:.78rem;color:var(--muted);font-weight:700;font-variant-numeric:tabular-nums}
+details.sets{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:.2rem 1rem;margin-bottom:1.2rem}
+details.sets summary{cursor:pointer;font-weight:700;padding:.6rem 0}
+.setrow{display:grid;grid-template-columns:minmax(0,9rem) 1fr auto;align-items:center;gap:.8rem;width:100%;background:none;border:0;padding:.45rem 0;border-top:1px solid var(--line);cursor:pointer;text-align:left;font-size:.92rem}
+.setbar{height:8px;background:var(--line);border-radius:4px;overflow:hidden}
+.setbar i{display:block;height:100%;background:var(--pc)}
+.setrow .n{font-variant-numeric:tabular-nums;color:var(--muted)}
+.setrow.done .n{color:var(--gold);font-weight:700}

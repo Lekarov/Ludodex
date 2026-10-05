@@ -1,0 +1,152 @@
+/* Boosters : écran d'ouverture, paquet (normal/doré/thématique), tombola. Extrait de ludodex.html sans changement de règle. */
+.stage{display:flex;flex-direction:column;align-items:center;text-align:center}
+.stage[hidden]{display:none}
+.ptitle{font-size:clamp(1.9rem,7vw,2.7rem);font-weight:800;letter-spacing:-.03em;margin:.6rem 0 .15rem;line-height:1.08}
+.psub{margin:0;color:var(--muted)}
+.howto{background:none;border:0;color:var(--accent);font-weight:700;cursor:pointer;padding:.3rem .6rem}
+.packzone{--glow:#8f86ff;position:relative;margin:1.4rem 0 .4rem;display:grid;place-items:center;transition:transform .28s cubic-bezier(.2,.8,.2,1)}
+.packzone.gold{--glow:#f2b632}
+.packzone::before{content:"";position:absolute;width:175%;aspect-ratio:1;border-radius:50%;background:radial-gradient(circle,color-mix(in srgb,var(--glow) 55%,transparent),transparent 62%);pointer-events:none;opacity:.85;transition:opacity .28s,transform .28s cubic-bezier(.2,.8,.2,1)}
+/* Étincelles émises au clic sur le paquet */
+.packzone::after{content:"";position:absolute;z-index:0;width:145%;aspect-ratio:1;pointer-events:none;opacity:0;
+  background:
+    radial-gradient(circle at 50% 4%,#fff 0 3px,transparent 4px),
+    radial-gradient(circle at 86% 20%,var(--glow) 0 4px,transparent 5px),
+    radial-gradient(circle at 96% 55%,#fff 0 3px,transparent 4px),
+    radial-gradient(circle at 76% 88%,var(--glow) 0 3px,transparent 4px),
+    radial-gradient(circle at 22% 86%,#fff 0 4px,transparent 5px),
+    radial-gradient(circle at 3% 52%,var(--glow) 0 3px,transparent 4px),
+    radial-gradient(circle at 18% 18%,#fff 0 3px,transparent 4px);
+  transform:scale(.45) rotate(0)}
+.packzone:has(.pack:not(:disabled):hover){transform:translateY(-3px)}
+.packzone:has(.pack:not(:disabled):hover)::before{opacity:1;transform:scale(1.08)}
+.packzone:has(.pack:not(:disabled):active){transform:translateY(-1px) scale(.96)}
+.pack:not(:disabled):hover{filter:brightness(1.05)}
+.pack{position:relative;z-index:1;width:min(205px,54vw);aspect-ratio:5/7.4;border:0;padding:0;cursor:pointer;border-radius:5px;overflow:hidden;
+  background-image:url('../assets/booster-confetti-foil-v1.png');
+  background-size:cover;
+  background-position:center;
+  box-shadow:0 0 0 1px rgba(255,255,255,.5) inset,0 18px 40px rgba(30,20,110,.4);
+  animation:float 3.4s ease-in-out infinite}
+.pack::before,.pack::after{content:"";position:absolute;left:0;right:0;height:7%;z-index:2;background:repeating-linear-gradient(90deg,rgba(0,0,0,.13) 0 2px,rgba(255,255,255,.4) 2px 5px)}
+.pack::before{top:0}.pack::after{bottom:0}
+.pack .sheen{position:absolute;inset:0;z-index:1;pointer-events:none;background:linear-gradient(115deg,transparent 35%,rgba(255,255,255,.6) 47%,transparent 58%);background-size:260% 100%;animation:holo 4s linear infinite}
+.pack .emblem{position:absolute;left:50%;top:47%;transform:translate(-50%,-50%);width:44%;aspect-ratio:1;border-radius:50%;background:#241c78;color:#fff;display:grid;place-items:center;
+  font-family:"Bricolage Grotesque",system-ui,sans-serif;font-weight:800;font-size:clamp(2.4rem,10vw,3.4rem);box-shadow:0 0 0 5px #fff,0 0 0 8px #241c78}
+.pack .pname{position:absolute;left:0;right:0;bottom:13%;font-family:"Bricolage Grotesque",system-ui,sans-serif;font-weight:800;color:#241c78;font-size:1rem;letter-spacing:.01em}
+.pack .pkind{position:absolute;left:0;right:0;top:12%;font-weight:700;font-size:.8rem;color:#241c78;opacity:.75}
+.packzone.gold .pack{background:
+    radial-gradient(circle at 20% 20%,#fff 0 5%,transparent 5.5%),
+    radial-gradient(circle at 81% 28%,#fff6c9 0 5%,transparent 5.5%),
+    radial-gradient(circle at 17% 77%,#fff6c9 0 5.5%,transparent 6%),
+    radial-gradient(circle at 82% 80%,#fff 0 6%,transparent 6.5%),
+    linear-gradient(165deg,#ffe58a,#f2b632 55%,#c98a0c)}
+.packzone.gold .emblem{background:#7a4f00;box-shadow:0 0 0 5px #fff6d6,0 0 0 8px #7a4f00}
+.packzone.gold .pname,.packzone.gold .pkind{color:#5e3c00}
+/* Prototype Gold Foil + gemme — activé uniquement par USE_NEW_GOLD_VISUAL */
+html.newGoldVisual .packzone.gold .pack{
+  background-image:url('../assets/booster-gold-foil-v1.png');
+  background-size:cover;
+  background-position:center;
+}
+html.newGoldVisual .packzone.gold .emblem{
+  color:transparent;background:radial-gradient(circle at 38% 30%,#5b3a00,#241500 72%);
+  box-shadow:0 0 0 4px #fff3bd,0 0 0 8px #9b6500,0 0 30px rgba(255,219,99,.72)}
+html.newGoldVisual .packzone.gold .emblem::before{
+  content:"";position:absolute;width:58%;height:68%;left:21%;top:16%;
+  clip-path:polygon(50% 0,88% 27%,72% 100%,28% 100%,12% 27%);
+  background:
+    linear-gradient(135deg,transparent 49%,rgba(94,55,0,.42) 50% 52%,transparent 53%),
+    linear-gradient(225deg,transparent 49%,rgba(94,55,0,.42) 50% 52%,transparent 53%),
+    linear-gradient(155deg,#fff9d8 0 22%,#ffd96a 23% 52%,#d79712 53% 76%,#fff0a0 77%);
+  filter:drop-shadow(0 5px 4px rgba(0,0,0,.38))}
+html.newGoldVisual .packzone.gold .emblem::after{
+  content:"";position:absolute;width:44%;height:22%;left:28%;top:35%;
+  clip-path:polygon(0 0,50% 100%,100% 0,82% 100%,18% 100%);
+  background:rgba(255,255,255,.42);mix-blend-mode:screen}
+.pack:disabled{filter:grayscale(.9);opacity:.5;cursor:not-allowed;animation:none}
+/* Effets physiques au clic (pas de fausse déchirure 3D, irréaliste en CSS pur) :
+   secousse, halo qui pulse, étincelles, emblème qui palpite, reflet qui balaie, puis éclatement. */
+.pack.tearing{
+  overflow:visible;
+  animation:
+    shake .5s ease-in-out .05s,
+    burstout .22s ease-in .5s forwards}
+.packzone:has(.pack.tearing)::before{animation:packpulse .48s cubic-bezier(.15,.8,.25,1)}
+.packzone:has(.pack.tearing)::after{animation:packsparks .52s ease-out}
+.pack.tearing .emblem{animation:emblempulse .36s ease-out}
+.pack.tearing .sheen{animation:clicksheen .42s ease-out}
+/* "Mouvement réduit" : css/tokens.css force `animation:none!important` sur *, ce qui couperait
+   toute la séquence d'ouverture (comme ça a coupé le retournement des cartes). On la raccourcit
+   au lieu de la supprimer — !important nécessaire pour la réactiver malgré la règle globale. */
+@media (prefers-reduced-motion: reduce){
+  .pack.tearing{animation:shake .3s ease-in-out .05s,burstout .18s ease-in .3s forwards!important}
+  .packzone:has(.pack.tearing)::before{animation:packpulse .35s cubic-bezier(.15,.8,.25,1)!important}
+  .packzone:has(.pack.tearing)::after{animation:packsparks .35s ease-out!important}
+  .pack.tearing .emblem{animation:emblempulse .28s ease-out!important}
+  .pack.tearing .sheen{animation:clicksheen .3s ease-out!important}
+}
+@keyframes float{0%,100%{transform:translateY(0) rotate(-1.5deg)}50%{transform:translateY(-8px) rotate(1.5deg)}}
+@keyframes shake{0%,100%{transform:rotate(0)}15%{transform:rotate(-7deg) scale(1.03)}35%{transform:rotate(7deg) scale(1.05)}55%{transform:rotate(-6deg) scale(1.07)}75%{transform:rotate(5deg) scale(1.09)}}
+@keyframes burstout{from{transform:scale(1.09)}to{transform:scale(1.4);opacity:0;filter:brightness(2.4)}}
+@keyframes packpulse{
+  0%{opacity:.85;transform:scale(.8)}
+  45%{opacity:1;transform:scale(1.22)}
+  100%{opacity:.25;transform:scale(1.42)}}
+@keyframes packsparks{
+  0%{opacity:0;transform:scale(.45) rotate(0)}
+  25%{opacity:1}
+  100%{opacity:0;transform:scale(1.18) rotate(12deg)}}
+@keyframes emblempulse{
+  0%,100%{transform:translate(-50%,-50%) scale(1)}
+  45%{transform:translate(-50%,-50%) scale(.86);box-shadow:0 0 0 5px #fff,0 0 0 8px var(--glow),0 0 34px var(--glow)}
+  72%{transform:translate(-50%,-50%) scale(1.12)}}
+@keyframes clicksheen{from{background-position:130% 0}to{background-position:-45% 0}}
+.openlbl{background:none;border:0;color:var(--accent);font-family:"Bricolage Grotesque",system-ui,sans-serif;font-weight:800;font-size:1.55rem;cursor:pointer;padding:.2rem 1.2rem;margin-top:.6rem}
+.openlbl:disabled{color:var(--muted);cursor:not-allowed}
+.stockbox{margin-top:.6rem;border:1px solid var(--line);background:var(--surface);border-radius:14px;padding:.8rem 1.8rem;display:flex;flex-direction:column;align-items:center;min-width:13rem}
+.stockbox b{font-family:"Bricolage Grotesque",system-ui,sans-serif;font-size:1.8rem;color:var(--accent);font-variant-numeric:tabular-nums;line-height:1.15}
+.stockbox span{font-size:.92rem;color:var(--muted)}
+.stockbox strong{color:var(--accent);font-variant-numeric:tabular-nums}
+.pity{font-size:.9rem;color:var(--muted);margin:1rem 0 .35rem}
+.pity-bar{width:min(220px,60vw);height:6px;border-radius:3px;background:var(--line);overflow:hidden}
+.pity-bar i{display:block;height:100%;background:var(--gold);transition:width .3s}
+.flash{position:fixed;inset:0;background:#fff;opacity:0;pointer-events:none;z-index:50}
+.flash.go{animation:flash .75s ease-out}
+@keyframes flash{0%{opacity:0}25%{opacity:.85}100%{opacity:0}}
+.flash.gold{background:radial-gradient(circle,#fff6c9,#ffd76a 60%,#ff9ad9)}
+.packzone.themed{--glow:var(--t1)}
+.packzone.themed .pack{background:
+    radial-gradient(circle at 20% 20%,rgba(255,255,255,.45) 0 5%,transparent 5.5%),
+    radial-gradient(circle at 83% 30%,rgba(255,255,255,.3) 0 4.5%,transparent 5%),
+    radial-gradient(circle at 18% 78%,rgba(255,255,255,.3) 0 5%,transparent 5.5%),
+    radial-gradient(circle at 82% 80%,rgba(255,255,255,.45) 0 6%,transparent 6.5%),
+    linear-gradient(165deg,var(--t1),var(--t2))}
+.packzone.themed .emblem{background:var(--t2);box-shadow:0 0 0 5px #fff,0 0 0 8px var(--t2)}
+.packzone.themed .pname,.packzone.themed .pkind{color:#fff}
+.raffle{width:min(430px,100%);margin-top:1.6rem;background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:1rem 1.1rem;text-align:left}
+.rf-head{display:flex;justify-content:space-between;align-items:baseline;gap:1rem}
+.rf-head h2{margin:0;font-size:1.3rem}
+.rf-head span{color:var(--muted);font-size:.9rem;white-space:nowrap}
+.rf-head strong{color:var(--accent);font-variant-numeric:tabular-nums}
+.rf-body{display:grid;grid-template-columns:58px 1fr;gap:.9rem;align-items:center;margin:.9rem 0 .7rem}
+.minipack{position:relative;width:58px;aspect-ratio:5/7.4;border-radius:4px;overflow:hidden;display:grid;place-items:center;color:#fff;
+  font-family:"Bricolage Grotesque",system-ui,sans-serif;font-weight:800;font-size:1.1rem;background:linear-gradient(165deg,var(--t1),var(--t2));box-shadow:0 6px 16px rgba(0,0,0,.25)}
+.minipack::before,.minipack::after{content:"";position:absolute;left:0;right:0;height:8%;background:repeating-linear-gradient(90deg,rgba(0,0,0,.15) 0 2px,rgba(255,255,255,.35) 2px 4px)}
+.minipack::before{top:0}.minipack::after{bottom:0}
+.rf-lot{font-weight:700;line-height:1.3}
+.rf-desc{font-size:.85rem;color:var(--muted)}
+.rf-stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.45rem;margin-bottom:.8rem}
+.rf-stats div{background:var(--bg);border-radius:10px;padding:.45rem .6rem}
+.rf-stats span{display:block;font-size:.75rem;color:var(--muted)}
+.rf-stats b{font-variant-numeric:tabular-nums}
+.rf-actions{display:flex;gap:.5rem;flex-wrap:wrap}
+.rf-actions .btn{flex:1;display:inline-flex;align-items:center;justify-content:center}
+.rf-input{flex:1;min-width:0;background:var(--bg);border:1px solid var(--line);border-radius:999px;padding:.55rem 1rem;font-size:1rem;color:var(--ink);font-variant-numeric:tabular-nums}
+.rf-last{font-size:.85rem;color:var(--muted);margin:.7rem 0 0}
+.tlist{width:min(430px,100%);margin-top:1rem;display:grid;gap:.5rem;text-align:left}
+.tlist h2{margin:.4rem 0 .2rem;font-size:1.2rem}
+.tpack{display:grid;grid-template-columns:44px 1fr auto;gap:.8rem;align-items:center;padding:.6rem .9rem;border:1px solid var(--line);background:var(--surface);border-radius:14px;cursor:pointer;text-align:left;width:100%}
+.tpack .minipack{width:44px;font-size:.85rem}
+.tpack b{color:var(--accent)}
+.tpack:disabled{opacity:.5;cursor:not-allowed}

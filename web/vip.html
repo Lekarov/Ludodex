@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>VIP & Premium — Ludodex Online</title>
+<link rel="icon" href="assets/logo-ludodex.png" type="image/png">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://YOUR_PROJECT_REF.supabase.co wss://YOUR_PROJECT_REF.supabase.co https://api.ipify.org; object-src 'none'; base-uri 'self'; form-action 'self'">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/tokens-site.css">
+<link rel="stylesheet" href="css/theme.css">
+<link rel="stylesheet" href="css/layout.css">
+<link rel="stylesheet" href="css/app-shell.css">
+<style>
+  /* Propre à cette page : pas assez de contenu ailleurs sur le site pour justifier une classe
+     partagée — trois blocs de tarif côte à côte, sobres, dans l'esprit du reste du site. */
+  .tiers{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:var(--space-4);margin:var(--space-4) 0}
+  .tier{border:1px solid var(--line);border-radius:var(--radius-lg);padding:var(--space-5);background:var(--surface)}
+  .tier h3{margin:0 0 .2rem;font-size:1.15rem}
+  .tier .price{font-family:"Bricolage Grotesque",system-ui,sans-serif;font-size:1.6rem;margin:.3rem 0 1rem}
+  .tier .price small{font-size:.85rem;color:var(--muted);font-weight:400}
+  .tier ul{margin:0;padding-left:1.1rem;color:var(--muted);font-size:.92rem;line-height:1.6}
+  .tier ul li b{color:var(--ink)}
+  .tier.highlight{border-color:var(--accent);box-shadow:0 0 0 1px var(--accent)}
+  .soon{display:inline-block;margin-top:1rem;padding:.3rem .8rem;border-radius:999px;font-size:.78rem;font-weight:700;background:color-mix(in srgb,var(--gold) 20%,transparent);color:var(--gold)}
+</style>
+</head>
+<body>
+<div class="appshell">
+  <aside class="sidebar">
+    <div class="sidebrand">
+      <img src="img/logo-ludodex.png" alt="Ludodex">
+      <div class="belwrap">
+        <button class="sidebell" id="notifBell" type="button" aria-label="Notifications">🔔<span class="nbub" id="notifBubble" hidden>0</span></button>
+        <div class="notifpanel" id="notifPanel" hidden>
+          <div class="notifhead">Notifications</div>
+          <ul class="nlist" id="notifList"></ul>
+        </div>
+      </div>
+    </div>
+    <nav class="sidenav" aria-label="Navigation">
+      <a class="snavitem" href="boosters.html"><span class="sicon">🎴︎</span><span>Boosters</span></a>
+      <a class="snavitem" href="collection.html"><span class="sicon">📚︎</span><span>Collection</span></a>
+      <a class="snavitem" href="cards.html"><span class="sicon">🔍︎</span><span>Toutes les cartes</span></a>
+      <a class="snavitem" href="market.html"><span class="sicon">💱︎</span><span>Marché</span></a>
+      <a class="snavitem" href="trades.html"><span class="sicon">🔁︎</span><span>Échanges</span></a>
+      <a class="snavitem" href="duels.html"><span class="sicon">⚔︎</span><span>Duels</span></a>
+      <a class="snavitem" href="achievements.html"><span class="sicon">🏆︎</span><span>Succès</span></a>
+      <a class="snavitem" href="messages.html"><span class="sicon">✉︎</span><span>Messages</span></a>
+      <a class="snavitem" href="social.html"><span class="sicon">👥︎</span><span>Amis</span></a>
+    </nav>
+    <div class="sidefoot">
+      <nav class="sidenav" aria-label="Compte">
+        <a class="snavitem" href="account.html"><span class="sicon">👤︎</span><span>Profil</span></a>
+        <a class="snavitem" href="settings.html"><span class="sicon">⚙︎</span><span>Paramètres</span></a>
+      </nav>
+      <div class="sidewallet"><span class="wallet"><span id="coins">—</span><span class="coin" aria-hidden="true"></span></span></div>
+    </div>
+  </aside>
+
+  <div class="maincol">
+    <main class="page-main">
+      <div class="pagehead">
+        <div><h1>VIP & Premium</h1><p class="pagesub">Deux statuts distincts, à ne pas confondre.</p></div>
+      </div>
+
+      <div class="panel section">
+        <p class="sub" style="margin:0">
+          <b>VIP</b> est un statut offert manuellement par l'équipe (récompense, remerciement) — non
+          lié à un paiement. <b>Premium</b> (ci-dessous) sera un abonnement payant à venir : les deux
+          donnent un confort de jeu similaire, mais ce sont deux choses différentes.
+        </p>
+      </div>
+
+      <div class="tiers">
+        <div class="tier">
+          <h3>Gratuit</h3>
+          <div class="price">0€ <small>/ toujours</small></div>
+          <ul>
+            <li>1 booster régénéré toutes les <b>10 minutes</b></li>
+            <li>Stock maximum : <b>5 boosters</b></li>
+            <li>Accès complet à la collection, au marché, aux échanges et aux duels</li>
+          </ul>
+        </div>
+        <div class="tier highlight">
+          <h3>Premium</h3>
+          <div class="price">4,99€ <small>/ mois</small></div>
+          <ul>
+            <li>1 booster régénéré toutes les <b>3 minutes</b></li>
+            <li>Stock maximum : <b>10 boosters</b></li>
+            <li>D'autres avantages à venir (en réflexion)</li>
+          </ul>
+          <span class="soon">Bientôt disponible</span>
+        </div>
+        <div class="tier">
+          <h3>VIP</h3>
+          <div class="price">Offert <small>par l'équipe</small></div>
+          <ul>
+            <li>1 booster régénéré toutes les <b>3 minutes</b></li>
+            <li>Stock maximum : <b>15 boosters</b></li>
+            <li>Non disponible à l'achat — attribué à la main pour une contribution ou un événement particulier</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="panel section">
+        <h2>Ça ne change rien au fond du jeu</h2>
+        <p class="sub" style="margin:0">Premium et VIP accélèrent le rythme d'ouverture de boosters,
+          rien de plus : aucun avantage sur les probabilités de tirage, aucune carte exclusive
+          réservée, aucun raccourci compétitif (marché, duels, échanges). Voir aussi la
+          <a href="terms.html">politique du statut VIP</a> dans les CGU.</p>
+      </div>
+    </main>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js"></script>
+<script src="js/config.js"></script>
+<script src="js/supabaseClient.js"></script>
+<script src="js/catalogue/dom-helpers.js"></script>
+<script src="js/shared.js"></script>
+<script src="js/notifications.js"></script>
+<script>
+(async function(){ await initPage(); })();
+</script>
+</body>
+</html>

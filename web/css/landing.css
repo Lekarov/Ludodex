@@ -1,0 +1,57 @@
+/* Ludodex Online — page publique (index.html). Ne s'applique qu'à cette page, pas au reste du
+   site (qui utilise app-shell.css pour les pages connectées, style.css pour les pages de compte). */
+
+body.landing{background:var(--bg);color:var(--ink);font-family:"Inter","Atkinson Hyperlegible",system-ui,-apple-system,"Segoe UI",sans-serif;margin:0}
+
+.lp-header{position:sticky;top:0;z-index:10;display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:.9rem 1.4rem;background:color-mix(in srgb, var(--bg) 88%, transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.lp-header .brand img{height:1.7rem;display:block}
+.lp-header nav{display:flex;align-items:center;gap:.7rem}
+.lp-header nav a{text-decoration:none;font-weight:600;font-size:.92rem}
+.lp-header nav a.btn-ghost{color:var(--ink);padding:.5rem .9rem;border-radius:10px}
+.lp-header nav a.btn-ghost:hover{background:var(--surface-hover)}
+.lp-header nav a.btn-solid{color:var(--accent-ink);background:var(--accent);padding:.5rem 1rem;border-radius:10px}
+.lp-header nav a.btn-solid:hover{background:var(--accent-hover)}
+
+.lp-hero{max-width:1180px;margin:0 auto;padding:clamp(2rem,6vw,4.5rem) 1.4rem 2rem;display:grid;grid-template-columns:1.1fr 1fr;gap:2.5rem;align-items:center}
+.lp-hero h1{font-size:clamp(1.9rem,4vw,3rem);line-height:1.12;margin:0 0 1rem;letter-spacing:-.02em}
+.lp-hero h1 .accent{color:var(--accent)}
+.lp-hero p.lead{color:var(--muted);font-size:1.05rem;line-height:1.6;max-width:46ch;margin:0 0 1.6rem}
+.lp-hero .cta-row{display:flex;flex-wrap:wrap;gap:.8rem}
+.lp-cta{display:inline-flex;align-items:center;gap:.5rem;padding:.85rem 1.4rem;border-radius:12px;font-weight:700;text-decoration:none;font-size:.98rem}
+.lp-cta.primary{background:var(--accent);color:var(--accent-ink)}
+.lp-cta.primary:hover{background:var(--accent-hover)}
+.lp-cta.ghost{background:var(--surface);color:var(--ink);border:1px solid var(--line)}
+.lp-cta.ghost:hover{background:var(--surface-hover)}
+.lp-hero-art{position:relative;border-radius:var(--radius-xl);overflow:hidden;border:1px solid var(--line);box-shadow:0 20px 60px -20px rgba(0,0,0,.6)}
+.lp-hero-art img{display:block;width:100%;height:auto}
+
+.lp-stats{max-width:1180px;margin:0 auto;padding:0 1.4rem 3rem;display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:1rem}
+.lp-stat{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius-lg);padding:1.1rem 1.2rem;text-align:center}
+.lp-stat b{display:block;font-size:1.6rem;color:var(--accent);letter-spacing:-.02em}
+.lp-stat span{display:block;color:var(--muted);font-size:.82rem;margin-top:.25rem}
+
+.lp-section{max-width:1180px;margin:0 auto;padding:3rem 1.4rem}
+.lp-section h2{font-size:clamp(1.4rem,2.6vw,1.9rem);text-align:center;margin:0 0 .5rem;letter-spacing:-.01em}
+.lp-section p.sub{text-align:center;color:var(--muted);max-width:56ch;margin:0 auto 2.2rem;font-size:.96rem}
+
+.lp-features{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem}
+.lp-feature{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius-lg);padding:1.3rem}
+.lp-feature .ico{width:2.5rem;height:2.5rem;border-radius:var(--radius-md);background:var(--accent-soft);color:var(--accent);display:flex;align-items:center;justify-content:center;margin-bottom:.8rem}
+.lp-feature .ico svg{width:1.3rem;height:1.3rem}
+.lp-feature h3{font-size:1.02rem;margin:0 0 .35rem}
+.lp-feature p{color:var(--muted);font-size:.86rem;line-height:1.5;margin:0}
+
+.lp-cta-band{max-width:1180px;margin:1rem auto 3.5rem;padding:2.4rem 1.6rem;border-radius:var(--radius-xl);background:linear-gradient(135deg,var(--accent-soft),var(--surface));border:1px solid var(--line);text-align:center}
+.lp-cta-band h2{margin:0 0 .5rem;font-size:1.5rem}
+.lp-cta-band p{color:var(--muted);margin:0 0 1.4rem}
+
+.lp-footer{border-top:1px solid var(--line);padding:2rem 1.4rem;text-align:center;color:var(--muted);font-size:.82rem}
+.lp-footer .foot-links{display:flex;flex-wrap:wrap;gap:.4rem 1rem;justify-content:center;margin-bottom:.8rem}
+.lp-footer .foot-links a{color:var(--muted);text-decoration:underline}
+
+@media (max-width:900px){
+  .lp-hero{grid-template-columns:1fr;text-align:center}
+  .lp-hero p.lead{margin-left:auto;margin-right:auto}
+  .lp-hero .cta-row{justify-content:center}
+  .lp-hero-art{order:-1}
+}

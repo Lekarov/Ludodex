@@ -1,0 +1,121 @@
+/* Ludodex Online — hub admin/modérateur (admin.html uniquement). */
+
+/* admin.html ne charge pas style.css (layout flex-column incompatible avec app-shell) : ces
+   règles .msg y sont dupliquées, sinon les messages d'erreur/succès n'ont aucun style ici. */
+.msg{margin-top:1rem;padding:.7rem .9rem;border-radius:10px;font-size:.88rem;display:none}
+.msg.show{display:block}
+.msg.error{background:color-mix(in srgb, var(--danger) 18%, transparent);color:var(--danger)}
+.msg.ok{background:color-mix(in srgb, var(--accent) 18%, transparent);color:var(--accent)}
+
+.rolebadge{display:inline-block;padding:.3rem .7rem;border-radius:999px;background:var(--accent-soft);color:var(--accent);font-size:.78rem;font-weight:700;text-align:center;width:100%}
+.admbadge{margin-left:auto;background:var(--danger);color:#fff;font-size:.72rem;font-weight:800;border-radius:999px;padding:.05rem .45rem;min-width:1.2rem;text-align:center}
+
+/* [hidden] doit rester prioritaire : sans ce garde, .elev-gate{display:flex} (règle d'auteur)
+   l'emporte toujours sur l'attribut hidden (règle du navigateur), donc la porte de mot de passe
+   restait affichée même une fois masquée en JS — bug réel constaté par Doktor. */
+.elev-gate[hidden]{display:none}
+.elev-gate{display:flex;align-items:center;justify-content:center;min-height:60vh}
+.elev-card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius-lg);padding:1.8rem;max-width:380px;width:100%}
+.elev-card h1{margin:0 0 .3rem;font-size:1.3rem}
+.elev-card .sub{color:var(--muted);font-size:.88rem;margin:0 0 1.2rem}
+.elev-card label{display:block;font-weight:700;font-size:.85rem;margin-bottom:.3rem}
+.elev-card input{width:100%;padding:.65rem .8rem;border-radius:10px;border:1px solid var(--line);background:var(--bg);color:var(--ink);font:inherit;margin-bottom:.9rem}
+
+.kpigrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:1rem}
+.kpicard{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius-lg);padding:1.1rem 1.2rem}
+.kpicard b{display:block;font-size:1.7rem;color:var(--accent)}
+.kpicard span{display:block;color:var(--muted);font-size:.82rem;margin-top:.2rem}
+
+.admtoolbar{display:flex;flex-wrap:wrap;gap:.6rem;align-items:center;margin-bottom:1rem}
+.admtoolbar input[type=text]{padding:.55rem .8rem;border-radius:10px;border:1px solid var(--line);background:var(--surface);color:var(--ink);font:inherit;min-width:180px}
+.admtoolbar select{padding:.55rem .8rem;border-radius:10px;border:1px solid var(--line);background:var(--surface);color:var(--ink);font:inherit}
+.admtoolbar-sep{width:1px;align-self:stretch;background:var(--line);margin:0 .3rem}
+
+.admtable-wrap{overflow-x:auto;border:1px solid var(--line);border-radius:var(--radius-lg)}
+table.admtable{width:100%;border-collapse:collapse;font-size:.88rem}
+table.admtable th{text-align:left;padding:.7rem .9rem;color:var(--muted);font-weight:700;font-size:.78rem;text-transform:uppercase;letter-spacing:.02em;border-bottom:1px solid var(--line)}
+table.admtable td{padding:.65rem .9rem;border-bottom:1px solid var(--line)}
+table.admtable tr:last-child td{border-bottom:0}
+table.admtable tr:hover td{background:var(--surface-hover)}
+.admtable .linklike{background:none;border:0;color:var(--accent);font:inherit;font-weight:700;cursor:pointer;padding:0}
+.statuschip{display:inline-block;padding:.1rem .5rem;border-radius:999px;font-size:.72rem;font-weight:700;margin-right:.3rem}
+.statuschip.muted{background:color-mix(in srgb, var(--info) 20%, transparent);color:var(--info)}
+.statuschip.suspended{background:color-mix(in srgb, var(--danger) 20%, transparent);color:var(--danger)}
+.statuschip.vip{background:color-mix(in srgb, var(--gold) 20%, transparent);color:var(--gold)}
+
+.admempty{text-align:center;padding:2.4rem 1rem;color:var(--muted)}
+.admempty-ico{font-size:1.8rem;margin-bottom:.6rem}
+.admempty b{display:block;color:var(--ink);font-size:.98rem;margin-bottom:.3rem}
+.admempty p{margin:0;font-size:.85rem}
+
+.reportslist{display:flex;flex-direction:column;gap:.8rem}
+.reportcard{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius-lg);padding:1rem 1.2rem}
+.reportcard .rhead{display:flex;justify-content:space-between;gap:1rem;color:var(--muted);font-size:.8rem;margin-bottom:.5rem}
+.reportcard .rmsg{background:var(--bg);border:1px solid var(--line);border-radius:10px;padding:.6rem .8rem;font-size:.9rem;margin-bottom:.7rem}
+.reportcard .ractions{display:flex;gap:.6rem;flex-wrap:wrap}
+
+.hubflash{position:sticky;top:0;z-index:5}
+
+.admdlg{width:min(680px,94vw);padding:0}
+.admdlg > div{padding:1.6rem 1.6rem 0}
+.admdlg > .btn{margin:0 1.6rem 1.6rem;width:calc(100% - 3.2rem)}
+.catdlg{width:min(920px,96vw)}
+
+.pdlg-head{display:flex;align-items:center;gap:.9rem;margin-bottom:1.3rem;padding-bottom:1.1rem;border-bottom:1px solid var(--line)}
+.pdlg-head h2{margin:0;font-size:1.3rem;letter-spacing:-.01em}
+.pdlg-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:.7rem;margin-bottom:1.3rem}
+.pdlg-grid > div{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius-md);padding:.6rem .8rem}
+.pdlg-grid span{display:block;color:var(--muted);font-size:.72rem;text-transform:uppercase;letter-spacing:.03em;margin-bottom:.15rem}
+.pdlg-grid b{font-size:1rem}
+
+.pdlg-section{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius-lg);padding:1rem 1.1rem;margin:0 0 .9rem}
+.pdlg-section.pdlg-danger{border-color:color-mix(in srgb, var(--danger) 40%, var(--line))}
+.pdlg-section h3{font-size:.78rem;text-transform:uppercase;letter-spacing:.03em;color:var(--muted);margin:0 0 .7rem}
+
+.pdlg-actionrow{display:flex;flex-wrap:wrap;gap:.5rem;align-items:center;margin-bottom:.5rem}
+.pdlg-actionrow:last-child{margin-bottom:0}
+.pdlg-actionrow .btn{width:auto;margin:0;padding:.5rem .9rem;font-size:.85rem;white-space:nowrap}
+.pdlg-reason,.pdlg-txt,.pdlg-num{padding:.5rem .7rem;border-radius:10px;border:1px solid var(--line);background:var(--bg);color:var(--ink);font:inherit;font-size:.85rem}
+.pdlg-reason{flex:1;min-width:120px}
+.pdlg-txt{flex:1;min-width:130px}
+.pdlg-num{width:80px}
+.pdlg-chk{display:flex;align-items:center;gap:.35rem;font-size:.85rem;color:var(--muted)}
+
+.pdlg-notes{display:flex;flex-direction:column;gap:.4rem;max-height:160px;overflow:auto;margin-bottom:.7rem}
+.pdlg-note{background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:.5rem .7rem;font-size:.84rem}
+.pdlg-note small{display:block;color:var(--muted);margin-top:.2rem}
+.pdlg-hist{max-height:160px;overflow:auto;font-size:.82rem}
+.pdlg-hist div{padding:.35rem 0;border-bottom:1px solid var(--line)}
+.pdlg-hist div:last-child{border-bottom:0}
+
+/* Grille du catalogue (onglet "Catalogue") — vraies cartes cardHTML()/card.css, comme la page
+   Collection côté joueur, façon "affiche-moi une interface comme la collection" (retour Doktor). */
+.catgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(120px,1fr));gap:.9rem;margin-bottom:1rem}
+.catcell{background:none;border:0;padding:0;cursor:pointer;display:block;border-radius:var(--radius-md);transition:transform .1s}
+.catcell:hover{transform:translateY(-2px)}
+.catcell:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+
+/* Gros panneau d'édition (catalogDlg) : grande prévisualisation à gauche, contrôles à droite. */
+.catreq{background:color-mix(in srgb, var(--gold) 16%, transparent);color:var(--gold);border-radius:10px;padding:.5rem .8rem;font-size:.85rem;margin:0 0 1rem}
+.cateditor{display:grid;grid-template-columns:220px 1fr;gap:1.4rem;align-items:start}
+.catpreview .cw{width:100%}
+.catcontrols{min-width:0}
+@media (max-width:640px){.cateditor{grid-template-columns:1fr}.catpreview .cw{max-width:220px;margin:0 auto}}
+
+/* Pavé directionnel + zoom groupés côte à côte (pas empilés) dans un seul bloc compact, pour
+   éviter le grand vide à droite constaté quand chacun était centré séparément sur toute la
+   largeur du panneau. */
+.framectl{display:flex;align-items:center;justify-content:center;gap:1.4rem;flex-wrap:wrap}
+.dpad{display:grid;grid-template-columns:repeat(3,2.1rem);grid-template-rows:repeat(3,2.1rem);gap:2px;background:var(--bg);border:1px solid var(--line);border-radius:10px;padding:2px}
+.dbtn{width:2.1rem;height:2.1rem;padding:0;margin:0;background:var(--surface-2);border:1px solid var(--line);border-radius:6px;color:var(--ink);cursor:pointer;font-size:.95rem;display:flex;align-items:center;justify-content:center}
+.dbtn:hover{background:var(--surface-hover)}
+.dbtn-reset{color:var(--muted);font-size:1.05rem;background:var(--bg);border-color:transparent}
+.dbtn-reset:hover{color:var(--ink)}
+.zoomrow{display:flex;align-items:center;gap:.4rem}
+.zoomrow span{min-width:3.2rem;text-align:center;font-variant-numeric:tabular-nums;font-weight:700}
+.motifchips{display:flex;flex-wrap:wrap;gap:.4rem;margin-bottom:.6rem}
+.chip{background:var(--surface-2);border:1px solid var(--line);border-radius:999px;padding:.3rem .7rem;font-size:.78rem;color:var(--muted);cursor:pointer}
+.chip:hover{background:var(--surface-hover);color:var(--ink);border-color:var(--accent)}
+.catimgstatus{font-size:.8rem;color:var(--muted)}
+.catimgstatus.ok{color:var(--accent)}
+.catimgstatus.error{color:var(--danger)}

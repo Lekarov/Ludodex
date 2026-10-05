@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Hub modération — Ludodex Online</title>
+<link rel="icon" href="assets/logo-ludodex.png" type="image/png">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://YOUR_PROJECT_REF.supabase.co wss://YOUR_PROJECT_REF.supabase.co https://api.ipify.org; object-src 'none'; base-uri 'self'; form-action 'self'">
+<meta name="robots" content="noindex,nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/tokens-site.css">
+<link rel="stylesheet" href="css/theme.css">
+<link rel="stylesheet" href="css/layout.css">
+<link rel="stylesheet" href="css/card.css">
+<link rel="stylesheet" href="css/dialogs.css">
+<link rel="stylesheet" href="css/notifications.css">
+<link rel="stylesheet" href="css/app-shell.css">
+<link rel="stylesheet" href="css/admin.css">
+</head>
+<body>
+<div class="appshell">
+  <aside class="sidebar">
+    <div class="sidebrand">
+      <img src="img/logo-ludodex.png" alt="Ludodex">
+      <div class="belwrap">
+        <button class="sidebell" id="notifBell" type="button" aria-label="Notifications">🔔<span class="nbub" id="notifBubble" hidden>0</span></button>
+        <div class="notifpanel" id="notifPanel" hidden>
+          <div class="notifhead">Notifications</div>
+          <ul class="nlist" id="notifList"></ul>
+        </div>
+      </div>
+    </div>
+    <nav class="sidenav" aria-label="Sections du hub">
+      <a class="snavitem admtab" data-tab="dashboard" href="#dashboard" aria-current="page"><span class="sicon"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="12" width="4" height="8"/><rect x="10" y="7" width="4" height="13"/><rect x="17" y="3" width="4" height="17"/></svg></span><span>Tableau de bord</span></a>
+      <a class="snavitem admtab" data-tab="players" href="#players"><span class="sicon"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="9" cy="8" r="3"/><circle cx="17" cy="9" r="2.5"/><path d="M3 19a6 6 0 0 1 12 0M15 15a5 5 0 0 1 6 4"/></svg></span><span>Joueurs</span></a>
+      <a class="snavitem admtab" data-tab="reports" href="#reports"><span class="sicon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 3v18M5 4h11l-2 4 2 4H5"/></svg></span><span>Signalements</span><span class="admbadge" id="reportsBadge" hidden>0</span></a>
+      <a class="snavitem admtab" data-tab="support" href="#support"><span class="sicon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 11.5a8.38 8.38 0 01-9 8.35A8.38 8.38 0 013 11.5a8.38 8.38 0 019-8.35 8.5 8.5 0 019 8.35z"/></svg></span><span>Support</span><span class="admbadge" id="supportBadge" hidden>0</span></a>
+      <a class="snavitem admtab" data-tab="images" href="#images"><span class="sicon"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="9" cy="9" r="2"/><path d="M21 15l-5-5-9 9"/></svg></span><span>Catalogue</span><span class="admbadge" id="imagesBadge" hidden>0</span></a>
+      <a class="snavitem admtab" data-tab="announcements" href="#announcements"><span class="sicon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 10v4h3l5 4V6l-5 4H4z"/><path d="M16 9a4 4 0 0 1 0 6"/></svg></span><span>Annonces</span></a>
+    </nav>
+    <div class="sidefoot">
+      <nav class="sidenav" aria-label="Retour">
+        <a class="snavitem" href="boosters.html"><span class="sicon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 6l-6 6 6 6"/></svg></span><span>Retour au site</span></a>
+      </nav>
+      <div class="sidewallet"><span id="hubRoleBadge" class="rolebadge">—</span></div>
+    </div>
+  </aside>
+
+  <div class="maincol">
+    <main class="page-main">
+
+      <!-- Porte d'élévation : rien du hub ne charge tant que ce n'est pas passé. -->
+      <div id="elevGate" class="elev-gate">
+        <div class="elev-card">
+          <h1>Hub modération</h1>
+          <p class="sub">Reconfirme ton mot de passe pour ouvrir le hub. Cette élévation expire
+            après 15 minutes d'inactivité.</p>
+          <label for="elevPassword">Mot de passe</label>
+          <input type="password" id="elevPassword" autocomplete="current-password">
+          <button class="btn primary" id="elevSubmit" type="button">Ouvrir le hub</button>
+          <div class="msg" id="elevMsg"></div>
+        </div>
+      </div>
+
+      <div id="hubBody" hidden>
+        <div class="pagehead">
+          <div><h1>Hub modération</h1><p class="pagesub" id="elevExpiry"></p></div>
+        </div>
+        <div class="msg hubflash" id="hubFlash"></div>
+
+        <section class="admtabpanel" id="tab-dashboard">
+          <div class="kpigrid" id="kpiGrid"></div>
+        </section>
+
+        <section class="admtabpanel" id="tab-players" hidden>
+          <div class="admtoolbar">
+            <input type="text" id="playerSearch" placeholder="Rechercher un pseudo…">
+            <select id="playerSort">
+              <option value="created_desc">Plus récents</option>
+              <option value="coins_desc">Plus de pièces</option>
+              <option value="cards_desc">Plus de cartes</option>
+              <option value="username_asc">Pseudo (A→Z)</option>
+              <option value="role_desc">Rôle</option>
+            </select>
+            <button class="btn" id="playerSearchBtn" type="button">Filtrer</button>
+            <span class="admtoolbar-sep"></span>
+            <input type="text" id="cardOwnerSearch" placeholder="ID de carte (recherche de propriétaires)…">
+            <button class="btn" id="cardOwnerBtn" type="button">Qui possède cette carte ?</button>
+            <button class="btn" id="exportCsvBtn" type="button">Export CSV</button>
+          </div>
+          <div id="cardOwnersResult" hidden></div>
+          <div class="admtable-wrap">
+            <table class="admtable" id="playersTable">
+              <thead><tr><th>Pseudo</th><th>Rôle</th><th>Pièces</th><th>Cartes</th><th>Statuts</th><th>Créé le</th><th></th></tr></thead>
+              <tbody id="playersBody"></tbody>
+            </table>
+          </div>
+        </section>
+
+        <section class="admtabpanel" id="tab-reports" hidden>
+          <div id="reportsList" class="reportslist"></div>
+        </section>
+
+        <section class="admtabpanel" id="tab-support" hidden>
+          <div class="admtoolbar">
+            <select id="supportStatusFilter">
+              <option value="open">Ouverts</option>
+              <option value="in_progress">En cours</option>
+              <option value="closed">Fermés</option>
+            </select>
+            <button class="btn" id="supportFilterBtn" type="button">Filtrer</button>
+          </div>
+          <div id="supportList" class="reportslist"></div>
+        </section>
+
+        <section class="admtabpanel" id="tab-images" hidden>
+          <div class="admtoolbar">
+            <input type="text" id="catSearch" placeholder="Rechercher un titre dans le catalogue…" style="flex:1;min-width:220px">
+            <button class="btn" id="catSearchBtn" type="button">Rechercher</button>
+            <span class="admtoolbar-sep"></span>
+            <button class="btn primary" id="catQueueBtn" type="button">🎯 Carte suivante à trier</button>
+          </div>
+          <p class="pagesub" id="catQueueCount" style="margin:0 0 1rem"></p>
+          <div class="catgrid" id="catGrid"></div>
+          <div class="admtoolbar" id="catPager"></div>
+        </section>
+
+        <section class="admtabpanel" id="tab-announcements" hidden>
+          <div class="admtoolbar">
+            <input type="text" id="annMessage" placeholder="Message de l'annonce globale…" style="flex:1">
+            <button class="btn primary" id="annCreateBtn" type="button">Publier</button>
+          </div>
+          <div id="annList" class="reportslist"></div>
+        </section>
+
+      </div>
+    </main>
+  </div>
+</div>
+
+<!-- Fiche joueur détaillée -->
+<dialog id="playerDlg" class="admdlg">
+  <div id="playerDlgBody"></div>
+  <button class="btn" id="playerDlgClose" type="button">Fermer</button>
+</dialog>
+
+<!-- Éditeur de fiche catalogue (grande prévisualisation + cadrage + rareté/ATK/DEF) -->
+<dialog id="catalogDlg" class="admdlg catdlg">
+  <div id="catalogDlgBody"></div>
+  <button class="btn" id="catalogDlgClose" type="button">Fermer</button>
+</dialog>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js"></script>
+<script src="js/config.js"></script>
+<script src="js/supabaseClient.js"></script>
+<script src="js/catalogue/dom-helpers.js"></script>
+<script src="js/shared.js"></script>
+<script src="js/render.js"></script>
+<script src="js/notifications.js"></script>
+<script src="js/admin.js"></script>
+</body>
+</html>
