@@ -1,0 +1,23 @@
+{
+  "generated_at": "2026-09-25T12:53:52+00:00",
+  "source": "IGDB API v4",
+  "retrieved": 10354,
+  "accepted_new_games": 10015,
+  "excluded": {
+    "known_id": 165,
+    "known_title_year": 12,
+    "batch_title_year": 7,
+    "category": 0,
+    "adult": 155
+  },
+  "filters": {
+    "rating_count": "1-4",
+    "cover_required": true,
+    "release_date_required": true,
+    "deduplication": "IGDB ID then normalized title+year against all delivered catalogues and batch"
+  },
+  "image_formats": {
+    "cover.url": "cover_big 264x374",
+    "cover.square_url": "thumb 90x90"
+  }
+}

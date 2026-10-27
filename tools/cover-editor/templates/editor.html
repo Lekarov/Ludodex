@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="fr" class="fullArtCards">
+<head>
+<meta charset="utf-8">
+<title>Ludodex — Éditeur de jaquettes</title>
+<link rel="stylesheet" href="/ludodex-css/tokens.css">
+<link rel="stylesheet" href="/ludodex-css/components/card.css">
+<link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<header class="bar">
+  <h1>Éditeur de jaquettes Ludodex</h1>
+  <div class="progress">{{ stats.done }} / {{ stats.total }} jeux passés en revue{% if current_filter %} — filtre : {{ current_filter }}{% endif %}</div>
+</header>
+
+<div class="toolbar">
+  <div class="search">
+    <input id="searchBox" type="text" placeholder="Chercher un jeu par titre…" autocomplete="off" data-platform="{{ current_filter }}">
+    <div id="searchResults" class="searchResults" hidden></div>
+  </div>
+
+  <form method="get" action="/" class="filterForm">
+    <label for="platformFilter">Plateforme :</label>
+    <select id="platformFilter" name="platform" onchange="this.form.submit()">
+      <option value=""{% if not current_filter %} selected{% endif %}>Toutes</option>
+      {% for p in platforms %}
+      <option value="{{ p }}"{% if p == current_filter %} selected{% endif %}>{{ p }}</option>
+      {% endfor %}
+    </select>
+  </form>
+</div>
+
+{% if not game %}
+<p class="empty">Aucun jeu trouvé pour ce filtre — vérifie que les fichiers Ludodex sont bien accessibles, ou change de plateforme.</p>
+{% else %}
+<main class="editor">
+  <section class="preview">
+    <div class="cw">
+      <div class="card r0" style="--pc:#5b6272;--rc:#7d879c">
+        <div class="art" id="artBox">
+          <img id="previewImg"
+               src="{{ game.override_cover_url or game.cover_url or '' }}"
+               style="object-position:{{ game.object_position }};transform:scale({{ game.zoom }});transform-origin:{{ game.object_position }}"
+               onerror="this.style.display='none'"
+               draggable="false">
+          <div id="posMarker" class="posMarker"></div>
+        </div>
+        <div class="info">
+          <div class="title">{{ game.title }}</div>
+          <div class="dev">{{ game.platforms|join(', ') }}{% if game.year %} · {{ game.year }}{% endif %}</div>
+          <div class="statdiv"></div>
+          <div class="stats">
+            <span class="atk" title="Attaque"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 3 21 9.5 12 18l-3-3 8.5-8.5Z"></path><path d="M9 15l-6 6"></path><path d="M3 21l1.5-4.5L9 15"></path></svg>—</span>
+            <b class="rbadge" title="Commune">C</b>
+            <span class="def" title="Défense"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 4 5v6c0 5 3.4 8.7 8 11 4.6-2.3 8-6 8-11V5l-8-3Z"></path></svg>—</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <p class="hint">Glisse ou clique dans l'image pour choisir le centre du cadrage.</p>
+    <div class="posReadout">
+      Cadrage : <b id="posReadoutValue">{{ game.object_position }}</b>
+      <button type="button" id="resetPos">Réinitialiser</button>
+    </div>
+    <div class="zoomRow">
+      <label for="zoomSlider">Zoom : <b id="zoomValue">{{ (game.zoom * 100)|round|int }}%</b></label>
+      <input type="range" id="zoomSlider" min="100" max="300" step="5" value="{{ (game.zoom * 100)|round|int }}">
+    </div>
+  </section>
+
+  <section class="controls">
+    <form method="post" action="/save" id="saveForm">
+      <input type="hidden" name="game_id" value="{{ game.id }}">
+      <input type="hidden" name="platform" value="{{ current_filter }}">
+      <input type="hidden" name="object_position" id="objectPositionField" value="{{ game.object_position }}">
+      <input type="hidden" name="zoom" id="zoomField" value="{{ game.zoom }}">
+
+      <h2>{{ game.title }}</h2>
+      <p class="meta">{{ game.id }} · {{ game.platforms|join(', ') }}{% if game.year %} · {{ game.year }}{% endif %}</p>
+
+      <label>Lien de l'image (laisser vide pour garder l'actuelle)</label>
+      <input type="url" name="cover_url" id="coverUrlField" placeholder="https://…" value="{{ game.override_cover_url or '' }}">
+      <div id="linkStatus" class="linkStatus"></div>
+
+      <div class="defaults">
+        <span>Suggestions :</span>
+        {% if game.cover_url %}
+        <button type="button" class="thumb" data-url="{{ game.cover_url }}">
+          <img src="{{ game.cover_url }}" alt="jaquette grande">
+        </button>
+        {% endif %}
+        {% if game.thumb_url and game.thumb_url != game.cover_url %}
+        <button type="button" class="thumb" data-url="{{ game.thumb_url }}">
+          <img src="{{ game.thumb_url }}" alt="miniature">
+        </button>
+        {% endif %}
+      </div>
+
+      <div class="actions">
+        <button type="submit" class="primary">Enregistrer et passer à la suivante</button>
+        <button type="submit" formaction="/skip" formnovalidate>Passer sans modifier</button>
+        {% if game.has_override %}
+        <button type="submit" formaction="/clear" formnovalidate class="danger">Retirer la surcouche</button>
+        {% endif %}
+      </div>
+    </form>
+  </section>
+</main>
+{% endif %}
+
+<script src="/static/app.js"></script>
+</body>
+</html>

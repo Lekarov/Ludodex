@@ -1,0 +1,32 @@
+{
+  "generated_at": "2026-09-25T12:25:52+00:00",
+  "source": "IGDB API v4",
+  "retrieved": 15435,
+  "accepted_new_games": 14663,
+  "excluded": {
+    "existing_igdb_id": 436,
+    "existing_title_year": 190,
+    "category": 0,
+    "adult_keyword": 116,
+    "batch_title_year": 30
+  },
+  "filters": {
+    "minimum_total_rating_count": 5,
+    "requires_cover": true,
+    "requires_release_date": true,
+    "version_parent_null": true,
+    "parent_game_null": true,
+    "allowed_categories": [
+      0,
+      4,
+      8,
+      9,
+      10
+    ],
+    "deduplication": "IGDB ID, then normalized title + release year against existing catalogue, volume 2, and batch"
+  },
+  "image_formats": {
+    "cover.url": "IGDB cover_big 264x374",
+    "cover.square_url": "IGDB thumb 90x90"
+  }
+}

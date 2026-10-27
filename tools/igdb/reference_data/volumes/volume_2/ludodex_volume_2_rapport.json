@@ -1,0 +1,762 @@
+{
+  "generated_at": "2026-09-25",
+  "source": "SteamSpy all page 2 + Steam Store appdetails",
+  "filter_discovery": "not already present; >=8000 SteamSpy reviews; >=85% positive",
+  "filter_validation": "Steam type=game; Steam genre includes Indie; capsule present; selected exclusions",
+  "candidates_checked": 183,
+  "accepted": 33,
+  "excluded": 150,
+  "request_errors": [],
+  "exclusions": [
+    {
+      "appid": 22490,
+      "name": "Fallout: New Vegas",
+      "reason": "fiche Steam absente ou inaccessible"
+    },
+    {
+      "appid": 236430,
+      "name": "DARK SOULS II",
+      "reason": "fiche Steam absente ou inaccessible"
+    },
+    {
+      "appid": 1562700,
+      "name": "SANABI",
+      "reason": "fiche Steam absente ou inaccessible"
+    },
+    {
+      "appid": 824270,
+      "name": "KovaaK's",
+      "reason": "fiche Steam absente ou inaccessible"
+    },
+    {
+      "appid": 1235140,
+      "name": "Yakuza: Like a Dragon",
+      "reason": "fiche Steam absente ou inaccessible"
+    },
+    {
+      "appid": 1144400,
+      "name": "Senren＊Banka",
+      "reason": "genre Indie absent de la fiche Steam"
+    },
+    {
+      "appid": 1876890,
+      "name": "Wandering Sword",
+      "reason": "fiche Steam absente ou inaccessible"
+    },
+    {
+      "appid": 2273430,
+      "name": "BlazBlue Entropy Effect",
+      "reason": "fiche Steam absente ou inaccessible"
+    },
+    {
+      "appid": 1392820,
+      "name": "Milk inside a bag of milk inside a bag of milk",
+      "reason": "fiche Steam absente ou inaccessible"
+    },
+    {
+      "appid": 2475490,
+      "name": "Mouthwashing",
+      "reason": "fiche Steam absente ou inaccessible"
+    },
+    {
+      "appid": 622650,
+      "name": "Bendy and the Ink Machine",
+      "reason": "fiche Steam absente ou inaccessible"
+    },
+    {
+      "appid": 333600,
+      "name": "NEKOPARA Vol. 1",
+      "reason": "fiche Steam absente ou inaccessible"
+    },
+    {
+      "appid": 2531310,
+      "name": "The Last of Us Part II Remastered",
+      "reason": "genre Indie absent de la fiche Steam"
+    },
+    {
+      "appid": 1237320,
+      "name": "Sonic Frontiers",
+      "reason": "fiche Steam absente ou inaccessible"
+    },
+    {
+      "appid": 1583320,
+      "name": "Pro Soccer Online",
+      "reason": "fiche Steam absente ou inaccessible"
+    },
+    {
+      "appid": 1240210,
+      "name": "There Is No Game: Wrong Dimension",
+      "reason": "fiche Steam absente ou inaccessible"
+    },
+    {
+      "appid": 928600,
+      "name": "F1 2019",
+      "reason": "fiche Steam absente ou inaccessible"
+    },
+    {
+      "appid": 692890,
+      "name": "Roboquest",
+      "reason": "fiche Steam absente ou inaccessible"
+    },
+    {
+      "appid": 1466640,
+      "name": "Road 96 ",
+      "reason": "fiche Steam absente ou inaccessible"
+    },
+    {
+      "appid": 1401590,
+      "name": "Disney Dreamlight Valley",
+      "reason": "fiche Steam absente ou inaccessible"
+    },
+    {
+      "appid": 394690,
+      "name": "Tower Unite",
+      "reason": "fiche Steam absente ou inaccessible"
+    },
+    {
+      "appid": 1182900,
+      "name": "A Plague Tale: Requiem",
+      "reason": "fiche Steam absente ou inaccessible"
+    },
+    {
+      "appid": 756800,
+      "name": "Contraband Police",
+      "reason": "fiche Steam absente ou inaccessible"
+    },
+    {
+      "appid": 2072450,
+      "name": "Like a Dragon: Infinite Wealth",
+      "reason": "fiche Steam absente ou inaccessible"
+    },
+    {
+      "appid": 1421250,
+      "name": "Tiny Bunny",
+      "reason": "fiche Steam absente ou inaccessible"
+    },
+    {
+      "appid": 1583230,
+      "name": "High On Life",
+      "reason": "fiche Steam absente ou inaccessible"
+    },
+    {
+      "appid": 1761390,
+      "name": "Hatsune Miku: Project DIVA Mega Mix+",
+      "reason": "fiche Steam absente ou inaccessible"
+    },
+    {
+      "appid": 337340,
+      "name": "Finding Paradise",
+      "reason": "fiche Steam absente ou inaccessible"
+    },
+    {
+      "appid": 1604000,
+      "name": "Milk outside a bag of milk outside a bag of milk",
+      "reason": "fiche Steam absente ou inaccessible"
+    },
+    {
+      "appid": 2707900,
+      "name": "NIGHT-RUNNERS PROLOGUE",
+      "reason": "genre Indie absent de la fiche Steam"
+    },
+    {
+      "appid": 242680,
+      "name": "Nuclear Throne",
+      "reason": "fiche Steam absente ou inaccessible"
+    },
+    {
+      "appid": 1533420,
+      "name": "Neon White",
+      "reason": "fiche Steam absente ou inaccessible"
+    },
+    {
+      "appid": 667530,
+      "name": "Drunken Wrestlers 2",
+      "reason": "fiche Steam absente ou inaccessible"
+    },
+    {
+      "appid": 71250,
+      "name": "Sonic Adventure DX",
+      "reason": "genre Indie absent de la fiche Steam"
+    },
+    {
+      "appid": 927380,
+      "name": "Yakuza Kiwami 2",
+      "reason": "fiche Steam absente ou inaccessible"
+    },
+    {
+      "appid": 498240,
+      "name": "Batman - The Telltale Series",
+      "reason": "fiche Steam absente ou inaccessible"
+    },
+    {
+      "appid": 1150440,
+      "name": "Aliens: Dark Descent",
+      "reason": "fiche Steam absente ou inaccessible"
+    },
+    {
+      "appid": 39510,
+      "name": "Gothic II: Gold Edition",
+      "reason": "genre Indie absent de la fiche Steam"
+    },
+    {
+      "appid": 463530,
+      "name": "Empires of the Undergrowth",
+      "reason": "fiche Steam absente ou inaccessible"
+    },
+    {
+      "appid": 812810,
+      "name": "missed messages.",
+      "reason": "fiche Steam absente ou inaccessible"
+    },
+    {
+      "appid": 1275670,
+      "name": "Outcore: Desktop Adventure",
+      "reason": "fiche Steam absente ou inaccessible"
+    },
+    {
+      "appid": 2365810,
+      "name": "Pseudoregalia",
+      "reason": "fiche Steam absente ou inaccessible"
+    },
+    {
+      "appid": 1216710,
+      "name": "Cyber Manhunt",
+      "reason": "fiche Steam absente ou inaccessible"
+    },
+    {
+      "appid": 335670,
+      "name": "LISA: The Painful",
+      "reason": "fiche Steam absente ou inaccessible"
+    },
+    {
+      "appid": 1085510,
+      "name": "Garfield Kart - Furious Racing",
+      "reason": "genre Indie absent de la fiche Steam"
+    },
+    {
+      "appid": 293760,
+      "name": "Automation - The Car Company Tycoon Game",
+      "reason": "fiche Steam absente ou inaccessible"
+    },
+    {
+      "appid": 362930,
+      "name": "Garfield Kart",
+      "reason": "genre Indie absent de la fiche Steam"
+    },
+    {
+      "appid": 1164940,
+      "name": "Trepang2",
+      "reason": "fiche Steam absente ou inaccessible"
+    },
+    {
+      "appid": 1170880,
+      "name": "Grimm's Hollow",
+      "reason": "fiche Steam absente ou inaccessible"
+    },
+    {
+      "appid": 2600,
+      "name": "Vampire: The Masquerade - Bloodlines",
+      "reason": "genre Indie absent de la fiche Steam"
+    },
+    {
+      "appid": 1318690,
+      "name": "shapez",
+      "reason": "fiche Steam absente ou inaccessible"
+    },
+    {
+      "appid": 1895880,
+      "name": "Ratchet & Clank: Rift Apart",
+      "reason": "fiche Steam absente ou inaccessible"
+    },
+    {
+      "appid": 415200,
+      "name": "Motorsport Manager",
+      "reason": "fiche Steam absente ou inaccessible"
+    },
+    {
+      "appid": 1971650,
+      "name": "OCTOPATH TRAVELER II",
+      "reason": "genre Indie absent de la fiche Steam"
+    },
+    {
+      "appid": 1559390,
+      "name": "Fate Seeker II",
+      "reason": "fiche Steam absente ou inaccessible"
+    },
+    {
+      "appid": 1229380,
+      "name": "Everhood",
+      "reason": "fiche Steam absente ou inaccessible"
+    },
+    {
+      "appid": 737800,
+      "name": "F1 2018",
+      "reason": "fiche Steam absente ou inaccessible"
+    },
+    {
+      "appid": 882790,
+      "name": "Fate Seeker",
+      "reason": "fiche Steam absente ou inaccessible"
+    },
+    {
+      "appid": 1488200,
+      "name": "Symphony of War: The Nephilim Saga",
+      "reason": "fiche Steam absente ou inaccessible"
+    },
+    {
+      "appid": 607080,
+      "name": "Psychonauts 2",
+      "reason": "fiche Steam absente ou inaccessible"
+    },
+    {
+      "appid": 1084160,
+      "name": "Jagged Alliance 3",
+      "reason": "fiche Steam absente ou inaccessible"
+    },
+    {
+      "appid": 221260,
+      "name": "Little Inferno",
+      "reason": "fiche Steam absente ou inaccessible"
+    },
+    {
+      "appid": 589780,
+      "name": "The Red Strings Club",
+      "reason": "fiche Steam absente ou inaccessible"
+    },
+    {
+      "appid": 2666510,
+      "name": "Rusty's Retirement",
+      "reason": "fiche Steam absente ou inaccessible"
+    },
+    {
+      "appid": 314650,
+      "name": "SpaceEngine",
+      "reason": "fiche Steam absente ou inaccessible"
+    },
+    {
+      "appid": 420110,
+      "name": "NEKOPARA Vol. 2",
+      "reason": "fiche Steam absente ou inaccessible"
+    },
+    {
+      "appid": 965200,
+      "name": "Walking Zombie 2",
+      "reason": "fiche Steam absente ou inaccessible"
+    },
+    {
+      "appid": 1129190,
+      "name": "Our Life: Beginnings & Always",
+      "reason": "fiche Steam absente ou inaccessible"
+    },
+    {
+      "appid": 40100,
+      "name": "Supreme Commander 2",
+      "reason": "fiche Steam absente ou inaccessible"
+    },
+    {
+      "appid": 1283410,
+      "name": "Tails of Iron",
+      "reason": "fiche Steam absente ou inaccessible"
+    },
+    {
+      "appid": 688420,
+      "name": "Bad North: Jotunn Edition",
+      "reason": "fiche Steam absente ou inaccessible"
+    },
+    {
+      "appid": 282900,
+      "name": "Hyperdimension Neptunia Re;Birth1",
+      "reason": "fiche Steam absente ou inaccessible"
+    },
+    {
+      "appid": 714120,
+      "name": "Little Misfortune",
+      "reason": "fiche Steam absente ou inaccessible"
+    },
+    {
+      "appid": 1714320,
+      "name": "Find Love or Die Trying",
+      "reason": "fiche Steam absente ou inaccessible"
+    },
+    {
+      "appid": 268650,
+      "name": "From the Depths",
+      "reason": "fiche Steam absente ou inaccessible"
+    },
+    {
+      "appid": 400910,
+      "name": "Rabi-Ribi",
+      "reason": "fiche Steam absente ou inaccessible"
+    },
+    {
+      "appid": 388880,
+      "name": "Oxenfree",
+      "reason": "fiche Steam absente ou inaccessible"
+    },
+    {
+      "appid": 1182620,
+      "name": "Impostor Factory",
+      "reason": "fiche Steam absente ou inaccessible"
+    },
+    {
+      "appid": 1115690,
+      "name": "Yes, Your Grace",
+      "reason": "fiche Steam absente ou inaccessible"
+    },
+    {
+      "appid": 2194530,
+      "name": "Yog-Sothoth’s Yard",
+      "reason": "fiche Steam absente ou inaccessible"
+    },
+    {
+      "appid": 2109460,
+      "name": "VillageRhapsody",
+      "reason": "fiche Steam absente ou inaccessible"
+    },
+    {
+      "appid": 356570,
+      "name": "Party Hard",
+      "reason": "fiche Steam absente ou inaccessible"
+    },
+    {
+      "appid": 874260,
+      "name": "The Forgotten City",
+      "reason": "fiche Steam absente ou inaccessible"
+    },
+    {
+      "appid": 814370,
+      "name": "Monster Sanctuary",
+      "reason": "fiche Steam absente ou inaccessible"
+    },
+    {
+      "appid": 1525700,
+      "name": "Tavern Master",
+      "reason": "fiche Steam absente ou inaccessible"
+    },
+    {
+      "appid": 613830,
+      "name": "CHRONO TRIGGER",
+      "reason": "genre Indie absent de la fiche Steam"
+    },
+    {
+      "appid": 799600,
+      "name": "Cosmoteer: Starship Architect & Commander",
+      "reason": "genre Indie absent de la fiche Steam"
+    },
+    {
+      "appid": 1286350,
+      "name": "BPM: BULLETS PER MINUTE",
+      "reason": "fiche Steam absente ou inaccessible"
+    },
+    {
+      "appid": 861540,
+      "name": "Dicey Dungeons",
+      "reason": "fiche Steam absente ou inaccessible"
+    },
+    {
+      "appid": 410340,
+      "name": "Liftoff: FPV Drone Racing",
+      "reason": "fiche Steam absente ou inaccessible"
+    },
+    {
+      "appid": 2162800,
+      "name": "shapez 2 - Factory",
+      "reason": "fiche Steam absente ou inaccessible"
+    },
+    {
+      "appid": 586140,
+      "name": "BlazBlue Centralfiction",
+      "reason": "fiche Steam absente ou inaccessible"
+    },
+    {
+      "appid": 469820,
+      "name": "Genital Jousting",
+      "reason": "prologue/démo/outil exclu"
+    },
+    {
+      "appid": 505230,
+      "name": "Pathologic 2",
+      "reason": "fiche Steam absente ou inaccessible"
+    },
+    {
+      "appid": 3480,
+      "name": "Peggle Deluxe",
+      "reason": "genre Indie absent de la fiche Steam"
+    },
+    {
+      "appid": 1276790,
+      "name": "Ruined King: A League of Legends Story",
+      "reason": "fiche Steam absente ou inaccessible"
+    },
+    {
+      "appid": 1012790,
+      "name": "Into the Radius VR",
+      "reason": "fiche Steam absente ou inaccessible"
+    },
+    {
+      "appid": 482400,
+      "name": "System Shock",
+      "reason": "fiche Steam absente ou inaccessible"
+    },
+    {
+      "appid": 1404850,
+      "name": "Luck be a Landlord",
+      "reason": "fiche Steam absente ou inaccessible"
+    },
+    {
+      "appid": 520440,
+      "name": "GUILTY GEAR Xrd REV 2",
+      "reason": "fiche Steam absente ou inaccessible"
+    },
+    {
+      "appid": 383270,
+      "name": "Hue",
+      "reason": "fiche Steam absente ou inaccessible"
+    },
+    {
+      "appid": 371970,
+      "name": "Barony",
+      "reason": "fiche Steam absente ou inaccessible"
+    },
+    {
+      "appid": 2415010,
+      "name": "A Date with Death",
+      "reason": "fiche Steam absente ou inaccessible"
+    },
+    {
+      "appid": 222940,
+      "name": "THE KING OF FIGHTERS XIII STEAM EDITION",
+      "reason": "fiche Steam absente ou inaccessible"
+    },
+    {
+      "appid": 333640,
+      "name": "Caves of Qud",
+      "reason": "fiche Steam absente ou inaccessible"
+    },
+    {
+      "appid": 926990,
+      "name": "WolfQuest: Anniversary Edition",
+      "reason": "fiche Steam absente ou inaccessible"
+    },
+    {
+      "appid": 1111460,
+      "name": "小白兔电商~Bunny e-Shop",
+      "reason": "fiche Steam absente ou inaccessible"
+    },
+    {
+      "appid": 1801110,
+      "name": "BOKURA",
+      "reason": "fiche Steam absente ou inaccessible"
+    },
+    {
+      "appid": 2187290,
+      "name": "Wall World",
+      "reason": "fiche Steam absente ou inaccessible"
+    },
+    {
+      "appid": 572890,
+      "name": "Pikuniku",
+      "reason": "fiche Steam absente ou inaccessible"
+    },
+    {
+      "appid": 893180,
+      "name": "Catherine Classic",
+      "reason": "genre Indie absent de la fiche Steam"
+    },
+    {
+      "appid": 351920,
+      "name": "Crazy Machines 3",
+      "reason": "genre Indie absent de la fiche Steam"
+    },
+    {
+      "appid": 40950,
+      "name": "Stronghold HD (2012)",
+      "reason": "fiche Steam absente ou inaccessible"
+    },
+    {
+      "appid": 604240,
+      "name": "Shotgun Farmers",
+      "reason": "fiche Steam absente ou inaccessible"
+    },
+    {
+      "appid": 587620,
+      "name": "Okami HD",
+      "reason": "fiche Steam absente ou inaccessible"
+    },
+    {
+      "appid": 1367550,
+      "name": "Kingdom Rush Vengeance - Tower Defense",
+      "reason": "fiche Steam absente ou inaccessible"
+    },
+    {
+      "appid": 597220,
+      "name": "West of Loathing",
+      "reason": "fiche Steam absente ou inaccessible"
+    },
+    {
+      "appid": 251150,
+      "name": "The Legend of Heroes: Trails in the Sky",
+      "reason": "genre Indie absent de la fiche Steam"
+    },
+    {
+      "appid": 458710,
+      "name": "Kingdom Rush Frontiers - Tower Defense",
+      "reason": "genre Indie absent de la fiche Steam"
+    },
+    {
+      "appid": 375950,
+      "name": "Viridi",
+      "reason": "fiche Steam absente ou inaccessible"
+    },
+    {
+      "appid": 753420,
+      "name": "Dungreed",
+      "reason": "fiche Steam absente ou inaccessible"
+    },
+    {
+      "appid": 435400,
+      "name": "Hidden Folks",
+      "reason": "fiche Steam absente ou inaccessible"
+    },
+    {
+      "appid": 900270,
+      "name": "Reventure",
+      "reason": "fiche Steam absente ou inaccessible"
+    },
+    {
+      "appid": 435120,
+      "name": "Rusty Lake Hotel",
+      "reason": "fiche Steam absente ou inaccessible"
+    },
+    {
+      "appid": 470310,
+      "name": "TROUBLESHOOTER: Abandoned Children",
+      "reason": "fiche Steam absente ou inaccessible"
+    },
+    {
+      "appid": 2495450,
+      "name": "Winter Memories",
+      "reason": "genre Indie absent de la fiche Steam"
+    },
+    {
+      "appid": 647830,
+      "name": "LEGO Marvel Super Heroes 2",
+      "reason": "fiche Steam absente ou inaccessible"
+    },
+    {
+      "appid": 675260,
+      "name": "Batman: The Enemy Within - The Telltale Series",
+      "reason": "fiche Steam absente ou inaccessible"
+    },
+    {
+      "appid": 39150,
+      "name": "FINAL FANTASY VIII",
+      "reason": "genre Indie absent de la fiche Steam"
+    },
+    {
+      "appid": 656350,
+      "name": "UnderMine",
+      "reason": "fiche Steam absente ou inaccessible"
+    },
+    {
+      "appid": 979110,
+      "name": "Space Haven",
+      "reason": "fiche Steam absente ou inaccessible"
+    },
+    {
+      "appid": 435530,
+      "name": "The Final Station",
+      "reason": "fiche Steam absente ou inaccessible"
+    },
+    {
+      "appid": 258520,
+      "name": "The Vanishing of Ethan Carter",
+      "reason": "fiche Steam absente ou inaccessible"
+    },
+    {
+      "appid": 1281590,
+      "name": "The Dark Pictures Anthology: House of Ashes",
+      "reason": "fiche Steam absente ou inaccessible"
+    },
+    {
+      "appid": 313690,
+      "name": "LEGO Batman 3: Beyond Gotham",
+      "reason": "fiche Steam absente ou inaccessible"
+    },
+    {
+      "appid": 1293160,
+      "name": "The Medium",
+      "reason": "fiche Steam absente ou inaccessible"
+    },
+    {
+      "appid": 1677770,
+      "name": "The Case of the Golden Idol",
+      "reason": "fiche Steam absente ou inaccessible"
+    },
+    {
+      "appid": 459220,
+      "name": "Halo Wars: Definitive Edition",
+      "reason": "genre Indie absent de la fiche Steam"
+    },
+    {
+      "appid": 423880,
+      "name": "Carpe Diem",
+      "reason": "fiche Steam absente ou inaccessible"
+    },
+    {
+      "appid": 2060130,
+      "name": "Return to Monkey Island",
+      "reason": "fiche Steam absente ou inaccessible"
+    },
+    {
+      "appid": 32510,
+      "name": "LEGO Star Wars III - The Clone Wars",
+      "reason": "genre Indie absent de la fiche Steam"
+    },
+    {
+      "appid": 2378620,
+      "name": "Anomaly Agent",
+      "reason": "fiche Steam absente ou inaccessible"
+    },
+    {
+      "appid": 868360,
+      "name": "Project Hospital",
+      "reason": "fiche Steam absente ou inaccessible"
+    },
+    {
+      "appid": 407130,
+      "name": "Tank Mechanic Simulator",
+      "reason": "fiche Steam absente ou inaccessible"
+    },
+    {
+      "appid": 363890,
+      "name": "RPG Maker MV",
+      "reason": "fiche Steam absente ou inaccessible"
+    },
+    {
+      "appid": 269770,
+      "name": "Secrets of Grindea",
+      "reason": "fiche Steam absente ou inaccessible"
+    },
+    {
+      "appid": 316790,
+      "name": "Grim Fandango Remastered",
+      "reason": "fiche Steam absente ou inaccessible"
+    },
+    {
+      "appid": 360740,
+      "name": "Downwell",
+      "reason": "fiche Steam absente ou inaccessible"
+    },
+    {
+      "appid": 1594940,
+      "name": "Little Witch in the Woods",
+      "reason": "fiche Steam absente ou inaccessible"
+    },
+    {
+      "appid": 1578650,
+      "name": "Citizen Sleeper",
+      "reason": "fiche Steam absente ou inaccessible"
+    }
+  ]
+}

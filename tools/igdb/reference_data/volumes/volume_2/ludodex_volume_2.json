@@ -1,0 +1,1260 @@
+{
+  "steam:250600": {
+    "id": "steam:250600",
+    "igdb_id": null,
+    "steam_appid": 250600,
+    "title": "The Plan",
+    "year": 2014,
+    "developer": "Krillbite Studio",
+    "platforms": [
+      "PC (Windows)",
+      "macOS",
+      "Linux"
+    ],
+    "genres": [
+      "Casual",
+      "Free To Play",
+      "Indie"
+    ],
+    "cover": {
+      "url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/250600/header.jpg?t=1667300001",
+      "source": "steam"
+    },
+    "source_page": "https://store.steampowered.com/app/250600/",
+    "verification_status": "verified",
+    "duplicate_of": null,
+    "merged_from": [
+      "steamspy:all:page=2",
+      "steam:appdetails:250600"
+    ],
+    "conflict_fields": [],
+    "last_updated_source": "steam:appdetails:250600",
+    "added_at": "2026-09-25",
+    "selection": {
+      "steamspy_owners_estimate": "500,000 .. 1,000,000",
+      "steamspy_positive_reviews": 21304,
+      "steamspy_negative_reviews": 1783,
+      "steamspy_positive_ratio": 0.92277,
+      "note": "SteamSpy owners is an estimate, not sales."
+    }
+  },
+  "steam:303210": {
+    "id": "steam:303210",
+    "igdb_id": null,
+    "steam_appid": 303210,
+    "title": "The Beginner's Guide",
+    "year": 2015,
+    "developer": "Everything Unlimited Ltd.",
+    "platforms": [
+      "PC (Windows)",
+      "macOS",
+      "Linux"
+    ],
+    "genres": [
+      "Adventure",
+      "Indie"
+    ],
+    "cover": {
+      "url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/303210/header.jpg?t=1781207118",
+      "source": "steam"
+    },
+    "source_page": "https://store.steampowered.com/app/303210/",
+    "verification_status": "verified",
+    "duplicate_of": null,
+    "merged_from": [
+      "steamspy:all:page=2",
+      "steam:appdetails:303210"
+    ],
+    "conflict_fields": [],
+    "last_updated_source": "steam:appdetails:303210",
+    "added_at": "2026-09-25",
+    "selection": {
+      "steamspy_owners_estimate": "500,000 .. 1,000,000",
+      "steamspy_positive_reviews": 19369,
+      "steamspy_negative_reviews": 2633,
+      "steamspy_positive_ratio": 0.880329,
+      "note": "SteamSpy owners is an estimate, not sales."
+    }
+  },
+  "steam:2334730": {
+    "id": "steam:2334730",
+    "igdb_id": null,
+    "steam_appid": 2334730,
+    "title": "Death Must Die",
+    "year": 2023,
+    "developer": "Realm Archive",
+    "platforms": [
+      "PC (Windows)",
+      "macOS"
+    ],
+    "genres": [
+      "Action",
+      "Casual",
+      "Indie",
+      "RPG",
+      "Early Access"
+    ],
+    "cover": {
+      "url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2334730/70e0e4f26d9d6669fff784089ee35163c8401d0b/header.jpg?t=1744305567",
+      "source": "steam"
+    },
+    "source_page": "https://store.steampowered.com/app/2334730/",
+    "verification_status": "verified",
+    "duplicate_of": null,
+    "merged_from": [
+      "steamspy:all:page=2",
+      "steam:appdetails:2334730"
+    ],
+    "conflict_fields": [],
+    "last_updated_source": "steam:appdetails:2334730",
+    "added_at": "2026-09-25",
+    "selection": {
+      "steamspy_owners_estimate": "500,000 .. 1,000,000",
+      "steamspy_positive_reviews": 18498,
+      "steamspy_negative_reviews": 1829,
+      "steamspy_positive_ratio": 0.910021,
+      "note": "SteamSpy owners is an estimate, not sales."
+    }
+  },
+  "steam:425580": {
+    "id": "steam:425580",
+    "igdb_id": null,
+    "steam_appid": 425580,
+    "title": "The Room Two",
+    "year": 2016,
+    "developer": "Fireproof Games",
+    "platforms": [
+      "PC (Windows)"
+    ],
+    "genres": [
+      "Adventure",
+      "Indie"
+    ],
+    "cover": {
+      "url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/425580/header.jpg?t=1646758355",
+      "source": "steam"
+    },
+    "source_page": "https://store.steampowered.com/app/425580/",
+    "verification_status": "verified",
+    "duplicate_of": null,
+    "merged_from": [
+      "steamspy:all:page=2",
+      "steam:appdetails:425580"
+    ],
+    "conflict_fields": [],
+    "last_updated_source": "steam:appdetails:425580",
+    "added_at": "2026-09-25",
+    "selection": {
+      "steamspy_owners_estimate": "500,000 .. 1,000,000",
+      "steamspy_positive_reviews": 19460,
+      "steamspy_negative_reviews": 468,
+      "steamspy_positive_ratio": 0.976515,
+      "note": "SteamSpy owners is an estimate, not sales."
+    }
+  },
+  "steam:2768430": {
+    "id": "steam:2768430",
+    "igdb_id": null,
+    "steam_appid": 2768430,
+    "title": "ATLYSS",
+    "year": 2024,
+    "developer": "Kiseff",
+    "platforms": [
+      "PC (Windows)"
+    ],
+    "genres": [
+      "Action",
+      "Adventure",
+      "Casual",
+      "Indie",
+      "RPG",
+      "Early Access"
+    ],
+    "cover": {
+      "url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2768430/header.jpg?t=1764521441",
+      "source": "steam"
+    },
+    "source_page": "https://store.steampowered.com/app/2768430/",
+    "verification_status": "verified",
+    "duplicate_of": null,
+    "merged_from": [
+      "steamspy:all:page=2",
+      "steam:appdetails:2768430"
+    ],
+    "conflict_fields": [],
+    "last_updated_source": "steam:appdetails:2768430",
+    "added_at": "2026-09-25",
+    "selection": {
+      "steamspy_owners_estimate": "200,000 .. 500,000",
+      "steamspy_positive_reviews": 16289,
+      "steamspy_negative_reviews": 484,
+      "steamspy_positive_ratio": 0.971144,
+      "note": "SteamSpy owners is an estimate, not sales."
+    }
+  },
+  "steam:1046030": {
+    "id": "steam:1046030",
+    "igdb_id": null,
+    "steam_appid": 1046030,
+    "title": "ISLANDERS",
+    "year": 2019,
+    "developer": "Coatsink, GrizzlyGames, Stage Clear Studios",
+    "platforms": [
+      "PC (Windows)",
+      "macOS"
+    ],
+    "genres": [
+      "Casual",
+      "Indie",
+      "Strategy"
+    ],
+    "cover": {
+      "url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1046030/1bc0f29a0f3e4cdfd7a0d209ca0264228e39ee98/header.jpg?t=1760689653",
+      "source": "steam"
+    },
+    "source_page": "https://store.steampowered.com/app/1046030/",
+    "verification_status": "verified",
+    "duplicate_of": null,
+    "merged_from": [
+      "steamspy:all:page=2",
+      "steam:appdetails:1046030"
+    ],
+    "conflict_fields": [],
+    "last_updated_source": "steam:appdetails:1046030",
+    "added_at": "2026-09-25",
+    "selection": {
+      "steamspy_owners_estimate": "500,000 .. 1,000,000",
+      "steamspy_positive_reviews": 15434,
+      "steamspy_negative_reviews": 882,
+      "steamspy_positive_ratio": 0.945943,
+      "note": "SteamSpy owners is an estimate, not sales."
+    }
+  },
+  "steam:313340": {
+    "id": "steam:313340",
+    "igdb_id": null,
+    "steam_appid": 313340,
+    "title": "Mountain",
+    "year": 2014,
+    "developer": "David OReilly",
+    "platforms": [
+      "PC (Windows)",
+      "macOS",
+      "Linux"
+    ],
+    "genres": [
+      "Casual",
+      "Indie",
+      "RPG",
+      "Simulation"
+    ],
+    "cover": {
+      "url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/313340/header.jpg?t=1606597053",
+      "source": "steam"
+    },
+    "source_page": "https://store.steampowered.com/app/313340/",
+    "verification_status": "verified",
+    "duplicate_of": null,
+    "merged_from": [
+      "steamspy:all:page=2",
+      "steam:appdetails:313340"
+    ],
+    "conflict_fields": [],
+    "last_updated_source": "steam:appdetails:313340",
+    "added_at": "2026-09-25",
+    "selection": {
+      "steamspy_owners_estimate": "500,000 .. 1,000,000",
+      "steamspy_positive_reviews": 14320,
+      "steamspy_negative_reviews": 1923,
+      "steamspy_positive_ratio": 0.881611,
+      "note": "SteamSpy owners is an estimate, not sales."
+    }
+  },
+  "steam:1766740": {
+    "id": "steam:1766740",
+    "igdb_id": null,
+    "steam_appid": 1766740,
+    "title": "Choo-Choo Charles",
+    "year": 2022,
+    "developer": "Two Star Games",
+    "platforms": [
+      "PC (Windows)",
+      "macOS"
+    ],
+    "genres": [
+      "Action",
+      "Adventure",
+      "Indie"
+    ],
+    "cover": {
+      "url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1766740/header.jpg?t=1776483802",
+      "source": "steam"
+    },
+    "source_page": "https://store.steampowered.com/app/1766740/",
+    "verification_status": "verified",
+    "duplicate_of": null,
+    "merged_from": [
+      "steamspy:all:page=2",
+      "steam:appdetails:1766740"
+    ],
+    "conflict_fields": [],
+    "last_updated_source": "steam:appdetails:1766740",
+    "added_at": "2026-09-25",
+    "selection": {
+      "steamspy_owners_estimate": "500,000 .. 1,000,000",
+      "steamspy_positive_reviews": 14293,
+      "steamspy_negative_reviews": 1372,
+      "steamspy_positive_ratio": 0.912416,
+      "note": "SteamSpy owners is an estimate, not sales."
+    }
+  },
+  "steam:990630": {
+    "id": "steam:990630",
+    "igdb_id": null,
+    "steam_appid": 990630,
+    "title": "The Last Campfire",
+    "year": 2021,
+    "developer": "Hello Games",
+    "platforms": [
+      "PC (Windows)"
+    ],
+    "genres": [
+      "Adventure",
+      "Indie"
+    ],
+    "cover": {
+      "url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/990630/header.jpg?t=1725272727",
+      "source": "steam"
+    },
+    "source_page": "https://store.steampowered.com/app/990630/",
+    "verification_status": "verified",
+    "duplicate_of": null,
+    "merged_from": [
+      "steamspy:all:page=2",
+      "steam:appdetails:990630"
+    ],
+    "conflict_fields": [],
+    "last_updated_source": "steam:appdetails:990630",
+    "added_at": "2026-09-25",
+    "selection": {
+      "steamspy_owners_estimate": "500,000 .. 1,000,000",
+      "steamspy_positive_reviews": 14350,
+      "steamspy_negative_reviews": 348,
+      "steamspy_positive_ratio": 0.976323,
+      "note": "SteamSpy owners is an estimate, not sales."
+    }
+  },
+  "steam:343780": {
+    "id": "steam:343780",
+    "igdb_id": null,
+    "steam_appid": 343780,
+    "title": "Cat Goes Fishing",
+    "year": 2015,
+    "developer": "Cat5Games",
+    "platforms": [
+      "PC (Windows)"
+    ],
+    "genres": [
+      "Casual",
+      "Indie",
+      "Simulation"
+    ],
+    "cover": {
+      "url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/343780/header.jpg?t=1722198432",
+      "source": "steam"
+    },
+    "source_page": "https://store.steampowered.com/app/343780/",
+    "verification_status": "verified",
+    "duplicate_of": null,
+    "merged_from": [
+      "steamspy:all:page=2",
+      "steam:appdetails:343780"
+    ],
+    "conflict_fields": [],
+    "last_updated_source": "steam:appdetails:343780",
+    "added_at": "2026-09-25",
+    "selection": {
+      "steamspy_owners_estimate": "500,000 .. 1,000,000",
+      "steamspy_positive_reviews": 13316,
+      "steamspy_negative_reviews": 840,
+      "steamspy_positive_ratio": 0.940661,
+      "note": "SteamSpy owners is an estimate, not sales."
+    }
+  },
+  "steam:601840": {
+    "id": "steam:601840",
+    "igdb_id": null,
+    "steam_appid": 601840,
+    "title": "Griftlands",
+    "year": 2021,
+    "developer": "Klei Entertainment",
+    "platforms": [
+      "PC (Windows)",
+      "macOS",
+      "Linux"
+    ],
+    "genres": [
+      "Indie"
+    ],
+    "cover": {
+      "url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/601840/header.jpg?t=1781206715",
+      "source": "steam"
+    },
+    "source_page": "https://store.steampowered.com/app/601840/",
+    "verification_status": "verified",
+    "duplicate_of": null,
+    "merged_from": [
+      "steamspy:all:page=2",
+      "steam:appdetails:601840"
+    ],
+    "conflict_fields": [],
+    "last_updated_source": "steam:appdetails:601840",
+    "added_at": "2026-09-25",
+    "selection": {
+      "steamspy_owners_estimate": "500,000 .. 1,000,000",
+      "steamspy_positive_reviews": 13088,
+      "steamspy_negative_reviews": 862,
+      "steamspy_positive_ratio": 0.938208,
+      "note": "SteamSpy owners is an estimate, not sales."
+    }
+  },
+  "steam:1574580": {
+    "id": "steam:1574580",
+    "igdb_id": null,
+    "steam_appid": 1574580,
+    "title": "Strange Horticulture",
+    "year": 2022,
+    "developer": "Bad Viking",
+    "platforms": [
+      "PC (Windows)",
+      "macOS"
+    ],
+    "genres": [
+      "Adventure",
+      "Indie",
+      "Simulation"
+    ],
+    "cover": {
+      "url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1574580/header.jpg?t=1772459223",
+      "source": "steam"
+    },
+    "source_page": "https://store.steampowered.com/app/1574580/",
+    "verification_status": "verified",
+    "duplicate_of": null,
+    "merged_from": [
+      "steamspy:all:page=2",
+      "steam:appdetails:1574580"
+    ],
+    "conflict_fields": [],
+    "last_updated_source": "steam:appdetails:1574580",
+    "added_at": "2026-09-25",
+    "selection": {
+      "steamspy_owners_estimate": "500,000 .. 1,000,000",
+      "steamspy_positive_reviews": 12466,
+      "steamspy_negative_reviews": 686,
+      "steamspy_positive_ratio": 0.947841,
+      "note": "SteamSpy owners is an estimate, not sales."
+    }
+  },
+  "steam:1571440": {
+    "id": "steam:1571440",
+    "igdb_id": null,
+    "steam_appid": 1571440,
+    "title": "Lunch Lady",
+    "year": 2021,
+    "developer": "Manic Mice",
+    "platforms": [
+      "PC (Windows)"
+    ],
+    "genres": [
+      "Action",
+      "Adventure",
+      "Indie"
+    ],
+    "cover": {
+      "url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1571440/header.jpg?t=1788607205",
+      "source": "steam"
+    },
+    "source_page": "https://store.steampowered.com/app/1571440/",
+    "verification_status": "verified",
+    "duplicate_of": null,
+    "merged_from": [
+      "steamspy:all:page=2",
+      "steam:appdetails:1571440"
+    ],
+    "conflict_fields": [],
+    "last_updated_source": "steam:appdetails:1571440",
+    "added_at": "2026-09-25",
+    "selection": {
+      "steamspy_owners_estimate": "500,000 .. 1,000,000",
+      "steamspy_positive_reviews": 10868,
+      "steamspy_negative_reviews": 1826,
+      "steamspy_positive_ratio": 0.856153,
+      "note": "SteamSpy owners is an estimate, not sales."
+    }
+  },
+  "steam:398710": {
+    "id": "steam:398710",
+    "igdb_id": null,
+    "steam_appid": 398710,
+    "title": "Timberman",
+    "year": 2015,
+    "developer": "Digital Melody",
+    "platforms": [
+      "PC (Windows)",
+      "macOS",
+      "Linux"
+    ],
+    "genres": [
+      "Action",
+      "Casual",
+      "Indie"
+    ],
+    "cover": {
+      "url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/398710/header.jpg?t=1775042659",
+      "source": "steam"
+    },
+    "source_page": "https://store.steampowered.com/app/398710/",
+    "verification_status": "verified",
+    "duplicate_of": null,
+    "merged_from": [
+      "steamspy:all:page=2",
+      "steam:appdetails:398710"
+    ],
+    "conflict_fields": [],
+    "last_updated_source": "steam:appdetails:398710",
+    "added_at": "2026-09-25",
+    "selection": {
+      "steamspy_owners_estimate": "500,000 .. 1,000,000",
+      "steamspy_positive_reviews": 10572,
+      "steamspy_negative_reviews": 764,
+      "steamspy_positive_ratio": 0.932604,
+      "note": "SteamSpy owners is an estimate, not sales."
+    }
+  },
+  "steam:732430": {
+    "id": "steam:732430",
+    "igdb_id": null,
+    "steam_appid": 732430,
+    "title": "Superflight",
+    "year": 2017,
+    "developer": "GrizzlyGames",
+    "platforms": [
+      "PC (Windows)"
+    ],
+    "genres": [
+      "Action",
+      "Casual",
+      "Indie",
+      "Racing",
+      "Sports"
+    ],
+    "cover": {
+      "url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/732430/header.jpg?t=1691583493",
+      "source": "steam"
+    },
+    "source_page": "https://store.steampowered.com/app/732430/",
+    "verification_status": "verified",
+    "duplicate_of": null,
+    "merged_from": [
+      "steamspy:all:page=2",
+      "steam:appdetails:732430"
+    ],
+    "conflict_fields": [],
+    "last_updated_source": "steam:appdetails:732430",
+    "added_at": "2026-09-25",
+    "selection": {
+      "steamspy_owners_estimate": "500,000 .. 1,000,000",
+      "steamspy_positive_reviews": 10857,
+      "steamspy_negative_reviews": 410,
+      "steamspy_positive_ratio": 0.963611,
+      "note": "SteamSpy owners is an estimate, not sales."
+    }
+  },
+  "steam:790740": {
+    "id": "steam:790740",
+    "igdb_id": null,
+    "steam_appid": 790740,
+    "title": "Tick Tock: A Tale for Two",
+    "year": 2019,
+    "developer": "Other Tales Interactive",
+    "platforms": [
+      "PC (Windows)",
+      "macOS"
+    ],
+    "genres": [
+      "Adventure",
+      "Casual",
+      "Indie"
+    ],
+    "cover": {
+      "url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/790740/header.jpg?t=1790146243",
+      "source": "steam"
+    },
+    "source_page": "https://store.steampowered.com/app/790740/",
+    "verification_status": "verified",
+    "duplicate_of": null,
+    "merged_from": [
+      "steamspy:all:page=2",
+      "steam:appdetails:790740"
+    ],
+    "conflict_fields": [],
+    "last_updated_source": "steam:appdetails:790740",
+    "added_at": "2026-09-25",
+    "selection": {
+      "steamspy_owners_estimate": "500,000 .. 1,000,000",
+      "steamspy_positive_reviews": 9497,
+      "steamspy_negative_reviews": 1559,
+      "steamspy_positive_ratio": 0.858991,
+      "note": "SteamSpy owners is an estimate, not sales."
+    }
+  },
+  "steam:1331550": {
+    "id": "steam:1331550",
+    "igdb_id": null,
+    "steam_appid": 1331550,
+    "title": "Big Ambitions",
+    "year": 2026,
+    "developer": "Hovgaard Games",
+    "platforms": [
+      "PC (Windows)",
+      "macOS"
+    ],
+    "genres": [
+      "Indie",
+      "Simulation"
+    ],
+    "cover": {
+      "url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1331550/6ef350077eee961864c78ac396a16195ef385fae/header.jpg?t=1788186935",
+      "source": "steam"
+    },
+    "source_page": "https://store.steampowered.com/app/1331550/",
+    "verification_status": "verified",
+    "duplicate_of": null,
+    "merged_from": [
+      "steamspy:all:page=2",
+      "steam:appdetails:1331550"
+    ],
+    "conflict_fields": [],
+    "last_updated_source": "steam:appdetails:1331550",
+    "added_at": "2026-09-25",
+    "selection": {
+      "steamspy_owners_estimate": "500,000 .. 1,000,000",
+      "steamspy_positive_reviews": 9952,
+      "steamspy_negative_reviews": 760,
+      "steamspy_positive_ratio": 0.929052,
+      "note": "SteamSpy owners is an estimate, not sales."
+    }
+  },
+  "steam:70300": {
+    "id": "steam:70300",
+    "igdb_id": null,
+    "steam_appid": 70300,
+    "title": "VVVVVV",
+    "year": 2010,
+    "developer": "Terry Cavanagh",
+    "platforms": [
+      "PC (Windows)",
+      "macOS",
+      "Linux"
+    ],
+    "genres": [
+      "Action",
+      "Indie"
+    ],
+    "cover": {
+      "url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/70300/header.jpg?t=1751298999",
+      "source": "steam"
+    },
+    "source_page": "https://store.steampowered.com/app/70300/",
+    "verification_status": "verified",
+    "duplicate_of": null,
+    "merged_from": [
+      "steamspy:all:page=2",
+      "steam:appdetails:70300"
+    ],
+    "conflict_fields": [],
+    "last_updated_source": "steam:appdetails:70300",
+    "added_at": "2026-09-25",
+    "selection": {
+      "steamspy_owners_estimate": "500,000 .. 1,000,000",
+      "steamspy_positive_reviews": 9720,
+      "steamspy_negative_reviews": 377,
+      "steamspy_positive_ratio": 0.962662,
+      "note": "SteamSpy owners is an estimate, not sales."
+    }
+  },
+  "steam:924140": {
+    "id": "steam:924140",
+    "igdb_id": null,
+    "steam_appid": 924140,
+    "title": "Hand Simulator: Survival",
+    "year": 2019,
+    "developer": "HFM Games",
+    "platforms": [
+      "PC (Windows)"
+    ],
+    "genres": [
+      "Action",
+      "Adventure",
+      "Indie",
+      "Massively Multiplayer",
+      "RPG",
+      "Simulation"
+    ],
+    "cover": {
+      "url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/924140/header.jpg?t=1664350383",
+      "source": "steam"
+    },
+    "source_page": "https://store.steampowered.com/app/924140/",
+    "verification_status": "verified",
+    "duplicate_of": null,
+    "merged_from": [
+      "steamspy:all:page=2",
+      "steam:appdetails:924140"
+    ],
+    "conflict_fields": [],
+    "last_updated_source": "steam:appdetails:924140",
+    "added_at": "2026-09-25",
+    "selection": {
+      "steamspy_owners_estimate": "500,000 .. 1,000,000",
+      "steamspy_positive_reviews": 8591,
+      "steamspy_negative_reviews": 1347,
+      "steamspy_positive_ratio": 0.86446,
+      "note": "SteamSpy owners is an estimate, not sales."
+    }
+  },
+  "steam:673750": {
+    "id": "steam:673750",
+    "igdb_id": null,
+    "steam_appid": 673750,
+    "title": "Super Bunny Man",
+    "year": 2023,
+    "developer": "Catobyte",
+    "platforms": [
+      "PC (Windows)",
+      "macOS",
+      "Linux"
+    ],
+    "genres": [
+      "Action",
+      "Indie"
+    ],
+    "cover": {
+      "url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/673750/header.jpg?t=1764709681",
+      "source": "steam"
+    },
+    "source_page": "https://store.steampowered.com/app/673750/",
+    "verification_status": "verified",
+    "duplicate_of": null,
+    "merged_from": [
+      "steamspy:all:page=2",
+      "steam:appdetails:673750"
+    ],
+    "conflict_fields": [],
+    "last_updated_source": "steam:appdetails:673750",
+    "added_at": "2026-09-25",
+    "selection": {
+      "steamspy_owners_estimate": "500,000 .. 1,000,000",
+      "steamspy_positive_reviews": 8567,
+      "steamspy_negative_reviews": 1316,
+      "steamspy_positive_ratio": 0.866842,
+      "note": "SteamSpy owners is an estimate, not sales."
+    }
+  },
+  "steam:2088570": {
+    "id": "steam:2088570",
+    "igdb_id": null,
+    "steam_appid": 2088570,
+    "title": "Tiny Rogues",
+    "year": 2022,
+    "developer": "RubyDev",
+    "platforms": [
+      "PC (Windows)"
+    ],
+    "genres": [
+      "Action",
+      "Adventure",
+      "Indie",
+      "RPG",
+      "Early Access"
+    ],
+    "cover": {
+      "url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2088570/header.jpg?t=1788537523",
+      "source": "steam"
+    },
+    "source_page": "https://store.steampowered.com/app/2088570/",
+    "verification_status": "verified",
+    "duplicate_of": null,
+    "merged_from": [
+      "steamspy:all:page=2",
+      "steam:appdetails:2088570"
+    ],
+    "conflict_fields": [],
+    "last_updated_source": "steam:appdetails:2088570",
+    "added_at": "2026-09-25",
+    "selection": {
+      "steamspy_owners_estimate": "500,000 .. 1,000,000",
+      "steamspy_positive_reviews": 9445,
+      "steamspy_negative_reviews": 310,
+      "steamspy_positive_ratio": 0.968221,
+      "note": "SteamSpy owners is an estimate, not sales."
+    }
+  },
+  "steam:252610": {
+    "id": "steam:252610",
+    "igdb_id": null,
+    "steam_appid": 252610,
+    "title": "Death Road to Canada",
+    "year": 2016,
+    "developer": "Rocketcat Games, Madgarden",
+    "platforms": [
+      "PC (Windows)",
+      "macOS",
+      "Linux"
+    ],
+    "genres": [
+      "Action",
+      "Indie",
+      "RPG"
+    ],
+    "cover": {
+      "url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/252610/header.jpg?t=1666824491",
+      "source": "steam"
+    },
+    "source_page": "https://store.steampowered.com/app/252610/",
+    "verification_status": "verified",
+    "duplicate_of": null,
+    "merged_from": [
+      "steamspy:all:page=2",
+      "steam:appdetails:252610"
+    ],
+    "conflict_fields": [],
+    "last_updated_source": "steam:appdetails:252610",
+    "added_at": "2026-09-25",
+    "selection": {
+      "steamspy_owners_estimate": "200,000 .. 500,000",
+      "steamspy_positive_reviews": 8712,
+      "steamspy_negative_reviews": 673,
+      "steamspy_positive_ratio": 0.92829,
+      "note": "SteamSpy owners is an estimate, not sales."
+    }
+  },
+  "steam:220780": {
+    "id": "steam:220780",
+    "igdb_id": null,
+    "steam_appid": 220780,
+    "title": "Thomas Was Alone",
+    "year": 2012,
+    "developer": "Bithell Games",
+    "platforms": [
+      "PC (Windows)",
+      "macOS"
+    ],
+    "genres": [
+      "Indie"
+    ],
+    "cover": {
+      "url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/220780/header.jpg?t=1758896562",
+      "source": "steam"
+    },
+    "source_page": "https://store.steampowered.com/app/220780/",
+    "verification_status": "verified",
+    "duplicate_of": null,
+    "merged_from": [
+      "steamspy:all:page=2",
+      "steam:appdetails:220780"
+    ],
+    "conflict_fields": [],
+    "last_updated_source": "steam:appdetails:220780",
+    "added_at": "2026-09-25",
+    "selection": {
+      "steamspy_owners_estimate": "500,000 .. 1,000,000",
+      "steamspy_positive_reviews": 8685,
+      "steamspy_negative_reviews": 582,
+      "steamspy_positive_ratio": 0.937197,
+      "note": "SteamSpy owners is an estimate, not sales."
+    }
+  },
+  "steam:1281800": {
+    "id": "steam:1281800",
+    "igdb_id": null,
+    "steam_appid": 1281800,
+    "title": "Samsara Room",
+    "year": 2020,
+    "developer": "Rusty Lake",
+    "platforms": [
+      "PC (Windows)",
+      "macOS"
+    ],
+    "genres": [
+      "Adventure",
+      "Free To Play",
+      "Indie"
+    ],
+    "cover": {
+      "url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1281800/header.jpg?t=1667254367",
+      "source": "steam"
+    },
+    "source_page": "https://store.steampowered.com/app/1281800/",
+    "verification_status": "verified",
+    "duplicate_of": null,
+    "merged_from": [
+      "steamspy:all:page=2",
+      "steam:appdetails:1281800"
+    ],
+    "conflict_fields": [],
+    "last_updated_source": "steam:appdetails:1281800",
+    "added_at": "2026-09-25",
+    "selection": {
+      "steamspy_owners_estimate": "500,000 .. 1,000,000",
+      "steamspy_positive_reviews": 8956,
+      "steamspy_negative_reviews": 246,
+      "steamspy_positive_ratio": 0.973267,
+      "note": "SteamSpy owners is an estimate, not sales."
+    }
+  },
+  "steam:1307890": {
+    "id": "steam:1307890",
+    "igdb_id": null,
+    "steam_appid": 1307890,
+    "title": "Kingdoms Reborn",
+    "year": 2020,
+    "developer": "Earthshine",
+    "platforms": [
+      "PC (Windows)"
+    ],
+    "genres": [
+      "Indie",
+      "Simulation",
+      "Strategy",
+      "Early Access"
+    ],
+    "cover": {
+      "url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1307890/header.jpg?t=1710049664",
+      "source": "steam"
+    },
+    "source_page": "https://store.steampowered.com/app/1307890/",
+    "verification_status": "verified",
+    "duplicate_of": null,
+    "merged_from": [
+      "steamspy:all:page=2",
+      "steam:appdetails:1307890"
+    ],
+    "conflict_fields": [],
+    "last_updated_source": "steam:appdetails:1307890",
+    "added_at": "2026-09-25",
+    "selection": {
+      "steamspy_owners_estimate": "500,000 .. 1,000,000",
+      "steamspy_positive_reviews": 8280,
+      "steamspy_negative_reviews": 833,
+      "steamspy_positive_ratio": 0.908592,
+      "note": "SteamSpy owners is an estimate, not sales."
+    }
+  },
+  "steam:422970": {
+    "id": "steam:422970",
+    "igdb_id": null,
+    "steam_appid": 422970,
+    "title": "Devil Daggers",
+    "year": 2016,
+    "developer": "Sorath",
+    "platforms": [
+      "PC (Windows)",
+      "macOS",
+      "Linux"
+    ],
+    "genres": [
+      "Action",
+      "Indie"
+    ],
+    "cover": {
+      "url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/422970/header.jpg?t=1724973461",
+      "source": "steam"
+    },
+    "source_page": "https://store.steampowered.com/app/422970/",
+    "verification_status": "verified",
+    "duplicate_of": null,
+    "merged_from": [
+      "steamspy:all:page=2",
+      "steam:appdetails:422970"
+    ],
+    "conflict_fields": [],
+    "last_updated_source": "steam:appdetails:422970",
+    "added_at": "2026-09-25",
+    "selection": {
+      "steamspy_owners_estimate": "200,000 .. 500,000",
+      "steamspy_positive_reviews": 8641,
+      "steamspy_negative_reviews": 427,
+      "steamspy_positive_ratio": 0.952911,
+      "note": "SteamSpy owners is an estimate, not sales."
+    }
+  },
+  "steam:1071870": {
+    "id": "steam:1071870",
+    "igdb_id": null,
+    "steam_appid": 1071870,
+    "title": "Biped",
+    "year": 2020,
+    "developer": "NEXT Studios",
+    "platforms": [
+      "PC (Windows)"
+    ],
+    "genres": [
+      "Action",
+      "Adventure",
+      "Casual",
+      "Indie",
+      "Simulation"
+    ],
+    "cover": {
+      "url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1071870/e4534c085670f0ec4a2c4fab343e1342c81ca035/header.jpg?t=1780934155",
+      "source": "steam"
+    },
+    "source_page": "https://store.steampowered.com/app/1071870/",
+    "verification_status": "verified",
+    "duplicate_of": null,
+    "merged_from": [
+      "steamspy:all:page=2",
+      "steam:appdetails:1071870"
+    ],
+    "conflict_fields": [],
+    "last_updated_source": "steam:appdetails:1071870",
+    "added_at": "2026-09-25",
+    "selection": {
+      "steamspy_owners_estimate": "500,000 .. 1,000,000",
+      "steamspy_positive_reviews": 7597,
+      "steamspy_negative_reviews": 1225,
+      "steamspy_positive_ratio": 0.861143,
+      "note": "SteamSpy owners is an estimate, not sales."
+    }
+  },
+  "steam:1353300": {
+    "id": "steam:1353300",
+    "igdb_id": null,
+    "steam_appid": 1353300,
+    "title": "Idle Slayer",
+    "year": 2020,
+    "developer": "Pablo Leban",
+    "platforms": [
+      "PC (Windows)"
+    ],
+    "genres": [
+      "Casual",
+      "Indie",
+      "Strategy",
+      "Free To Play"
+    ],
+    "cover": {
+      "url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1353300/header.jpg?t=1785886162",
+      "source": "steam"
+    },
+    "source_page": "https://store.steampowered.com/app/1353300/",
+    "verification_status": "verified",
+    "duplicate_of": null,
+    "merged_from": [
+      "steamspy:all:page=2",
+      "steam:appdetails:1353300"
+    ],
+    "conflict_fields": [],
+    "last_updated_source": "steam:appdetails:1353300",
+    "added_at": "2026-09-25",
+    "selection": {
+      "steamspy_owners_estimate": "500,000 .. 1,000,000",
+      "steamspy_positive_reviews": 7488,
+      "steamspy_negative_reviews": 1279,
+      "steamspy_positive_ratio": 0.854112,
+      "note": "SteamSpy owners is an estimate, not sales."
+    }
+  },
+  "steam:1615290": {
+    "id": "steam:1615290",
+    "igdb_id": null,
+    "steam_appid": 1615290,
+    "title": "Ravenous Devils",
+    "year": 2022,
+    "developer": "Bad Vices Games",
+    "platforms": [
+      "PC (Windows)"
+    ],
+    "genres": [
+      "Casual",
+      "Indie",
+      "Simulation"
+    ],
+    "cover": {
+      "url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1615290/header.jpg?t=1778135029",
+      "source": "steam"
+    },
+    "source_page": "https://store.steampowered.com/app/1615290/",
+    "verification_status": "verified",
+    "duplicate_of": null,
+    "merged_from": [
+      "steamspy:all:page=2",
+      "steam:appdetails:1615290"
+    ],
+    "conflict_fields": [],
+    "last_updated_source": "steam:appdetails:1615290",
+    "added_at": "2026-09-25",
+    "selection": {
+      "steamspy_owners_estimate": "500,000 .. 1,000,000",
+      "steamspy_positive_reviews": 8044,
+      "steamspy_negative_reviews": 649,
+      "steamspy_positive_ratio": 0.925342,
+      "note": "SteamSpy owners is an estimate, not sales."
+    }
+  },
+  "steam:597760": {
+    "id": "steam:597760",
+    "igdb_id": null,
+    "steam_appid": 597760,
+    "title": "Yuppie Psycho: Executive Edition",
+    "year": 2019,
+    "developer": "Baroque Decay",
+    "platforms": [
+      "PC (Windows)",
+      "macOS",
+      "Linux"
+    ],
+    "genres": [
+      "Adventure",
+      "Indie"
+    ],
+    "cover": {
+      "url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/597760/header.jpg?t=1789027545",
+      "source": "steam"
+    },
+    "source_page": "https://store.steampowered.com/app/597760/",
+    "verification_status": "verified",
+    "duplicate_of": null,
+    "merged_from": [
+      "steamspy:all:page=2",
+      "steam:appdetails:597760"
+    ],
+    "conflict_fields": [],
+    "last_updated_source": "steam:appdetails:597760",
+    "added_at": "2026-09-25",
+    "selection": {
+      "steamspy_owners_estimate": "500,000 .. 1,000,000",
+      "steamspy_positive_reviews": 8015,
+      "steamspy_negative_reviews": 429,
+      "steamspy_positive_ratio": 0.949195,
+      "note": "SteamSpy owners is an estimate, not sales."
+    }
+  },
+  "steam:1645820": {
+    "id": "steam:1645820",
+    "igdb_id": null,
+    "steam_appid": 1645820,
+    "title": "SurrounDead",
+    "year": 2022,
+    "developer": "Zurvivor",
+    "platforms": [
+      "PC (Windows)"
+    ],
+    "genres": [
+      "Action",
+      "Adventure",
+      "Indie",
+      "RPG",
+      "Early Access"
+    ],
+    "cover": {
+      "url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1645820/header.jpg?t=1758056393",
+      "source": "steam"
+    },
+    "source_page": "https://store.steampowered.com/app/1645820/",
+    "verification_status": "verified",
+    "duplicate_of": null,
+    "merged_from": [
+      "steamspy:all:page=2",
+      "steam:appdetails:1645820"
+    ],
+    "conflict_fields": [],
+    "last_updated_source": "steam:appdetails:1645820",
+    "added_at": "2026-09-25",
+    "selection": {
+      "steamspy_owners_estimate": "500,000 .. 1,000,000",
+      "steamspy_positive_reviews": 7347,
+      "steamspy_negative_reviews": 853,
+      "steamspy_positive_ratio": 0.895976,
+      "note": "SteamSpy owners is an estimate, not sales."
+    }
+  },
+  "steam:578620": {
+    "id": "steam:578620",
+    "igdb_id": null,
+    "steam_appid": 578620,
+    "title": "GORN",
+    "year": 2019,
+    "developer": "Free Lives",
+    "platforms": [
+      "PC (Windows)"
+    ],
+    "genres": [
+      "Action",
+      "Indie"
+    ],
+    "cover": {
+      "url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/578620/header.jpg?t=1740671868",
+      "source": "steam"
+    },
+    "source_page": "https://store.steampowered.com/app/578620/",
+    "verification_status": "verified",
+    "duplicate_of": null,
+    "merged_from": [
+      "steamspy:all:page=2",
+      "steam:appdetails:578620"
+    ],
+    "conflict_fields": [],
+    "last_updated_source": "steam:appdetails:578620",
+    "added_at": "2026-09-25",
+    "selection": {
+      "steamspy_owners_estimate": "200,000 .. 500,000",
+      "steamspy_positive_reviews": 7680,
+      "steamspy_negative_reviews": 483,
+      "steamspy_positive_ratio": 0.940831,
+      "note": "SteamSpy owners is an estimate, not sales."
+    }
+  },
+  "steam:290300": {
+    "id": "steam:290300",
+    "igdb_id": null,
+    "steam_appid": 290300,
+    "title": "Rebel Galaxy",
+    "year": 2015,
+    "developer": "Double Damage Games",
+    "platforms": [
+      "PC (Windows)",
+      "macOS"
+    ],
+    "genres": [
+      "Action",
+      "Adventure",
+      "Indie",
+      "RPG",
+      "Simulation"
+    ],
+    "cover": {
+      "url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/290300/header.jpg?t=1778077786",
+      "source": "steam"
+    },
+    "source_page": "https://store.steampowered.com/app/290300/",
+    "verification_status": "verified",
+    "duplicate_of": null,
+    "merged_from": [
+      "steamspy:all:page=2",
+      "steam:appdetails:290300"
+    ],
+    "conflict_fields": [],
+    "last_updated_source": "steam:appdetails:290300",
+    "added_at": "2026-09-25",
+    "selection": {
+      "steamspy_owners_estimate": "500,000 .. 1,000,000",
+      "steamspy_positive_reviews": 6869,
+      "steamspy_negative_reviews": 1191,
+      "steamspy_positive_ratio": 0.852233,
+      "note": "SteamSpy owners is an estimate, not sales."
+    }
+  }
+}

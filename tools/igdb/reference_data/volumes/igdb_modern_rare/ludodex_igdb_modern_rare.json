@@ -1,0 +1,955 @@
+{
+  "igdb:111759": {
+    "id": "igdb:111759",
+    "igdb_id": 111759,
+    "steam_appid": null,
+    "title": "Professional Farmer: Nintendo Switch Edition",
+    "year": 2018,
+    "developer": null,
+    "platforms": [
+      "Nintendo Switch"
+    ],
+    "genres": [
+      "Simulator"
+    ],
+    "themes": [],
+    "cover": {
+      "url": "https://images.igdb.com/igdb/image/upload/t_cover_big/co271t.jpg",
+      "square_url": "https://images.igdb.com/igdb/image/upload/t_thumb/co271t.jpg",
+      "source": "igdb",
+      "image_id": "co271t"
+    },
+    "source_page": "https://www.igdb.com/games/professional-farmer-nintendo-switch-edition",
+    "verification_status": "verified",
+    "duplicate_of": null,
+    "merged_from": [
+      "igdb:games:111759"
+    ],
+    "conflict_fields": [],
+    "last_updated_source": "igdb:games:111759",
+    "added_at": "2026-09-25"
+  },
+  "igdb:120329": {
+    "id": "igdb:120329",
+    "igdb_id": 120329,
+    "steam_appid": null,
+    "title": "Layton's Mystery Journey: Katrielle and the Millionaires' Conspiracy - Deluxe Edition",
+    "year": 2019,
+    "developer": null,
+    "platforms": [
+      "Nintendo Switch"
+    ],
+    "genres": [
+      "Puzzle",
+      "Adventure"
+    ],
+    "themes": [
+      "Fantasy",
+      "Mystery"
+    ],
+    "cover": {
+      "url": "https://images.igdb.com/igdb/image/upload/t_cover_big/cobav2.jpg",
+      "square_url": "https://images.igdb.com/igdb/image/upload/t_thumb/cobav2.jpg",
+      "source": "igdb",
+      "image_id": "cobav2"
+    },
+    "source_page": "https://www.igdb.com/games/laytons-mystery-journey-katrielle-and-the-millionaires-conspiracy-deluxe-edition",
+    "verification_status": "verified",
+    "duplicate_of": null,
+    "merged_from": [
+      "igdb:games:120329"
+    ],
+    "conflict_fields": [],
+    "last_updated_source": "igdb:games:120329",
+    "added_at": "2026-09-25"
+  },
+  "igdb:121419": {
+    "id": "igdb:121419",
+    "igdb_id": 121419,
+    "steam_appid": null,
+    "title": "Super Mega Baseball 2: Ultimate Edition",
+    "year": 2019,
+    "developer": null,
+    "platforms": [
+      "Nintendo Switch"
+    ],
+    "genres": [
+      "Simulator",
+      "Sport",
+      "Arcade"
+    ],
+    "themes": [],
+    "cover": {
+      "url": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1ron.jpg",
+      "square_url": "https://images.igdb.com/igdb/image/upload/t_thumb/co1ron.jpg",
+      "source": "igdb",
+      "image_id": "co1ron"
+    },
+    "source_page": "https://www.igdb.com/games/super-mega-baseball-2-ultimate-edition",
+    "verification_status": "verified",
+    "duplicate_of": null,
+    "merged_from": [
+      "igdb:games:121419"
+    ],
+    "conflict_fields": [],
+    "last_updated_source": "igdb:games:121419",
+    "added_at": "2026-09-25"
+  },
+  "igdb:126484": {
+    "id": "igdb:126484",
+    "igdb_id": 126484,
+    "steam_appid": null,
+    "title": "Railway Empire: Nintendo Switch Edition",
+    "year": 2020,
+    "developer": null,
+    "platforms": [
+      "Nintendo Switch"
+    ],
+    "genres": [
+      "Simulator",
+      "Strategy"
+    ],
+    "themes": [
+      "Business"
+    ],
+    "cover": {
+      "url": "https://images.igdb.com/igdb/image/upload/t_cover_big/co229o.jpg",
+      "square_url": "https://images.igdb.com/igdb/image/upload/t_thumb/co229o.jpg",
+      "source": "igdb",
+      "image_id": "co229o"
+    },
+    "source_page": "https://www.igdb.com/games/railway-empire-nintendo-switch-edition",
+    "verification_status": "verified",
+    "duplicate_of": null,
+    "merged_from": [
+      "igdb:games:126484"
+    ],
+    "conflict_fields": [],
+    "last_updated_source": "igdb:games:126484",
+    "added_at": "2026-09-25"
+  },
+  "igdb:163631": {
+    "id": "igdb:163631",
+    "igdb_id": 163631,
+    "steam_appid": null,
+    "title": "Slime Rancher: Plortable Edition",
+    "year": 2021,
+    "developer": null,
+    "platforms": [
+      "Nintendo Switch"
+    ],
+    "genres": [
+      "Simulator",
+      "Adventure",
+      "Indie"
+    ],
+    "themes": [
+      "Action",
+      "Science fiction",
+      "Open world"
+    ],
+    "cover": {
+      "url": "https://images.igdb.com/igdb/image/upload/t_cover_big/co4yk9.jpg",
+      "square_url": "https://images.igdb.com/igdb/image/upload/t_thumb/co4yk9.jpg",
+      "source": "igdb",
+      "image_id": "co4yk9"
+    },
+    "source_page": "https://www.igdb.com/games/slime-rancher-plortable-edition",
+    "verification_status": "verified",
+    "duplicate_of": null,
+    "merged_from": [
+      "igdb:games:163631"
+    ],
+    "conflict_fields": [],
+    "last_updated_source": "igdb:games:163631",
+    "added_at": "2026-09-25"
+  },
+  "igdb:191418": {
+    "id": "igdb:191418",
+    "igdb_id": 191418,
+    "steam_appid": null,
+    "title": "No Man's Sky: Nintendo Switch Edition",
+    "year": 2022,
+    "developer": null,
+    "platforms": [
+      "Nintendo Switch"
+    ],
+    "genres": [
+      "Shooter",
+      "Role-playing (RPG)",
+      "Simulator",
+      "Adventure",
+      "Indie"
+    ],
+    "themes": [
+      "Action",
+      "Science fiction",
+      "Survival",
+      "Sandbox",
+      "Open world"
+    ],
+    "cover": {
+      "url": "https://images.igdb.com/igdb/image/upload/t_cover_big/co5j50.jpg",
+      "square_url": "https://images.igdb.com/igdb/image/upload/t_thumb/co5j50.jpg",
+      "source": "igdb",
+      "image_id": "co5j50"
+    },
+    "source_page": "https://www.igdb.com/games/no-mans-sky-nintendo-switch-edition",
+    "verification_status": "verified",
+    "duplicate_of": null,
+    "merged_from": [
+      "igdb:games:191418"
+    ],
+    "conflict_fields": [],
+    "last_updated_source": "igdb:games:191418",
+    "added_at": "2026-09-25"
+  },
+  "igdb:193394": {
+    "id": "igdb:193394",
+    "igdb_id": 193394,
+    "steam_appid": null,
+    "title": "Pinball FX3: Indiana Jones - The Pinball Adventure",
+    "year": 2022,
+    "developer": null,
+    "platforms": [
+      "Nintendo Switch"
+    ],
+    "genres": [
+      "Simulator",
+      "Pinball"
+    ],
+    "themes": [],
+    "cover": {
+      "url": "https://images.igdb.com/igdb/image/upload/t_cover_big/cocmzz.jpg",
+      "square_url": "https://images.igdb.com/igdb/image/upload/t_thumb/cocmzz.jpg",
+      "source": "igdb",
+      "image_id": "cocmzz"
+    },
+    "source_page": "https://www.igdb.com/games/pinball-fx3-indiana-jones-the-pinball-adventure",
+    "verification_status": "verified",
+    "duplicate_of": null,
+    "merged_from": [
+      "igdb:games:193394"
+    ],
+    "conflict_fields": [],
+    "last_updated_source": "igdb:games:193394",
+    "added_at": "2026-09-25"
+  },
+  "igdb:19651": {
+    "id": "igdb:19651",
+    "igdb_id": 19651,
+    "steam_appid": null,
+    "title": "Marvel Pinball",
+    "year": 2010,
+    "developer": null,
+    "platforms": [
+      "PlayStation 3"
+    ],
+    "genres": [
+      "Pinball",
+      "Arcade"
+    ],
+    "themes": [
+      "Action",
+      "Fantasy"
+    ],
+    "cover": {
+      "url": "https://images.igdb.com/igdb/image/upload/t_cover_big/co6vdc.jpg",
+      "square_url": "https://images.igdb.com/igdb/image/upload/t_thumb/co6vdc.jpg",
+      "source": "igdb",
+      "image_id": "co6vdc"
+    },
+    "source_page": "https://www.igdb.com/games/marvel-pinball",
+    "verification_status": "verified",
+    "duplicate_of": null,
+    "merged_from": [
+      "igdb:games:19651"
+    ],
+    "conflict_fields": [],
+    "last_updated_source": "igdb:games:19651",
+    "added_at": "2026-09-25"
+  },
+  "igdb:20656": {
+    "id": "igdb:20656",
+    "igdb_id": 20656,
+    "steam_appid": null,
+    "title": "Gears of War 3: Fenix Rising",
+    "year": 2012,
+    "developer": null,
+    "platforms": [
+      "Xbox 360"
+    ],
+    "genres": [
+      "Shooter"
+    ],
+    "themes": [
+      "Action",
+      "Science fiction"
+    ],
+    "cover": {
+      "url": "https://images.igdb.com/igdb/image/upload/t_cover_big/co30pg.jpg",
+      "square_url": "https://images.igdb.com/igdb/image/upload/t_thumb/co30pg.jpg",
+      "source": "igdb",
+      "image_id": "co30pg"
+    },
+    "source_page": "https://www.igdb.com/games/gears-of-war-3-fenix-rising",
+    "verification_status": "verified",
+    "duplicate_of": null,
+    "merged_from": [
+      "igdb:games:20656"
+    ],
+    "conflict_fields": [],
+    "last_updated_source": "igdb:games:20656",
+    "added_at": "2026-09-25"
+  },
+  "igdb:20683": {
+    "id": "igdb:20683",
+    "igdb_id": 20683,
+    "steam_appid": null,
+    "title": "The Godfather: The Don's Edition",
+    "year": 2007,
+    "developer": null,
+    "platforms": [
+      "PlayStation 3"
+    ],
+    "genres": [
+      "Fighting",
+      "Shooter",
+      "Racing",
+      "Adventure"
+    ],
+    "themes": [
+      "Action",
+      "Historical",
+      "Drama",
+      "Open world"
+    ],
+    "cover": {
+      "url": "https://images.igdb.com/igdb/image/upload/t_cover_big/cobdvd.jpg",
+      "square_url": "https://images.igdb.com/igdb/image/upload/t_thumb/cobdvd.jpg",
+      "source": "igdb",
+      "image_id": "cobdvd"
+    },
+    "source_page": "https://www.igdb.com/games/the-godfather-the-dons-edition",
+    "verification_status": "verified",
+    "duplicate_of": null,
+    "merged_from": [
+      "igdb:games:20683"
+    ],
+    "conflict_fields": [],
+    "last_updated_source": "igdb:games:20683",
+    "added_at": "2026-09-25"
+  },
+  "igdb:20851": {
+    "id": "igdb:20851",
+    "igdb_id": 20851,
+    "steam_appid": null,
+    "title": "Forza Horizon - 1000 Club Expansion Pack",
+    "year": 2013,
+    "developer": null,
+    "platforms": [
+      "Xbox 360"
+    ],
+    "genres": [],
+    "themes": [],
+    "cover": {
+      "url": "https://images.igdb.com/igdb/image/upload/t_cover_big/co7xid.jpg",
+      "square_url": "https://images.igdb.com/igdb/image/upload/t_thumb/co7xid.jpg",
+      "source": "igdb",
+      "image_id": "co7xid"
+    },
+    "source_page": "https://www.igdb.com/games/forza-horizon-1000-club-expansion-pack",
+    "verification_status": "verified",
+    "duplicate_of": null,
+    "merged_from": [
+      "igdb:games:20851"
+    ],
+    "conflict_fields": [],
+    "last_updated_source": "igdb:games:20851",
+    "added_at": "2026-09-25"
+  },
+  "igdb:21575": {
+    "id": "igdb:21575",
+    "igdb_id": 21575,
+    "steam_appid": null,
+    "title": "Planet Minigolf",
+    "year": 2010,
+    "developer": null,
+    "platforms": [
+      "PlayStation 3"
+    ],
+    "genres": [
+      "Sport"
+    ],
+    "themes": [
+      "Comedy"
+    ],
+    "cover": {
+      "url": "https://images.igdb.com/igdb/image/upload/t_cover_big/co3pp0.jpg",
+      "square_url": "https://images.igdb.com/igdb/image/upload/t_thumb/co3pp0.jpg",
+      "source": "igdb",
+      "image_id": "co3pp0"
+    },
+    "source_page": "https://www.igdb.com/games/planet-minigolf",
+    "verification_status": "verified",
+    "duplicate_of": null,
+    "merged_from": [
+      "igdb:games:21575"
+    ],
+    "conflict_fields": [],
+    "last_updated_source": "igdb:games:21575",
+    "added_at": "2026-09-25"
+  },
+  "igdb:21578": {
+    "id": "igdb:21578",
+    "igdb_id": 21578,
+    "steam_appid": null,
+    "title": "Zeno Clash: Ultimate Edition",
+    "year": 2010,
+    "developer": null,
+    "platforms": [
+      "Xbox 360"
+    ],
+    "genres": [
+      "Hack and slash/Beat 'em up",
+      "Adventure"
+    ],
+    "themes": [
+      "Action"
+    ],
+    "cover": {
+      "url": "https://images.igdb.com/igdb/image/upload/t_cover_big/coc521.jpg",
+      "square_url": "https://images.igdb.com/igdb/image/upload/t_thumb/coc521.jpg",
+      "source": "igdb",
+      "image_id": "coc521"
+    },
+    "source_page": "https://www.igdb.com/games/zeno-clash-ultimate-edition",
+    "verification_status": "verified",
+    "duplicate_of": null,
+    "merged_from": [
+      "igdb:games:21578"
+    ],
+    "conflict_fields": [],
+    "last_updated_source": "igdb:games:21578",
+    "added_at": "2026-09-25"
+  },
+  "igdb:21717": {
+    "id": "igdb:21717",
+    "igdb_id": 21717,
+    "steam_appid": null,
+    "title": "LittleBigPlanet 2: Special Edition",
+    "year": 2011,
+    "developer": null,
+    "platforms": [
+      "PlayStation 3"
+    ],
+    "genres": [
+      "Platform",
+      "Puzzle",
+      "Adventure"
+    ],
+    "themes": [
+      "Comedy",
+      "Sandbox",
+      "Kids"
+    ],
+    "cover": {
+      "url": "https://images.igdb.com/igdb/image/upload/t_cover_big/co3kpu.jpg",
+      "square_url": "https://images.igdb.com/igdb/image/upload/t_thumb/co3kpu.jpg",
+      "source": "igdb",
+      "image_id": "co3kpu"
+    },
+    "source_page": "https://www.igdb.com/games/littlebigplanet-2-special-edition",
+    "verification_status": "verified",
+    "duplicate_of": null,
+    "merged_from": [
+      "igdb:games:21717"
+    ],
+    "conflict_fields": [],
+    "last_updated_source": "igdb:games:21717",
+    "added_at": "2026-09-25"
+  },
+  "igdb:21765": {
+    "id": "igdb:21765",
+    "igdb_id": 21765,
+    "steam_appid": null,
+    "title": "Dragon Age: Origins Collector's Edition",
+    "year": 2009,
+    "developer": null,
+    "platforms": [
+      "PlayStation 3"
+    ],
+    "genres": [
+      "Role-playing (RPG)"
+    ],
+    "themes": [
+      "Action",
+      "Fantasy"
+    ],
+    "cover": {
+      "url": "https://images.igdb.com/igdb/image/upload/t_cover_big/co95y5.jpg",
+      "square_url": "https://images.igdb.com/igdb/image/upload/t_thumb/co95y5.jpg",
+      "source": "igdb",
+      "image_id": "co95y5"
+    },
+    "source_page": "https://www.igdb.com/games/dragon-age-origins-collectors-edition",
+    "verification_status": "verified",
+    "duplicate_of": null,
+    "merged_from": [
+      "igdb:games:21765"
+    ],
+    "conflict_fields": [],
+    "last_updated_source": "igdb:games:21765",
+    "added_at": "2026-09-25"
+  },
+  "igdb:21871": {
+    "id": "igdb:21871",
+    "igdb_id": 21871,
+    "steam_appid": null,
+    "title": "Warhawk: Operation Fallen Star",
+    "year": 2008,
+    "developer": null,
+    "platforms": [
+      "PlayStation 3"
+    ],
+    "genres": [
+      "Shooter"
+    ],
+    "themes": [
+      "Warfare"
+    ],
+    "cover": {
+      "url": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1zql.jpg",
+      "square_url": "https://images.igdb.com/igdb/image/upload/t_thumb/co1zql.jpg",
+      "source": "igdb",
+      "image_id": "co1zql"
+    },
+    "source_page": "https://www.igdb.com/games/warhawk-operation-fallen-star",
+    "verification_status": "verified",
+    "duplicate_of": null,
+    "merged_from": [
+      "igdb:games:21871"
+    ],
+    "conflict_fields": [],
+    "last_updated_source": "igdb:games:21871",
+    "added_at": "2026-09-25"
+  },
+  "igdb:22201": {
+    "id": "igdb:22201",
+    "igdb_id": 22201,
+    "steam_appid": null,
+    "title": "Forza Horizon: Rally",
+    "year": 2012,
+    "developer": null,
+    "platforms": [
+      "Xbox 360"
+    ],
+    "genres": [
+      "Racing"
+    ],
+    "themes": [],
+    "cover": {
+      "url": "https://images.igdb.com/igdb/image/upload/t_cover_big/co7ste.jpg",
+      "square_url": "https://images.igdb.com/igdb/image/upload/t_thumb/co7ste.jpg",
+      "source": "igdb",
+      "image_id": "co7ste"
+    },
+    "source_page": "https://www.igdb.com/games/forza-horizon-rally",
+    "verification_status": "verified",
+    "duplicate_of": null,
+    "merged_from": [
+      "igdb:games:22201"
+    ],
+    "conflict_fields": [],
+    "last_updated_source": "igdb:games:22201",
+    "added_at": "2026-09-25"
+  },
+  "igdb:222891": {
+    "id": "igdb:222891",
+    "igdb_id": 222891,
+    "steam_appid": null,
+    "title": "Oddworld: Soulstorm Oddtimized Edition",
+    "year": 2022,
+    "developer": null,
+    "platforms": [
+      "Nintendo Switch"
+    ],
+    "genres": [
+      "Platform",
+      "Puzzle",
+      "Adventure"
+    ],
+    "themes": [
+      "Action",
+      "Fantasy",
+      "Comedy"
+    ],
+    "cover": {
+      "url": "https://images.igdb.com/igdb/image/upload/t_cover_big/co5q6b.jpg",
+      "square_url": "https://images.igdb.com/igdb/image/upload/t_thumb/co5q6b.jpg",
+      "source": "igdb",
+      "image_id": "co5q6b"
+    },
+    "source_page": "https://www.igdb.com/games/oddworld-soulstorm-oddtimized-edition",
+    "verification_status": "verified",
+    "duplicate_of": null,
+    "merged_from": [
+      "igdb:games:222891"
+    ],
+    "conflict_fields": [],
+    "last_updated_source": "igdb:games:222891",
+    "added_at": "2026-09-25"
+  },
+  "igdb:22933": {
+    "id": "igdb:22933",
+    "igdb_id": 22933,
+    "steam_appid": null,
+    "title": "DoDonPachi Resurrection: Deluxe Edition",
+    "year": 2011,
+    "developer": null,
+    "platforms": [
+      "Xbox 360"
+    ],
+    "genres": [
+      "Shooter"
+    ],
+    "themes": [],
+    "cover": {
+      "url": "https://images.igdb.com/igdb/image/upload/t_cover_big/eu4u5w0akqvqcriucf7z.jpg",
+      "square_url": "https://images.igdb.com/igdb/image/upload/t_thumb/eu4u5w0akqvqcriucf7z.jpg",
+      "source": "igdb",
+      "image_id": "eu4u5w0akqvqcriucf7z"
+    },
+    "source_page": "https://www.igdb.com/games/dodonpachi-resurrection-deluxe-edition",
+    "verification_status": "verified",
+    "duplicate_of": null,
+    "merged_from": [
+      "igdb:games:22933"
+    ],
+    "conflict_fields": [],
+    "last_updated_source": "igdb:games:22933",
+    "added_at": "2026-09-25"
+  },
+  "igdb:23021": {
+    "id": "igdb:23021",
+    "igdb_id": 23021,
+    "steam_appid": null,
+    "title": "Tomb Raider: Underworld - Lara's Shadow",
+    "year": 2009,
+    "developer": null,
+    "platforms": [
+      "Xbox 360"
+    ],
+    "genres": [
+      "Adventure"
+    ],
+    "themes": [
+      "Action"
+    ],
+    "cover": {
+      "url": "https://images.igdb.com/igdb/image/upload/t_cover_big/co8mkf.jpg",
+      "square_url": "https://images.igdb.com/igdb/image/upload/t_thumb/co8mkf.jpg",
+      "source": "igdb",
+      "image_id": "co8mkf"
+    },
+    "source_page": "https://www.igdb.com/games/tomb-raider-underworld-laras-shadow",
+    "verification_status": "verified",
+    "duplicate_of": null,
+    "merged_from": [
+      "igdb:games:23021"
+    ],
+    "conflict_fields": [],
+    "last_updated_source": "igdb:games:23021",
+    "added_at": "2026-09-25"
+  },
+  "igdb:240283": {
+    "id": "igdb:240283",
+    "igdb_id": 240283,
+    "steam_appid": null,
+    "title": "2006 FIFA World Cup",
+    "year": 2006,
+    "developer": null,
+    "platforms": [
+      "Xbox 360"
+    ],
+    "genres": [
+      "Sport"
+    ],
+    "themes": [
+      "Non-fiction"
+    ],
+    "cover": {
+      "url": "https://images.igdb.com/igdb/image/upload/t_cover_big/co70oq.jpg",
+      "square_url": "https://images.igdb.com/igdb/image/upload/t_thumb/co70oq.jpg",
+      "source": "igdb",
+      "image_id": "co70oq"
+    },
+    "source_page": "https://www.igdb.com/games/2006-fifa-world-cup--2",
+    "verification_status": "verified",
+    "duplicate_of": null,
+    "merged_from": [
+      "igdb:games:240283"
+    ],
+    "conflict_fields": [],
+    "last_updated_source": "igdb:games:240283",
+    "added_at": "2026-09-25"
+  },
+  "igdb:243007": {
+    "id": "igdb:243007",
+    "igdb_id": 243007,
+    "steam_appid": null,
+    "title": "Madden NFL 06",
+    "year": 2005,
+    "developer": null,
+    "platforms": [
+      "Xbox 360"
+    ],
+    "genres": [
+      "Sport"
+    ],
+    "themes": [],
+    "cover": {
+      "url": "https://images.igdb.com/igdb/image/upload/t_cover_big/co6b5r.jpg",
+      "square_url": "https://images.igdb.com/igdb/image/upload/t_thumb/co6b5r.jpg",
+      "source": "igdb",
+      "image_id": "co6b5r"
+    },
+    "source_page": "https://www.igdb.com/games/madden-nfl-06--6",
+    "verification_status": "verified",
+    "duplicate_of": null,
+    "merged_from": [
+      "igdb:games:243007"
+    ],
+    "conflict_fields": [],
+    "last_updated_source": "igdb:games:243007",
+    "added_at": "2026-09-25"
+  },
+  "igdb:248551": {
+    "id": "igdb:248551",
+    "igdb_id": 248551,
+    "steam_appid": null,
+    "title": "Tony Hawk's American Wasteland",
+    "year": 2005,
+    "developer": null,
+    "platforms": [
+      "Xbox 360"
+    ],
+    "genres": [
+      "Sport"
+    ],
+    "themes": [
+      "Action"
+    ],
+    "cover": {
+      "url": "https://images.igdb.com/igdb/image/upload/t_cover_big/co6gy9.jpg",
+      "square_url": "https://images.igdb.com/igdb/image/upload/t_thumb/co6gy9.jpg",
+      "source": "igdb",
+      "image_id": "co6gy9"
+    },
+    "source_page": "https://www.igdb.com/games/tony-hawks-american-wasteland",
+    "verification_status": "verified",
+    "duplicate_of": null,
+    "merged_from": [
+      "igdb:games:248551"
+    ],
+    "conflict_fields": [],
+    "last_updated_source": "igdb:games:248551",
+    "added_at": "2026-09-25"
+  },
+  "igdb:249597": {
+    "id": "igdb:249597",
+    "igdb_id": 249597,
+    "steam_appid": null,
+    "title": "Let's Sing 2023: Eurovision Hits Song Pack",
+    "year": 2023,
+    "developer": null,
+    "platforms": [
+      "Nintendo Switch"
+    ],
+    "genres": [],
+    "themes": [],
+    "cover": {
+      "url": "https://images.igdb.com/igdb/image/upload/t_cover_big/co6s4h.jpg",
+      "square_url": "https://images.igdb.com/igdb/image/upload/t_thumb/co6s4h.jpg",
+      "source": "igdb",
+      "image_id": "co6s4h"
+    },
+    "source_page": "https://www.igdb.com/games/lets-sing-2023-eurovision-hits-song-pack",
+    "verification_status": "verified",
+    "duplicate_of": null,
+    "merged_from": [
+      "igdb:games:249597"
+    ],
+    "conflict_fields": [],
+    "last_updated_source": "igdb:games:249597",
+    "added_at": "2026-09-25"
+  },
+  "igdb:28830": {
+    "id": "igdb:28830",
+    "igdb_id": 28830,
+    "steam_appid": null,
+    "title": "Snack World: The Dungeon Crawl - Gold",
+    "year": 2018,
+    "developer": null,
+    "platforms": [
+      "Nintendo Switch"
+    ],
+    "genres": [
+      "Role-playing (RPG)",
+      "Hack and slash/Beat 'em up"
+    ],
+    "themes": [
+      "Action",
+      "Fantasy"
+    ],
+    "cover": {
+      "url": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2vxp.jpg",
+      "square_url": "https://images.igdb.com/igdb/image/upload/t_thumb/co2vxp.jpg",
+      "source": "igdb",
+      "image_id": "co2vxp"
+    },
+    "source_page": "https://www.igdb.com/games/snack-world-the-dungeon-crawl-gold",
+    "verification_status": "verified",
+    "duplicate_of": null,
+    "merged_from": [
+      "igdb:games:28830"
+    ],
+    "conflict_fields": [],
+    "last_updated_source": "igdb:games:28830",
+    "added_at": "2026-09-25"
+  },
+  "igdb:315335": {
+    "id": "igdb:315335",
+    "igdb_id": 315335,
+    "steam_appid": null,
+    "title": "Guilty Gear: Strive - Nintendo Switch Edition",
+    "year": 2025,
+    "developer": null,
+    "platforms": [
+      "Nintendo Switch"
+    ],
+    "genres": [
+      "Fighting",
+      "Arcade"
+    ],
+    "themes": [
+      "Action"
+    ],
+    "cover": {
+      "url": "https://images.igdb.com/igdb/image/upload/t_cover_big/co963y.jpg",
+      "square_url": "https://images.igdb.com/igdb/image/upload/t_thumb/co963y.jpg",
+      "source": "igdb",
+      "image_id": "co963y"
+    },
+    "source_page": "https://www.igdb.com/games/guilty-gear-strive-nintendo-switch-edition",
+    "verification_status": "verified",
+    "duplicate_of": null,
+    "merged_from": [
+      "igdb:games:315335"
+    ],
+    "conflict_fields": [],
+    "last_updated_source": "igdb:games:315335",
+    "added_at": "2026-09-25"
+  },
+  "igdb:363998": {
+    "id": "igdb:363998",
+    "igdb_id": 363998,
+    "steam_appid": null,
+    "title": "Ys Memoire: Revelations in Celceta",
+    "year": 2025,
+    "developer": null,
+    "platforms": [
+      "Nintendo Switch"
+    ],
+    "genres": [
+      "Role-playing (RPG)",
+      "Adventure"
+    ],
+    "themes": [
+      "Action",
+      "Fantasy"
+    ],
+    "cover": {
+      "url": "https://images.igdb.com/igdb/image/upload/t_cover_big/coad07.jpg",
+      "square_url": "https://images.igdb.com/igdb/image/upload/t_thumb/coad07.jpg",
+      "source": "igdb",
+      "image_id": "coad07"
+    },
+    "source_page": "https://www.igdb.com/games/ys-memoire-revelations-in-celceta",
+    "verification_status": "verified",
+    "duplicate_of": null,
+    "merged_from": [
+      "igdb:games:363998"
+    ],
+    "conflict_fields": [],
+    "last_updated_source": "igdb:games:363998",
+    "added_at": "2026-09-25"
+  },
+  "igdb:80459": {
+    "id": "igdb:80459",
+    "igdb_id": 80459,
+    "steam_appid": null,
+    "title": "Deathsmiles IIX: Makai no Merry Christmas",
+    "year": 2010,
+    "developer": null,
+    "platforms": [
+      "Xbox 360"
+    ],
+    "genres": [
+      "Shooter",
+      "Indie"
+    ],
+    "themes": [
+      "Action",
+      "Horror"
+    ],
+    "cover": {
+      "url": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2pvo.jpg",
+      "square_url": "https://images.igdb.com/igdb/image/upload/t_thumb/co2pvo.jpg",
+      "source": "igdb",
+      "image_id": "co2pvo"
+    },
+    "source_page": "https://www.igdb.com/games/deathsmiles-iix-makai-no-merry-christmas",
+    "verification_status": "verified",
+    "duplicate_of": null,
+    "merged_from": [
+      "igdb:games:80459"
+    ],
+    "conflict_fields": [],
+    "last_updated_source": "igdb:games:80459",
+    "added_at": "2026-09-25"
+  },
+  "igdb:85323": {
+    "id": "igdb:85323",
+    "igdb_id": 85323,
+    "steam_appid": null,
+    "title": "Pac-Man Championship Edition 2 Plus",
+    "year": 2018,
+    "developer": null,
+    "platforms": [
+      "Nintendo Switch"
+    ],
+    "genres": [
+      "Adventure",
+      "Arcade"
+    ],
+    "themes": [
+      "Action"
+    ],
+    "cover": {
+      "url": "https://images.igdb.com/igdb/image/upload/t_cover_big/co3gsx.jpg",
+      "square_url": "https://images.igdb.com/igdb/image/upload/t_thumb/co3gsx.jpg",
+      "source": "igdb",
+      "image_id": "co3gsx"
+    },
+    "source_page": "https://www.igdb.com/games/pac-man-championship-edition-2-plus",
+    "verification_status": "verified",
+    "duplicate_of": null,
+    "merged_from": [
+      "igdb:games:85323"
+    ],
+    "conflict_fields": [],
+    "last_updated_source": "igdb:games:85323",
+    "added_at": "2026-09-25"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "entries": 10015,
+  "unique_ids": 10015,
+  "duplicate_ids": 0,
+  "duplicate_title_year_casefold": 0,
+  "missing_cover": 0,
+  "sampled_games": 100,
+  "sampled_urls": 200,
+  "valid_urls": 200,
+  "invalid": []
+}
